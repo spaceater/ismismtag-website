@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.ismism_cube{
+    position: absolute;
+    left: 42rem;
+    right: 1rem;
+    min-width: 50rem;
+    display: flex;
+    top: calc(2rem + calc(var(--y) * 18rem));
+}
+.ismism_cube p{
+    position: relative;
+    width: 2.5rem;
+    max-height: 3rem;
+    text-align: center;
+    word-break: break-all;
+    overflow: hidden;
+    text-wrap: balance;
+}
+.ismism_cube .detail{
+    position: relative;
+    flex: auto;
+    transform: skewY(-15deg);
+}
+.ismism_cube .detail .i{
+    position: absolute;
+    left: 10.25rem;
+    top: calc(calc(var(--y)*3rem) + 1rem);
+}
+.ismism_cube .detail #i{
+    position: absolute;
+    left: 10rem;
+    top: 0;
+    width: 0;
+    height: 12rem;
+    border-right: 0.2rem dashed orange;
+}
+.ismism_cube .detail #z{
+    position: absolute;
+    left: 0;
+    top: 12rem;
+    width: 10rem;
+    height: 0;
+    border-bottom: 0.2rem dashed blue;
+}
+.ismism_cube .detail ul{
+    z-index: calc(0 - var(--x));
+    position: absolute;
+    left: calc(var(--x)*2.5rem);
+}
+.ismism_cube .detail ul li{
+    position: relative;
+    list-style: none;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ismism_cube .detail ul li.searched{
+    background-color: rgb(225, 172, 39);
+}
+.ismism_cube .detail ul li.pinned{
+    background-color: rgb(17, 188, 188);
+}
+.ismism_cube .detail ul li.selected{
+    background-color: rgb(218, 73, 73);
+}
+.ismism_cube .block{
+    z-index: -10;
+    position: absolute;
+    display: flex;
+    left: 2.5rem;
+    top: 13.45rem;
+}
+.ismism_cube .block div{
+    position: relative;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: gray;
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ismism_cube .block div.searched{
+    background-color: darkgoldenrod;
+}
+.ismism_cube .block div.pinned{
+    background-color: darkcyan;
+}
+.ismism_cube .block div.selected{
+    background-color: brown;
+}
+.ismism_cube .block div::after{
+    content: "";
+    position: absolute;
+    left: -0.05rem;
+    top: -1.5rem;
+    width: 2.5rem;
+    height: 1.45rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    transform-origin: bottom;
+    transform: skewX(60deg);
+}
+.ismism_cube .block div.searched::after{
+    background-color: rgb(225, 172, 39);
+}
+.ismism_cube .block div.pinned::after{
+    background-color: rgb(17, 188, 188);
+}
+.ismism_cube .block div.selected::after{
+    background-color: rgb(218, 73, 73);
+}
+.ismism_cube .block div::before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: -2.55rem;
+    top: -0.05rem;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: rgb(170, 170, 170);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    transform-origin: right;
+    transform: skewY(30deg);
+}
+.ismism_cube .block div.searched::before{
+    background-color: rgb(201, 149, 15);
+}
+.ismism_cube .block div.pinned::before{
+    background-color: rgb(11, 167, 167);
+}
+.ismism_cube .block div.selected::before{
+    background-color: rgb(182, 53, 53);
+}
+#info_box{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 40rem;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+    box-shadow: -1rem 0 1rem 1rem rgb(0,0,0,1);
+}
+#info_box #axis_label{
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+    width: 7.5rem;
+    height: 8rem;
+    background-color: rgb(200, 200, 200);
+    border: 0.05rem solid black;
+}
+#info_box #axis_label:hover{
+    background-color: gray;
+}
+#info_box #axis_label p{
+    position: relative;
+    left: 2rem;
+    line-height: 2rem;
+}
+#info_box #axis_label p::before{
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    bottom: 0.5rem;
+    width: 1rem;
+    height:1rem;
+}
+#info_box #axis_label #axis_x::before{
+    background-color: red;
+}
+#info_box #axis_label #axis_y::before{
+    background-color: green;
+}
+#info_box #axis_label #axis_z::before{
+    background-color: blue;
+}
+#info_box #axis_label #axis_i::before{
+    background-color: orange;
+}
+#ism_info{
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    top: 20rem;
+    height: calc(100% - 20rem);
+    background-color: rgb(200, 200, 200);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 3px 3px gray;
+    overflow-y: scroll;
+}
+#ism_info div{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+}
+#ism_info div p{
+    white-space: pre-wrap;
+    margin: auto;
+}
+#ism_info #ism_name{
+    margin-top: -0.5rem;
+}
+#ism_info div a{
+    color: black;
+    white-space: pre-wrap;
+    margin: auto;
+}
+#ism_info #ism_name{
+    text-align: center;
+}
+#ism_info #ism_link{
+    text-decoration: none;
+}
+#ismism_main_cube{
+    position: absolute;
+    left: 10rem;
+    top: 4.5rem;
+    transform: skewY(-15deg);
+}
+#ismism_main_cube #main_cube{
+    z-index: 100;
+    position: absolute;
+}
+#ismism_main_cube #main_cube p{
+    position: relative;
+    width: 2.5rem;
+    max-height: 3rem;
+    text-align: center;
+    word-break: break-all;
+    overflow: hidden;
+    text-wrap: balance;
+}
+#ismism_main_cube #main_cube div{
+    position: absolute;
+    left: calc(calc(var(--x)*2.5rem));
+    top: calc(calc(var(--y)*3rem) + calc(var(--x)*1.45rem));
+    width: 2.5rem;
+    height: 3rem;
+    transform: skewY(30deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ismism_main_cube #main_cube div::before{
+    content: "";
+    position: absolute;
+    left: 2.5rem;
+    top: 0;
+    width: 10rem;
+    height: 3rem;
+    transform-origin: left;
+    transform: skewY(-30deg);
+}
+#ismism_main_cube #main_cube div::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -5.8rem;
+    width: 2.5rem;
+    height: 5.8rem;
+    transform-origin: bottom;
+    transform: skewX(-60deg);
+}
+#ismism_main_cube #show_cube{
+    position: absolute;
+}
+#ismism_main_cube #show_cube div{
+    position: absolute;
+    left: calc(var(--x)*2.5rem);
+    top: calc(calc(var(--y)*3rem) + calc(var(--x)*1.45rem));
+    width: 2.5rem;
+    height: 3rem;
+    transform: skewY(30deg);
+    background-color: rgb(170, 170, 170);
+    box-sizing: border-box;
+    border: solid black 0.05rem;
+    display: flex;
+}
+#ismism_main_cube #show_cube div.searched{
+    background-color: rgb(201, 149, 15);
+    z-index: 1;
+}
+#ismism_main_cube #show_cube div.pinned{
+    background-color: rgb(11, 167, 167);
+    z-index: 1;
+}
+#ismism_main_cube #show_cube div.selected{
+    background-color: rgb(182, 53, 53);
+    z-index: 1;
+}
+#ismism_main_cube #show_cube div::before{
+    content: "";
+    position: absolute;
+    left: 2.45rem;
+    top: -0.05rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: gray;
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    transform-origin: left;
+    transform: skewY(-30deg);
+}
+#ismism_main_cube #show_cube div.searched::before{
+    background-color: darkgoldenrod;
+    opacity: var(--b);
+}
+#ismism_main_cube #show_cube div.pinned::before{
+    background-color: darkcyan;
+    opacity: var(--b);
+}
+#ismism_main_cube #show_cube div.selected::before{
+    background-color: brown;
+    opacity: var(--b);
+}
+#ismism_main_cube #show_cube div::after{
+    content: "";
+    position: absolute;
+    left: -0.05rem;
+    top: -5.8rem;
+    width: 2.5rem;
+    height: 5.75rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    transform-origin: bottom;
+    transform: skewX(-60deg);
+}
+#ismism_main_cube #show_cube div.searched::after{
+    background-color: rgb(225, 172, 39);
+    opacity: var(--a);
+}
+#ismism_main_cube #show_cube div.pinned::after{
+    background-color: rgb(17, 188, 188);
+    opacity: var(--a);
+}
+#ismism_main_cube #show_cube div.selected::after{
+    background-color: rgb(218, 73, 73);
+    opacity: var(--a);
+}
+#ismism_main_cube .x{
+    z-index: 1;
+    position: absolute;
+    left: calc(9.95rem + calc(var(--x)*2.5rem));
+    top: calc(-0.65rem + calc(var(--x)*1.45rem));
+    width: 0;
+    height: 11.9rem;
+    border-right: 0.1rem dashed black;
+}
+#ismism_main_cube .x p{
+    position: relative;
+    left:-1.5rem;
+    top: -1.5rem;
+    width: 2.5rem;
+    transform: skewY(30deg);
+}
+#ismism_main_cube .y{
+    z-index: 1;
+    position: absolute;
+    left:10rem;
+    top: calc(11.25rem - calc(var(--y)*3rem));
+    width: 10rem;
+    height: 0;
+    border-bottom: 0.1rem dashed black;
+    transform-origin: left;
+    transform: skewY(30deg);
+}
+#ismism_main_cube .y p{
+    position: relative;
+    left:5.5rem;
+    top: 1rem;
+    height: 3rem;
+    text-align: center;
+}
+#ismism_main_cube #x{
+    z-index: 10;
+    position: absolute;
+    left: 9.9rem;
+    top: -0.65rem;
+    width: 0;
+    height: 11.9rem;
+    border-right: 0.2rem dashed red;
+}
+#ismism_main_cube #y{
+    z-index: 9;
+    position: absolute;
+    left:10rem;
+    top: 11.2rem;
+    width: 10rem;
+    height: 0;
+    border-bottom: 0.2rem dashed green;
+    transform-origin: left;
+    transform: skewY(30deg);
+}
+#ismism_main_cube #z{
+    z-index: 8;
+    position: absolute;
+    left: 0;
+    top: 11.2rem;
+    width: 10rem;
+    height: 0;
+    border-bottom: 0.2rem dashed blue;
+    transform-origin: top;
+}
+#search_box{
+    position: absolute;
+    left: 0.5rem;
+    top: 1rem;
+    width: 8rem;
+    height: 1.5rem;
+}
+#search_button{
+    position: absolute;
+    left: 1.05rem;
+    top: 3.05rem;
+    width: 3rem;
+    height: 1.5rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    text-align: center;
+    display: block;
+}
+#search_button:hover{
+    background-color: gray;
+}
+#clear_search_button{
+    position: absolute;
+    left: 5.05rem;
+    top: 3.05rem;
+    width: 3rem;
+    height: 1.5rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    text-align: center;
+    display: block;
+}
+#clear_search_button:hover{
+    background-color: gray;
+}
