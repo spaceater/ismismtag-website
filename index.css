@@ -421,10 +421,12 @@
     z-index: 10;
     position: absolute;
     left: 9.9rem;
-    top: 0.3rem;
+    top: 0.25rem;
     width: 0;
     height: 11rem;
     border-right: 0.2rem dashed red;
+    transform-origin: left;
+    transform: skewY(30deg);
 }
 #ismism_main_cube #x::before{
     content: "";
