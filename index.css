@@ -11,7 +11,7 @@
     top: calc(2rem + calc(var(--y) * 18rem));
 }
 .ismism_cube p{
-    position: relative;
+    position: absolute;
     width: 2.5rem;
     max-height: 3rem;
     text-align: center;
@@ -32,23 +32,48 @@
 .ismism_cube .detail #i{
     position: absolute;
     left: 10rem;
-    top: 0;
+    top: 1rem;
     width: 0;
-    height: 12rem;
+    height: 11rem;
     border-right: 0.2rem dashed orange;
+}
+.ismism_cube .detail #i::before{
+    content: "";
+    position: absolute;
+    left: -0.2rem;
+    top: -2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 0.3rem 1rem 0.3rem;
+    border-color: transparent transparent orange transparent;
 }
 .ismism_cube .detail #z{
     position: absolute;
-    left: 0;
+    left: 1rem;
     top: 12rem;
-    width: 10rem;
+    width: 9rem;
     height: 0;
     border-bottom: 0.2rem dashed blue;
+}
+.ismism_cube .detail #z::before{
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: -0.2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.3rem 1rem 0.3rem 1rem;
+    border-color: transparent blue transparent transparent;
 }
 .ismism_cube .detail ul{
     z-index: calc(0 - var(--x));
     position: absolute;
     left: calc(var(--x)*2.5rem);
+}
+.ismism_cube .detail ul .no_data p{
+    color: rgb(130, 130, 130);
 }
 .ismism_cube .detail ul li{
     position: relative;
@@ -77,6 +102,9 @@
     display: flex;
     left: 2.5rem;
     top: 13.45rem;
+}
+.ismism_cube .block .no_data p{
+    color: rgb(58,58,58);
 }
 .ismism_cube .block div{
     position: relative;
@@ -231,11 +259,11 @@
     top: 4.5rem;
     transform: skewY(-15deg);
 }
-#ismism_main_cube #main_cube{
+#ismism_main_cube #hover_cube{
     z-index: 100;
     position: absolute;
 }
-#ismism_main_cube #main_cube p{
+#ismism_main_cube #hover_cube p{
     position: relative;
     width: 2.5rem;
     max-height: 3rem;
@@ -244,7 +272,10 @@
     overflow: hidden;
     text-wrap: balance;
 }
-#ismism_main_cube #main_cube div{
+#ismism_main_cube .no_data p{
+    color: rgb(100,100,100);
+}
+#ismism_main_cube #hover_cube div{
     position: absolute;
     left: calc(calc(var(--x)*2.5rem));
     top: calc(calc(var(--y)*3rem) + calc(var(--x)*1.45rem));
@@ -255,7 +286,7 @@
     justify-content: center;
     align-items: center;
 }
-#ismism_main_cube #main_cube div::before{
+#ismism_main_cube #hover_cube div::before{
     content: "";
     position: absolute;
     left: 2.5rem;
@@ -265,7 +296,7 @@
     transform-origin: left;
     transform: skewY(-30deg);
 }
-#ismism_main_cube #main_cube div::after{
+#ismism_main_cube #hover_cube div::after{
     content: "";
     position: absolute;
     left: 0;
@@ -390,31 +421,64 @@
     z-index: 10;
     position: absolute;
     left: 9.9rem;
-    top: -0.65rem;
+    top: 0.3rem;
     width: 0;
-    height: 11.9rem;
+    height: 11rem;
     border-right: 0.2rem dashed red;
+}
+#ismism_main_cube #x::before{
+    content: "";
+    position: absolute;
+    left: -0.2rem;
+    top: -2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 0.3rem 1rem 0.3rem;
+    border-color: transparent transparent red transparent;
 }
 #ismism_main_cube #y{
     z-index: 9;
     position: absolute;
     left:10rem;
     top: 11.2rem;
-    width: 10rem;
+    width: 9rem;
     height: 0;
     border-bottom: 0.2rem dashed green;
     transform-origin: left;
     transform: skewY(30deg);
 }
+#ismism_main_cube #y::before{
+    content: "";
+    position: absolute;
+    left: 9rem;
+    top: -0.2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.3rem 1rem 0.3rem 1rem;
+    border-color: transparent transparent transparent green;
+}
 #ismism_main_cube #z{
     z-index: 8;
     position: absolute;
-    left: 0;
+    left: 1rem;
     top: 11.2rem;
-    width: 10rem;
+    width: 9rem;
     height: 0;
     border-bottom: 0.2rem dashed blue;
     transform-origin: top;
+}
+#ismism_main_cube #z::before{
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: -0.2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.3rem 1rem 0.3rem 1rem;
+    border-color: transparent blue transparent transparent;
 }
 #search_box{
     position: absolute;
