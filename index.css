@@ -2,175 +2,6 @@
     margin: 0;
     padding: 0;
 }
-.ismism_cube{
-    position: absolute;
-    left: 42rem;
-    right: 1rem;
-    min-width: 50rem;
-    display: flex;
-    top: calc(2rem + calc(var(--y) * 18rem));
-}
-.ismism_cube p{
-    position: absolute;
-    width: 2.5rem;
-    max-height: 3rem;
-    text-align: center;
-    word-break: break-all;
-    overflow: hidden;
-    text-wrap: balance;
-}
-.ismism_cube .detail{
-    position: relative;
-    flex: auto;
-    transform: skewY(-15deg);
-}
-.ismism_cube .detail .i{
-    position: absolute;
-    left: 10.25rem;
-    top: calc(calc(var(--y)*3rem) + 1rem);
-}
-.ismism_cube .detail #i{
-    position: absolute;
-    left: 10rem;
-    top: 1rem;
-    width: 0;
-    height: 11rem;
-    border-right: 0.2rem dashed orange;
-}
-.ismism_cube .detail #i::before{
-    content: "";
-    position: absolute;
-    left: -0.2rem;
-    top: -2rem;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 1rem 0.3rem 1rem 0.3rem;
-    border-color: transparent transparent orange transparent;
-}
-.ismism_cube .detail #z{
-    position: absolute;
-    left: 1rem;
-    top: 12rem;
-    width: 9rem;
-    height: 0;
-    border-bottom: 0.2rem dashed blue;
-}
-.ismism_cube .detail #z::before{
-    content: "";
-    position: absolute;
-    left: -2rem;
-    top: -0.2rem;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0.3rem 1rem 0.3rem 1rem;
-    border-color: transparent blue transparent transparent;
-}
-.ismism_cube .detail ul{
-    z-index: calc(0 - var(--x));
-    position: absolute;
-    left: calc(var(--x)*2.5rem);
-}
-.ismism_cube .detail ul .no_data p{
-    color: rgb(130, 130, 130);
-}
-.ismism_cube .detail ul li{
-    position: relative;
-    list-style: none;
-    width: 2.5rem;
-    height: 3rem;
-    background-color: rgb(200, 200, 200);
-    box-sizing: border-box;
-    border:solid black 0.05rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ismism_cube .detail ul li.searched{
-    background-color: rgb(225, 172, 39);
-}
-.ismism_cube .detail ul li.pinned{
-    background-color: rgb(17, 188, 188);
-}
-.ismism_cube .detail ul li.selected{
-    background-color: rgb(218, 73, 73);
-}
-.ismism_cube .block{
-    z-index: -10;
-    position: absolute;
-    display: flex;
-    left: 2.5rem;
-    top: 13.45rem;
-}
-.ismism_cube .block .no_data p{
-    color: rgb(58,58,58);
-}
-.ismism_cube .block div{
-    position: relative;
-    width: 2.5rem;
-    height: 3rem;
-    background-color: gray;
-    box-sizing: border-box;
-    border:solid black 0.05rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ismism_cube .block div.searched{
-    background-color: darkgoldenrod;
-}
-.ismism_cube .block div.pinned{
-    background-color: darkcyan;
-}
-.ismism_cube .block div.selected{
-    background-color: brown;
-}
-.ismism_cube .block div::after{
-    content: "";
-    position: absolute;
-    left: -0.05rem;
-    top: -1.5rem;
-    width: 2.5rem;
-    height: 1.45rem;
-    background-color: rgb(200, 200, 200);
-    box-sizing: border-box;
-    border:solid black 0.05rem;
-    transform-origin: bottom;
-    transform: skewX(60deg);
-}
-.ismism_cube .block div.searched::after{
-    background-color: rgb(225, 172, 39);
-}
-.ismism_cube .block div.pinned::after{
-    background-color: rgb(17, 188, 188);
-}
-.ismism_cube .block div.selected::after{
-    background-color: rgb(218, 73, 73);
-}
-.ismism_cube .block div::before{
-    z-index: -1;
-    content: "";
-    position: absolute;
-    left: -2.55rem;
-    top: -0.05rem;
-    width: 2.5rem;
-    height: 3rem;
-    background-color: rgb(170, 170, 170);
-    box-sizing: border-box;
-    border:solid black 0.05rem;
-    transform-origin: right;
-    transform: skewY(30deg);
-}
-.ismism_cube .block div.searched::before{
-    background-color: rgb(201, 149, 15);
-}
-.ismism_cube .block div.pinned::before{
-    background-color: rgb(11, 167, 167);
-}
-.ismism_cube .block div.selected::before{
-    background-color: rgb(182, 53, 53);
-}
 #info_box{
     position:fixed;
     left: 0;
@@ -182,26 +13,21 @@
 }
 #info_box #axis_label{
     position: absolute;
-    right: 0.5rem;
-    top: 1rem;
+    right: 0;
+    top: 0.5rem;
     width: 7.5rem;
     height: 8rem;
-    background-color: rgb(200, 200, 200);
-    border: 0.05rem solid black;
-}
-#info_box #axis_label:hover{
-    background-color: gray;
 }
 #info_box #axis_label p{
     position: relative;
     left: 2rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 #info_box #axis_label p::before{
     content: "";
     position: absolute;
-    left: -1.5rem;
-    bottom: 0.5rem;
+    left: -1.3rem;
+    bottom: 0.2rem;
     width: 1rem;
     height:1rem;
 }
@@ -215,43 +41,7 @@
     background-color: blue;
 }
 #info_box #axis_label #axis_i::before{
-    background-color: orange;
-}
-#ism_info{
-    position: absolute;
-    left: 0.5rem;
-    right: 0.5rem;
-    top: 20rem;
-    height: calc(100% - 20rem);
-    background-color: rgb(200, 200, 200);
-    border-radius: 1rem;
-    box-shadow: inset 0 0 3px 3px gray;
-    overflow-y: scroll;
-}
-#ism_info div{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 1.5rem;
-    margin-right: 0.5rem;
-    display: flex;
-}
-#ism_info div p{
-    white-space: pre-wrap;
-    margin: auto;
-}
-#ism_info #ism_name{
-    margin-top: -0.5rem;
-}
-#ism_info div a{
-    color: black;
-    white-space: pre-wrap;
-    margin: auto;
-}
-#ism_info #ism_name{
-    text-align: center;
-}
-#ism_info #ism_link{
-    text-decoration: none;
+    background-color: darkorange;
 }
 #ismism_main_cube{
     position: absolute;
@@ -384,23 +174,22 @@
     opacity: var(--a);
 }
 #ismism_main_cube .x{
-    z-index: 1;
     position: absolute;
     left: calc(9.95rem + calc(var(--x)*2.5rem));
     top: calc(-0.65rem + calc(var(--x)*1.45rem));
     width: 0;
     height: 11.9rem;
     border-right: 0.1rem dashed black;
+    transform: skewY(30deg);
 }
 #ismism_main_cube .x p{
     position: relative;
     left:-1.5rem;
     top: -1.5rem;
     width: 2.5rem;
-    transform: skewY(30deg);
+    color: green;
 }
 #ismism_main_cube .y{
-    z-index: 1;
     position: absolute;
     left:10rem;
     top: calc(11.25rem - calc(var(--y)*3rem));
@@ -416,6 +205,7 @@
     top: 1rem;
     height: 3rem;
     text-align: center;
+    color: red;
 }
 #ismism_main_cube #x{
     z-index: 10;
@@ -482,21 +272,58 @@
     border-width: 0.3rem 1rem 0.3rem 1rem;
     border-color: transparent blue transparent transparent;
 }
-#search_box{
+#ism_info{
     position: absolute;
     left: 0.5rem;
+    right: 0.5rem;
+    top: 20rem;
+    height: calc(100% - 20rem);
+    background-color: rgb(200, 200, 200);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 3px 3px gray;
+    overflow-y: scroll;
+}
+#ism_info div{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+}
+#ism_info div p{
+    white-space: pre-wrap;
+    margin: auto;
+}
+#ism_info #ism_name{
+    margin-top: calc(-0.5rem + 4px);
+}
+#ism_info div a{
+    color: black;
+    white-space: pre-wrap;
+    margin: auto;
+}
+#ism_info #ism_name{
+    text-align: center;
+}
+#ism_info #ism_link{
+    text-decoration: none;
+}
+#search_box{
+    position: absolute;
+    left: 1rem;
     top: 1rem;
-    width: 8rem;
+    width: 7rem;
     height: 1.5rem;
+    border:solid black 0.05rem;
+    text-align: center;
 }
 #search_button{
     position: absolute;
-    left: 1.05rem;
-    top: 3.05rem;
+    left: 1rem;
+    top: 3rem;
     width: 3rem;
     height: 1.5rem;
     background-color: rgb(200, 200, 200);
-    box-sizing: border-box;
     border:solid black 0.05rem;
     text-align: center;
     display: block;
@@ -506,16 +333,189 @@
 }
 #clear_search_button{
     position: absolute;
-    left: 5.05rem;
-    top: 3.05rem;
+    left: 5rem;
+    top: 3rem;
     width: 3rem;
     height: 1.5rem;
     background-color: rgb(200, 200, 200);
-    box-sizing: border-box;
     border:solid black 0.05rem;
     text-align: center;
     display: block;
 }
 #clear_search_button:hover{
     background-color: gray;
+}
+.ismism_cube{
+    position: absolute;
+    left: 42rem;
+    right: 1rem;
+    min-width: 50rem;
+    display: flex;
+    top: calc(2rem + calc(var(--y) * 18rem));
+}
+.ismism_cube p{
+    position: absolute;
+    width: 2.5rem;
+    max-height: 3rem;
+    text-align: center;
+    word-break: normal;
+    overflow: hidden;
+    text-wrap: balance;
+}
+.ismism_cube .detail{
+    position: relative;
+    flex: auto;
+    transform: skewY(-15deg);
+}
+.ismism_cube .detail .i{
+    position: absolute;
+    left: 10.25rem;
+    top: calc(calc(var(--y)*3rem) + 1rem);
+    color: darkorange;
+}
+.ismism_cube .detail #i{
+    position: absolute;
+    left: 10rem;
+    top: 1rem;
+    width: 0;
+    height: 11rem;
+    border-right: 0.2rem dashed darkorange;
+}
+.ismism_cube .detail #i::before{
+    content: "";
+    position: absolute;
+    left: -0.2rem;
+    top: -2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 0.3rem 1rem 0.3rem;
+    border-color: transparent transparent darkorange transparent;
+}
+.ismism_cube .detail #z{
+    position: absolute;
+    left: 1rem;
+    top: 12rem;
+    width: 9rem;
+    height: 0;
+    border-bottom: 0.2rem dashed blue;
+}
+.ismism_cube .detail #z::before{
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: -0.2rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.3rem 1rem 0.3rem 1rem;
+    border-color: transparent blue transparent transparent;
+}
+.ismism_cube .detail ul{
+    position: absolute;
+    left: calc(var(--x)*2.5rem);
+}
+.ismism_cube .detail ul li{
+    position: relative;
+    list-style: none;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ismism_cube .detail ul li.searched{
+    background-color: rgb(225, 172, 39);
+}
+.ismism_cube .detail ul li.pinned{
+    background-color: rgb(17, 188, 188);
+}
+.ismism_cube .detail ul li.selected{
+    background-color: rgb(218, 73, 73);
+}
+.ismism_cube .detail ul li p{
+    color: black;
+}
+.ismism_cube .detail ul .no_data p{
+    color: rgb(130, 130, 130);
+}
+.ismism_cube .detail ul p{
+    color: blue;
+}
+.ismism_cube .block{
+    position: absolute;
+    display: flex;
+    left: 2.5rem;
+    top: 13.45rem;
+}
+.ismism_cube .block .no_data p{
+    color: rgb(68,68,68);
+}
+.ismism_cube .block div{
+    position: relative;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: gray;
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ismism_cube .block div.searched{
+    background-color: darkgoldenrod;
+}
+.ismism_cube .block div.pinned{
+    background-color: darkcyan;
+}
+.ismism_cube .block div.selected{
+    background-color: brown;
+}
+.ismism_cube .block div::after{
+    content: "";
+    position: absolute;
+    left: -0.05rem;
+    top: -1.5rem;
+    width: 2.5rem;
+    height: 1.45rem;
+    background-color: rgb(200, 200, 200);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    transform-origin: bottom;
+    transform: skewX(60deg);
+}
+.ismism_cube .block div.searched::after{
+    background-color: rgb(225, 172, 39);
+}
+.ismism_cube .block div.pinned::after{
+    background-color: rgb(17, 188, 188);
+}
+.ismism_cube .block div.selected::after{
+    background-color: rgb(218, 73, 73);
+}
+.ismism_cube .block div::before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: -2.55rem;
+    top: -0.05rem;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: rgb(170, 170, 170);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    transform-origin: right;
+    transform: skewY(30deg);
+}
+.ismism_cube .block div.searched::before{
+    background-color: rgb(201, 149, 15);
+}
+.ismism_cube .block div.pinned::before{
+    background-color: rgb(11, 167, 167);
+}
+.ismism_cube .block div.selected::before{
+    background-color: rgb(182, 53, 53);
 }
