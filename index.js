@@ -2,6 +2,7 @@ let ism_detial_list = document.getElementsByClassName("ism")
 let info_box = document.getElementById("info_box")
 let ism_data = null
 let ism_pinned = null
+let axis_color = ["red","green","blue","darkorange"]
 
 document.getElementById("ism_name").textContent = "数据正在加载中\n\n若长时间未刷新\n请检测网络后重试\n或\n强制重新加载此页面(windows快捷键 Ctrl + F5)"
 window.onscroll=()=>{
@@ -77,45 +78,48 @@ function unselectISM(ism_node){
 
 function setISMInfo(ism_node){
     let ism_tag = ism_node.getAttribute("ism_tag")
+    let ism_tag_data = ism_data[ism_tag]
+    //设置ism_name标签
     if(ism_tag.length>=1)
-        document.getElementById("ism_name").innerHTML = "<span style='color:red;border:solid black 1px'>"+ism_tag[0]+"</span>"
+        document.getElementById("ism_name").innerHTML = "<b style='color:red;border:solid black 0.05rem'>"+ism_tag[0]+"</b>"
     if(ism_tag.length>=3)
-        document.getElementById("ism_name").innerHTML += "-<span style='color:green;border:solid black 1px'>"+ism_tag[2]+"</span>"
+        document.getElementById("ism_name").innerHTML += "-<b style='color:green;border:solid black 0.05rem'>"+ism_tag[2]+"</b>"
     if(ism_tag.length>=5)
-        document.getElementById("ism_name").innerHTML += "-<span style='color:blue;border:solid black 1px'>"+ism_tag[4]+"</span>"
+        document.getElementById("ism_name").innerHTML += "-<b style='color:blue;border:solid black 0.05rem'>"+ism_tag[4]+"</b>"
     if(ism_tag.length>=7)
-        document.getElementById("ism_name").innerHTML += "-<span style='color:darkorange;border:solid black 1px'>"+ism_tag[6]+"</span>"
-    document.getElementById("ism_name").innerHTML += '\n' + ism_data[ism_tag]["ch_name"] + '\n' + ism_data[ism_tag]["en_name"]
-    let axis_list_length = ism_data[ism_tag]["axis_list"].length
+        document.getElementById("ism_name").innerHTML += "-<b style='color:darkorange;border:solid black 0.05rem'>"+ism_tag[6]+"</b>"
+    document.getElementById("ism_name").innerHTML += '\n' + "<b>" + ism_tag_data["ch_name"] + '\n' + ism_tag_data["en_name"] + "</b>"
+    //设置ism_axis标签
+    let axis_list_length = ism_tag_data["axis_list"].length
     document.getElementById("ism_axis").textContent = ""
-    for(let i=0;i<axis_list_length;i++){
-        document.getElementById("ism_axis").textContent += ism_data[ism_tag]["axis_list"][i] + '\n' 
-    }
-    let feature_list_length = ism_data[ism_tag]["feature_list"].length
+    for(let i=0;i<axis_list_length;i++)
+        document.getElementById("ism_axis").innerHTML += "<b style='color:" + axis_color[i] + "'>" + ism_tag_data["axis_list"][i].slice(0,3) + "</b>" + ism_tag_data["axis_list"][i].slice(3) + '\n' 
+    //设置ism_features标签
+    let feature_list_length = ism_tag_data["feature_list"].length
     document.getElementById("ism_features").textContent = ""
-    for(let i=0;i<feature_list_length;i++){
-        document.getElementById("ism_features").textContent += ism_data[ism_tag]["feature_list"][i] + '\n'
-    }
+    for(let i=0;i<feature_list_length;i++)
+        document.getElementById("ism_features").innerHTML += "<b>" + ism_tag_data["feature_list"][i].slice(0,1) + "</b>" + ism_tag_data["feature_list"][i].slice(1) + '\n'
+    //设置ism_counterpart标签
     document.getElementById("ism_counterpart").textContent = ""
-    if(ism_data[ism_tag]["figure"]!="")
-        document.getElementById("ism_counterpart").textContent += ism_data[ism_tag]["figure"] + '\n'
-    if(ism_data[ism_tag]["guise"]!="")
-        document.getElementById("ism_counterpart").textContent += ism_data[ism_tag]["guise"] + '\n'
-    if(ism_data[ism_tag]["group"]!="")
-        document.getElementById("ism_counterpart").textContent += ism_data[ism_tag]["group"] + '\n'
-    document.getElementById("ism_link").textContent = ism_data[ism_tag]["link"]
-    document.getElementById("ism_link").innerHTML = document.getElementById("ism_link").innerHTML.replace(ism_data[ism_tag]["link"].split('：')[1],"<span style='text-decoration:underline;'>$&</span>")
-    document.getElementById("ism_link").href = ism_data[ism_tag]["link"].split('：')[1]
+    if(ism_tag_data["figure"]!=""){
+        let split_index = ism_tag_data["figure"].indexOf('：')
+        document.getElementById("ism_counterpart").innerHTML += "<b>" + ism_tag_data["figure"].slice(0,split_index) + "</b>" + ism_tag_data["figure"].slice(split_index) + '\n'
+    }
+    if(ism_tag_data["guise"]!=""){
+        let split_index = ism_tag_data["guise"].indexOf('：')
+        document.getElementById("ism_counterpart").innerHTML += "<b>" + ism_tag_data["guise"].slice(0,split_index) + "</b>" + ism_tag_data["guise"].slice(split_index) + '\n'
+    }
+    if(ism_tag_data["group"]!=""){
+        let split_index = ism_tag_data["group"].indexOf('：')
+        document.getElementById("ism_counterpart").innerHTML += "<b>" + ism_tag_data["group"].slice(0,split_index) + "</b>" + ism_tag_data["group"].slice(split_index) + '\n'
+    }
+    //设置ism_link标签
+    let split_index = ism_tag_data["link"].indexOf('：')
+    document.getElementById("ism_link").innerHTML = "<b>" + ism_tag_data["link"].slice(0,split_index) + "</b>：<i style='text-decoration:underline'>" + ism_tag_data["link"].slice(split_index+1) + "</i>"
+    document.getElementById("ism_link").href = ism_tag_data["link"].slice(split_index+1)
+    //设置搜索关键字加背景色
     if(document.getElementById("search_box").value!="")
         renewInfo(document.getElementById("search_box").value)
-}
-
-function removeISMInfo(){
-    document.getElementById("ism_name").textContent = ""
-    document.getElementById("ism_axis").textContent = ""
-    document.getElementById("ism_features").textContent = ""
-    document.getElementById("ism_counterpart").textContent = ""
-    document.getElementById("ism_link").textContent = ""
 }
 
 function renewInfo(target){
@@ -206,19 +210,22 @@ function searchISM(target){
 }
 
 function showIntroduction(){
-    document.getElementById("ism_name").textContent = ism_data["introduction"].ismismcube
-    let introduction_length = ism_data["introduction"]["ismismcube_introduction"].length
-    document.getElementById("ism_axis").textContent = '\t'
-    for(let i=0;i<introduction_length;i++){
-        document.getElementById("ism_axis").textContent += ism_data["introduction"]["ismismcube_introduction"][i]
-    }
-    document.getElementById("ism_features").textContent = ism_data["introduction"].ismism
-    introduction_length = ism_data["introduction"]["ismism_introduction"].length
-    document.getElementById("ism_counterpart").textContent = '\t'
-    for(let i=0;i<introduction_length;i++){
-        document.getElementById("ism_counterpart").textContent += ism_data["introduction"]["ismism_introduction"][i]
-    }
-    document.getElementById("ism_link").textContent = ism_data["introduction"]["warning"] + '\n' + ism_data["introduction"]["group"] + '\n' + ism_data["introduction"]["link"]
-    document.getElementById("ism_link").innerHTML = document.getElementById("ism_link").innerHTML.replace(ism_data["introduction"]["link"].split('：')[1],"<span style='text-decoration:underline;'>$&</span>")
-    document.getElementById("ism_link").href = ism_data["introduction"]["link"].split('：')[1]
+    let introduction = ism_data["introduction"]
+    //设置ism_name标签
+    document.getElementById("ism_name").innerHTML = introduction.ismismcube
+    //设置ism_axis标签
+    let introduction_length = introduction["ismismcube_introduction"].length
+    document.getElementById("ism_axis").innerHTML = '\t'
+    for(let i=0;i<introduction_length;i++)
+        document.getElementById("ism_axis").innerHTML += introduction["ismismcube_introduction"][i]
+    //设置ism_features标签
+    document.getElementById("ism_features").innerHTML = introduction.ismism
+    //设置ism_counterpart标签
+    introduction_length = introduction["ismism_introduction"].length
+    document.getElementById("ism_counterpart").innerHTML = '\t'
+    for(let i=0;i<introduction_length;i++)
+        document.getElementById("ism_counterpart").innerHTML += introduction["ismism_introduction"][i]
+    //设置ism_link标签
+    document.getElementById("ism_link").innerHTML = introduction["warning"] + '\n' + introduction["group"] + '\n' + introduction["link"]
+    document.getElementById("ism_link").href = ""
 }

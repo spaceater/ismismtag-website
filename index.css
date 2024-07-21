@@ -20,7 +20,7 @@
 }
 #info_box #axis_label p{
     position: relative;
-    left: 2rem;
+    left: 3rem;
     line-height: 1.5rem;
 }
 #info_box #axis_label p::before{
@@ -295,7 +295,7 @@
     margin: auto;
 }
 #ism_info #ism_name{
-    margin-top: calc(-0.5rem + 4px);
+    margin-top: -0.25rem;
 }
 #ism_info div a{
     color: black;
@@ -346,6 +346,7 @@
     background-color: gray;
 }
 .ismism_cube{
+    image-rendering: optimizeQuality;
     position: absolute;
     left: 42rem;
     right: 1rem;
