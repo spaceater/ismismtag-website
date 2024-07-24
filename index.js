@@ -5,6 +5,7 @@ let ism_pinned = null
 let axis_color = ["red","green","blue","darkorange"]
 
 document.getElementById("ism_name").textContent = "数据正在加载中\n\n若长时间未刷新\n请检测网络后重试\n或\n强制重新加载此页面(windows快捷键 Ctrl + F5)"
+document.getElementById("size_indicator").textContent = "↑\n≡\n↓"
 window.onscroll=()=>{
     info_box.style.left = -window.scrollX + "px"
 }
@@ -28,10 +29,12 @@ xhr.onload = ()=>{
 	        ism_node.addEventListener("mouseenter",function(){selectISM(ism_node)})
 	        ism_node.addEventListener("mouseleave",function(){unselectISM(ism_node)})
             ism_node.addEventListener("click",function(){pinISM(ism_node)})
-            document.getElementById("search_button").addEventListener("click",function(){searchISM(document.getElementById("search_box").value)})
-            document.getElementById("clear_search_button").addEventListener("click",function(){searchISM(""),document.getElementById("search_box").value=""})
-            showIntroduction()
         }
+        showIntroduction()
+        document.getElementById("search_text").addEventListener("click",function(){searchISM(document.getElementById("search_text").value)})
+        document.getElementById("reset_button").addEventListener("click",function(){document.getElementById("search_text").value="",searchISM("")})
+        document.getElementById("size_indicator").addEventListener("click",function(){setOverview(this)})
+        document.getElementById("size_indicator").addEventListener("mousedown",function(){setIndicatorActive()})
     }
     else{
         console.log("ism.json load failed")
@@ -91,35 +94,35 @@ function setISMInfo(ism_node){
     document.getElementById("ism_name").innerHTML += '\n' + "<b>" + ism_tag_data["ch_name"] + '\n' + ism_tag_data["en_name"] + "</b>"
     //设置ism_axis标签
     let axis_list_length = ism_tag_data["axis_list"].length
-    document.getElementById("ism_axis").textContent = ""
+    document.getElementById("ism_axis").innerHTML = ""
     for(let i=0;i<axis_list_length;i++)
         document.getElementById("ism_axis").innerHTML += "<b style='color:" + axis_color[i] + "'>" + ism_tag_data["axis_list"][i].slice(0,3) + "</b>" + ism_tag_data["axis_list"][i].slice(3) + '\n' 
     //设置ism_features标签
     let feature_list_length = ism_tag_data["feature_list"].length
-    document.getElementById("ism_features").textContent = ""
+    document.getElementById("ism_features").innerHTML = ""
     for(let i=0;i<feature_list_length;i++)
         document.getElementById("ism_features").innerHTML += "<b>" + ism_tag_data["feature_list"][i].slice(0,1) + "</b>" + ism_tag_data["feature_list"][i].slice(1) + '\n'
-    //设置ism_counterpart标签
-    document.getElementById("ism_counterpart").textContent = ""
+    //设置ism_related标签
+    document.getElementById("ism_related").innerHTML = ""
     if(ism_tag_data["figure"]!=""){
         let split_index = ism_tag_data["figure"].indexOf('：')
-        document.getElementById("ism_counterpart").innerHTML += "<b>" + ism_tag_data["figure"].slice(0,split_index) + "</b>" + ism_tag_data["figure"].slice(split_index) + '\n'
+        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["figure"].slice(0,split_index) + "</b>" + ism_tag_data["figure"].slice(split_index) + '\n'
     }
     if(ism_tag_data["guise"]!=""){
         let split_index = ism_tag_data["guise"].indexOf('：')
-        document.getElementById("ism_counterpart").innerHTML += "<b>" + ism_tag_data["guise"].slice(0,split_index) + "</b>" + ism_tag_data["guise"].slice(split_index) + '\n'
+        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["guise"].slice(0,split_index) + "</b>" + ism_tag_data["guise"].slice(split_index) + '\n'
     }
     if(ism_tag_data["group"]!=""){
         let split_index = ism_tag_data["group"].indexOf('：')
-        document.getElementById("ism_counterpart").innerHTML += "<b>" + ism_tag_data["group"].slice(0,split_index) + "</b>" + ism_tag_data["group"].slice(split_index) + '\n'
+        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["group"].slice(0,split_index) + "</b>" + ism_tag_data["group"].slice(split_index) + '\n'
     }
-    //设置ism_link标签
-    let split_index = ism_tag_data["link"].indexOf('：')
-    document.getElementById("ism_link").innerHTML = "<b>" + ism_tag_data["link"].slice(0,split_index) + "</b>：<i style='text-decoration:underline'>" + ism_tag_data["link"].slice(split_index+1) + "</i>"
-    document.getElementById("ism_link").href = ism_tag_data["link"].slice(split_index+1)
+    if(ism_tag_data["link"]!=""){
+        let split_index = ism_tag_data["link"].indexOf('：')
+        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["link"].slice(0,split_index) + "</b>：<a href='" + ism_tag_data["link"].slice(split_index+1) + "' target='_blank'><u><i>" + ism_tag_data["link"].slice(split_index+1) + "</i></u>"
+    }
     //设置搜索关键字加背景色
-    if(document.getElementById("search_box").value!="")
-        renewInfo(document.getElementById("search_box").value)
+    if(document.getElementById("search_text").value!="")
+        renewInfo(document.getElementById("search_text").value)
 }
 
 function renewInfo(target){
@@ -209,23 +212,64 @@ function searchISM(target){
     showIntroduction()
 }
 
+function setOverview(){
+    if(document.getElementById("left_part").offsetLeft<0){
+            document.getElementById("left_part").style.left = "0"
+            document.getElementById("right_part").style.left = "42rem"
+    }
+    else{
+        document.getElementById("left_part").style.left = "-40rem"
+        document.getElementById("right_part").style.left = "2rem"
+    }
+}
+
 function showIntroduction(){
     let introduction = ism_data["introduction"]
     //设置ism_name标签
-    document.getElementById("ism_name").innerHTML = introduction.ismismcube
+    document.getElementById("ism_name").innerHTML = introduction["ismismcube"]
     //设置ism_axis标签
     let introduction_length = introduction["ismismcube_introduction"].length
-    document.getElementById("ism_axis").innerHTML = '\t'
+    document.getElementById("ism_axis").innerHTML = ""
     for(let i=0;i<introduction_length;i++)
         document.getElementById("ism_axis").innerHTML += introduction["ismismcube_introduction"][i]
     //设置ism_features标签
     document.getElementById("ism_features").innerHTML = introduction.ismism
-    //设置ism_counterpart标签
+    //设置ism_related标签
     introduction_length = introduction["ismism_introduction"].length
-    document.getElementById("ism_counterpart").innerHTML = '\t'
+    document.getElementById("ism_related").innerHTML = ""
     for(let i=0;i<introduction_length;i++)
-        document.getElementById("ism_counterpart").innerHTML += introduction["ismism_introduction"][i]
-    //设置ism_link标签
-    document.getElementById("ism_link").innerHTML = introduction["warning"] + '\n' + introduction["group"] + '\n' + introduction["link"]
-    document.getElementById("ism_link").href = ""
+        document.getElementById("ism_related").innerHTML += introduction["ismism_introduction"][i]
+    document.getElementById("ism_related").innerHTML += '\n\n' + introduction["warning"] + '\n' + introduction["group"] + '\n' + introduction["link"]
+}
+
+function setIndicatorActive(){
+    document.getElementById("size_indicator").style.backgroundColor = "gray"
+    document.body.onselectstart=()=>{return false}
+    window.addEventListener("mousemove",changeSize)
+    window.addEventListener("mouseup",closeIndicatorr)
+}
+
+function changeSize(event){
+    let value = event.clientY
+    let max = document.getElementById("background_line").offsetHeight
+    if(value<0)
+        value=0
+    else if(value>max)
+        value=max
+    document.getElementById("size_indicator").style.top = value + "px"
+    let size_rate = 1 + value / max * 2
+    if(size_rate >= 1.2){
+        size_rate -= 0.2
+        document.getElementById("ismism_cube_box").style.cssText = "transform: scale(" + size_rate + ")"       
+    }
+    else{
+        document.getElementById("ismism_cube_box").style.cssText = "transform: scale(1)"       
+    }
+}
+
+function closeIndicatorr(){
+    document.getElementById("size_indicator").style.backgroundColor = "rgb(200,200,200)"
+    document.body.onselectstart=()=>{return true}
+    window.removeEventListener("mousemove",changeSize)
+    window.removeEventListener("mouseup",closeIndicatorr)
 }
