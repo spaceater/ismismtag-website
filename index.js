@@ -5,7 +5,7 @@ let ism_pinned = null
 let axis_color = ["red","green","blue","darkorange"]
 
 document.getElementById("ism_name").textContent = "数据正在加载中\n\n若长时间未刷新\n请检测网络后重试\n或\n强制重新加载此页面(windows快捷键 Ctrl + F5)"
-document.getElementById("size_indicator").textContent = "↑\n≡\n↓"
+document.getElementById("size_indicator").textContent = "△\n≡\n▽"
 window.onscroll=()=>{
     info_box.style.left = -window.scrollX + "px"
 }
@@ -31,7 +31,7 @@ xhr.onload = ()=>{
             ism_node.addEventListener("click",function(){pinISM(ism_node)})
         }
         showIntroduction()
-        document.getElementById("search_text").addEventListener("click",function(){searchISM(document.getElementById("search_text").value)})
+        document.getElementById("search_button").addEventListener("click",function(){searchISM(document.getElementById("search_text").value)})
         document.getElementById("reset_button").addEventListener("click",function(){document.getElementById("search_text").value="",searchISM("")})
         document.getElementById("size_indicator").addEventListener("click",function(){setOverview(this)})
         document.getElementById("size_indicator").addEventListener("mousedown",function(){setIndicatorActive()})
@@ -130,7 +130,7 @@ function renewInfo(target){
     document.getElementById("ism_name").innerHTML = document.getElementById("ism_name").innerHTML.replace(reg,"<span style='background-color:rgb(225, 172, 39);'>$&</span>")
     document.getElementById("ism_axis").innerHTML = document.getElementById("ism_axis").innerHTML.replace(reg,"<span style='background-color:rgb(225, 172, 39);'>$&</span>")
     document.getElementById("ism_features").innerHTML = document.getElementById("ism_features").innerHTML.replace(reg,"<span style='background-color:rgb(225, 172, 39);'>$&</span>")
-    document.getElementById("ism_counterpart").innerHTML = document.getElementById("ism_counterpart").innerHTML.replace(reg,"<span style='background-color:rgb(225, 172, 39);'>$&</span>")
+    document.getElementById("ism_related").innerHTML = document.getElementById("ism_related").innerHTML.replace(reg,"<span style='background-color:rgb(225, 172, 39);'>$&</span>")
 }
 
 function pinISM(ism_node){
@@ -179,16 +179,17 @@ function searchISM(target){
         for(let i=0;i<ism_data_list_length;i++){
             let ism_node = ism_detial_list[i]
             let ism_tag = ism_node.getAttribute("ism_tag")
-            if(ism_data[ism_tag]["ch_name"].search(reg)!=-1 || ism_data[ism_tag]["en_name"].search(reg)!=-1 || ism_data[ism_tag]["figure"].search(reg)!=-1 || ism_data[ism_tag]["guise"].search(reg)!=-1 || ism_data[ism_tag]["group"].search(reg)!=-1){
+            let ism_tag_data = ism_data[ism_tag]
+            if(ism_tag_data["ch_name"].search(reg)!=-1 || ism_tag_data["en_name"].search(reg)!=-1 || ism_tag_data["figure"].search(reg)!=-1 || ism_tag_data["guise"].search(reg)!=-1 || ism_tag_data["group"].search(reg)!=-1){
                 ism_node.classList.add("searched")
                 if(ism_tag.length==3){
                     document.getElementById(ism_tag).classList.add("searched")
                 }
             }
             else{
-                let axis_list_length = ism_data[ism_tag]["axis_list"].length
+                let axis_list_length = ism_tag_data["axis_list"].length
                 for(let i=0;i<axis_list_length;i++){
-                    if(ism_data[ism_tag]["axis_list"][i].search(reg)!=-1){
+                    if(ism_tag_data["axis_list"][i].search(reg)!=-1){
                         ism_node.classList.add("searched")
                         if(ism_tag.length==3){
                             document.getElementById(ism_tag).classList.add("searched")
@@ -196,9 +197,9 @@ function searchISM(target){
                         break
                     } 
                 }
-                let feature_list_length = ism_data[ism_tag]["feature_list"].length
+                let feature_list_length = ism_tag_data["feature_list"].length
                 for(let i=0;i<feature_list_length;i++){
-                    if(ism_data[ism_tag]["feature_list"][i].search(reg)!=-1){
+                    if(ism_tag_data["feature_list"][i].search(reg)!=-1){
                         ism_node.classList.add("searched")
                         if(ism_tag.length==3){
                             document.getElementById(ism_tag).classList.add("searched")
