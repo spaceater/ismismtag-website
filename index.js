@@ -116,7 +116,7 @@ function setISMInfo(ism_node){
     }
     if(ism_tag_data["link"]!=""){
         let split_index = ism_tag_data["link"].indexOf('：')
-        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["link"].slice(0,split_index) + "</b>：<a href='" + ism_tag_data["link"].slice(split_index+1) + "' target='_blank'><u><i>" + ism_tag_data["link"].slice(split_index+1) + "</i></u>"
+        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["link"].slice(0,split_index) + "</b>：<a href='" + ism_tag_data["link"].slice(split_index+1) + "' target='_blank'>" + ism_tag_data["link"].slice(split_index+1) + "</a>"
     }
     //设置搜索关键字加背景色
     if(document.getElementById("search_text").value!="")
@@ -211,17 +211,6 @@ function searchISM(target){
     showIntroduction()
 }
 
-function setOverview(){
-    if(document.getElementById("left_part").offsetLeft<0){
-            document.getElementById("left_part").style.left = "0"
-            document.getElementById("right_part").style.left = "42rem"
-    }
-    else{
-        document.getElementById("left_part").style.left = "-40rem"
-        document.getElementById("right_part").style.left = "2rem"
-    }
-}
-
 function showIntroduction(){
     let introduction = ism_data["introduction"]
     //设置ism_name标签
@@ -244,11 +233,29 @@ function showIntroduction(){
 function setIndicatorActive(){
     document.getElementById("size_indicator").style.backgroundColor = "gray"
     document.body.onselectstart=()=>{return false}
+    window.addEventListener("mouseup",setOverview)
     window.addEventListener("mousemove",changeSize)
     window.addEventListener("mouseup",closeIndicatorr)
 }
 
+function setOverview(){
+    document.getElementById("size_indicator").style.backgroundColor = "rgb(200,200,200)"
+    document.body.onselectstart=()=>{return true}
+    window.removeEventListener("mouseup",setOverview)
+    window.removeEventListener("mousemove",changeSize)
+    window.removeEventListener("mouseup",closeIndicatorr)
+    if(document.getElementById("left_part").offsetLeft<0){
+        document.getElementById("left_part").style.cssText = "animation: left_open 1s ease-in-out forwards;"
+        document.getElementById("right_part").style.cssText = "animation: right_open 1s ease-in-out forwards;"
+    }
+    else{
+        document.getElementById("left_part").style.cssText = "animation: left_close 1s ease-in-out forwards;"
+        document.getElementById("right_part").style.cssText = "animation: right_close 1s ease-in-out forwards;"
+    }
+}
+
 function changeSize(event){
+    window.removeEventListener("mouseup",setOverview)
     let value = event.clientY
     let max = document.getElementById("background_line").offsetHeight
     if(value<0)
@@ -269,6 +276,7 @@ function changeSize(event){
 function closeIndicatorr(){
     document.getElementById("size_indicator").style.backgroundColor = "rgb(200,200,200)"
     document.body.onselectstart=()=>{return true}
+    window.removeEventListener("mouseup",setOverview)
     window.removeEventListener("mousemove",changeSize)
     window.removeEventListener("mouseup",closeIndicatorr)
 }
