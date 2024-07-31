@@ -5,7 +5,6 @@ let ism_pinned = null
 let axis_color = ["red","green","blue","darkorange"]
 
 document.getElementById("ism_name").textContent = "数据正在加载中\n\n若长时间未刷新\n请检测网络后重试\n或\n强制重新加载此页面(windows快捷键 Ctrl + F5)"
-document.getElementById("size_indicator").textContent = "△\n≡\n▽"
 window.onscroll=()=>{
     info_box.style.left = -window.scrollX + "px"
 }
@@ -33,7 +32,6 @@ xhr.onload = ()=>{
         showIntroduction()
         document.getElementById("search_button").addEventListener("click",function(){searchISM(document.getElementById("search_text").value)})
         document.getElementById("reset_button").addEventListener("click",function(){document.getElementById("search_text").value="",searchISM("")})
-        document.getElementById("size_indicator").addEventListener("click",function(){setOverview(this)})
         document.getElementById("size_indicator").addEventListener("mousedown",function(){setIndicatorActive()})
     }
     else{
