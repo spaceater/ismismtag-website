@@ -40,6 +40,7 @@ xhr.onload = ()=>{
     }
 }
 
+
 function selectISM(ism_node){    
     setISMInfo(ism_node)
     let ism_tag = ism_node.getAttribute("ism_tag")
@@ -94,29 +95,25 @@ function setISMInfo(ism_node){
     let axis_list_length = ism_tag_data["axis_list"].length
     document.getElementById("ism_axis").innerHTML = ""
     for(let i=0;i<axis_list_length;i++)
-        document.getElementById("ism_axis").innerHTML += "<b style='color:" + axis_color[i] + "'>" + ism_tag_data["axis_list"][i].slice(0,3) + "</b>" + ism_tag_data["axis_list"][i].slice(3) + '\n' 
+        document.getElementById("ism_axis").innerHTML += "<b style='color:" + axis_color[i] + "'>" + ism_tag_data["axis_list"][i].slice(0,3) + "</b><b style='border:solid black 0.05rem'>" + ism_tag_data["axis_list"][i].slice(3,4) + "</b><b>" + ism_tag_data["axis_list"][i].slice(4,5) + "</b>" + ism_tag_data["axis_list"][i].slice(5) + '\n' 
     //设置ism_features标签
     let feature_list_length = ism_tag_data["feature_list"].length
     document.getElementById("ism_features").innerHTML = ""
-    for(let i=0;i<feature_list_length;i++)
-        document.getElementById("ism_features").innerHTML += "<b>" + ism_tag_data["feature_list"][i].slice(0,1) + "</b>" + ism_tag_data["feature_list"][i].slice(1) + '\n'
-    //设置ism_related标签
+    for(let i=0;i<feature_list_length;i++){
+        if(ism_tag_data["feature_list"][i]!="")
+            document.getElementById("ism_features").innerHTML += "<b>" + ism_tag_data["feature_list"][i].slice(0,1) + "</b>" + ism_tag_data["feature_list"][i].slice(1) + '\n'
+    }
+        //设置ism_related标签
+    let related_list_length = ism_tag_data["related_list"].length
     document.getElementById("ism_related").innerHTML = ""
-    if(ism_tag_data["figure"]!=""){
-        let split_index = ism_tag_data["figure"].indexOf('：')
-        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["figure"].slice(0,split_index) + "</b>" + ism_tag_data["figure"].slice(split_index) + '\n'
-    }
-    if(ism_tag_data["guise"]!=""){
-        let split_index = ism_tag_data["guise"].indexOf('：')
-        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["guise"].slice(0,split_index) + "</b>" + ism_tag_data["guise"].slice(split_index) + '\n'
-    }
-    if(ism_tag_data["group"]!=""){
-        let split_index = ism_tag_data["group"].indexOf('：')
-        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["group"].slice(0,split_index) + "</b>" + ism_tag_data["group"].slice(split_index) + '\n'
-    }
-    if(ism_tag_data["link"]!=""){
-        let split_index = ism_tag_data["link"].indexOf('：')
-        document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["link"].slice(0,split_index) + "</b>：<a href='" + ism_tag_data["link"].slice(split_index+1) + "' target='_blank'>" + ism_tag_data["link"].slice(split_index+1) + "</a>"
+    for(let i=0;i<related_list_length;i++){
+        if(ism_tag_data["related_list"][i]!=""){
+            let split_index = ism_tag_data["related_list"][i].indexOf('：')
+            if(ism_tag_data["related_list"][i].search("http")==-1)
+                document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["related_list"][i].slice(0,split_index+1) + "</b>" + ism_tag_data["related_list"][i].slice(split_index+1) + '\n'
+            else
+                document.getElementById("ism_related").innerHTML += "<b>" + ism_tag_data["related_list"][i].slice(0,split_index+1) + "</b><a href='" + ism_tag_data["related_list"][i].slice(split_index+1) + "' target='_blank'>" + ism_tag_data["related_list"][i].slice(split_index+1) + '</a>\n'
+        }    
     }
     //设置搜索关键字加背景色
     if(document.getElementById("search_text").value!="")
