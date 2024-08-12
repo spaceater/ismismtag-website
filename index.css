@@ -216,10 +216,49 @@ a{
 }
 #left_part #ismism_main_cube .y p{
     position: absolute;
-    left:10.25rem;
+    left:12.75rem;
     top: 0.75rem;
     width: 5rem;
     color: red;
+}
+#left_part #ismism_main_cube #ontological_structure{
+    position: absolute;   
+    left: 20rem;
+    top: 5.8rem;
+    transform: skewY(30deg);
+}
+#left_part #ismism_main_cube #ontological_structure li{
+    position: relative;
+    list-style: none;
+    width: 2.5rem;
+    height: 3rem;
+    background-color: rgb(170, 170, 170);
+    box-sizing: border-box;
+    border:solid black 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left_part #ismism_main_cube #ontological_structure li.searched{
+    background-color: rgb(201, 149, 15);
+}
+#left_part #ismism_main_cube #ontological_structure li.pinned{
+    background-color: rgb(11, 167, 167);
+}
+#left_part #ismism_main_cube #ontological_structure li.selected{
+    background-color: rgb(182, 53, 53);
+}
+#left_part #ismism_main_cube #ontological_structure li p{
+    position: absolute;
+    width: 2.5rem;
+    max-height: 3rem;
+    text-align: center;
+    word-break: normal;
+    overflow: hidden;
+    text-wrap: balance;
+}
+#left_part #ismism_main_cube #ontological_structure li.no_data p{
+    color: rgb(68,68,68);
 }
 #left_part #ismism_main_cube #x{
     z-index: 10;
@@ -313,7 +352,7 @@ a{
     position: absolute;
     left: 0.5rem;
     right: 0.5rem;
-    top: 20rem;
+    top: 19.5rem;
     height: calc(100% - 20rem);
     background-color: rgb(200, 200, 200);
     border-radius: 1rem;

@@ -10,7 +10,7 @@
 			"\n\t<b>①</b>将鼠标移动到显示有名称方块上，可以查看对应主义的主要内容，并附有相关视频链接，此时该方块及其下属的分支会标注为<b style='color:rgb(182,53,53)'>红色</b>",
 			"\n\t<b>②</b>鼠标左键点击显示有名称方块，可以锁定该主义，此时该方块及其下属的分支会标注为<b style='color:darkcyan'>青色</b>",
 			"\n\t<b>③</b>在左上角检索栏键入检索词，点击检索按钮进行检索，包含检索词的主义会标注为<b style='color:rgb(225,172,39)'>黄色</b>，对应内容的字体背景也会标注为<span style='background-color:rgb(225,172,39)'>黄色</span>，点击重置按钮清除检索结果",
-			"\n\t<b>④</b>滑动图例右侧的滑动块，可以调整右侧方块尺寸，点击此滑块可以收起左侧视窗",
+			"\n\t<b>④</b>滑动图例右侧的滑动块，可以调整右侧方块尺寸，点击此滑块可以收起左侧视窗（此功能可能在移动端失效）",
 			"\n\t<b>⑤</b>名称字体为<b style='color:rgb(130,130,130)'>灰色</b>的主义暂未进行总结，欢迎持续关注，最新内容将与视频同步更新"],
 		"ismism":"<b>什么是<i>主义主义</i>？</b>",
 		"ismism_introduction":[
@@ -28,12 +28,23 @@
 			"\n\t<b>4</b>：表示虚无、不可能性、内在不一致性、开放性、一种敞开的运动、未知",
 			"\n在填入数字时，在第一格<b>场域</b>中填入的数字是决定性的，其中：",
 			"\n\t<b>1</b>：<b>形而下学</b>/<b>实在论</b>，不反思，场域秩序的统治",
-			"\n\t<b>2</b>：<b>形而上学</b>，不彻底的反思，场域的二重化、冲突欲对立",
+			"\n\t<b>2</b>：<b>形而上学</b>，不彻底的反思，场域的二重化、冲突与对立",
 			"\n\t<b>3</b>：<b>观念论</b>，彻底的反思，场域的中心化",
 			"\n\t<b>4</b>：<b>实践</b>，反思的失败，场域的敞开"],
 		"warning":"<span style='color:rgb(200,50,50)'>对本网站的制作仅出于爱好，并未通过其进行任何牟利行为，如刘思墨本人对此感到冒犯，请联系删除</span>",
 		"group":"本网站制作组的QQ交流群：664505145",
 		"link":"本网站制作组的B站账号链接：<a href='https://space.bilibili.com/23191782' target='_blank'>https://b23.tv/ZSur3zx</a>"},
+	"1":{
+		"ch_name":"实在论/形而下学",
+		"en_name":"Realism/Subphysics",
+		"axis_list":[
+			"场域论1：实在的世界"],
+		"feature_list":[
+			"①场域论闭合，不反思日常生活中被作为背景的秩序",
+			"②认为拟制的符号学框架是真实存在的（“坐标系真的存在！”）",
+			"③现代普通人的基本思想配置，易受各种意识形态的欺骗与鼓动"],
+		"related_list":[
+			"视频版总结：https://www.bilibili.com/video/BV1JT4y1K7dp"]},
 	"1-1":{
 		"ch_name":"科学实在论",
 		"en_name":"Scientific Realism",
@@ -1401,6 +1412,17 @@
 			"意识形态代表物：《疾速追杀》、《V字仇杀队》",
 			"意识形态捕获群体：神风特攻队",
 			"原视频链接：https://www.bilibili.com/video/BV1tz4y1177m"]},
+	"2":{
+		"ch_name":"形而上学",
+		"en_name":"Metaphysics",
+		"axis_list":[
+			"场域论2：场域的二重化"],
+		"feature_list":[
+			"①背景性场域的一部分成为可被主体用思维切中并用符号系统把握的符号秩序（如逻辑、命运），另一部分不符号化，成为符号系统永远无法把握到的“剩余”，此二者的对立是形而上学的核心对立",
+			"②认为主体只是在两者之间进行居间调和的静态、僵死、游离于二者之外的“认识者”，终极背景性秩序对场域的开辟以及场域的二重化是自动发生的，与主体无关",
+			"③比实在论有余，考虑了场域的分裂，比观念论不足，没有考虑到主体性的力量"],
+		"related_list":[
+			"原视频链接：https://www.bilibili.com/video/BV19A411K7qX"]},
 	"2-1":{
 		"ch_name":"在场形而上学",
 		"en_name":"Metaphysics of Presence",
@@ -1724,39 +1746,37 @@
 			"原视频链接：https://www.bilibili.com/video/BV1ZX4y137kR"]},
 	"2-2":{
 		"ch_name":"辩证形而上学",
-		"en_name":"",
+		"en_name":"Dialectical Metaphysics",
 		"axis_list":[
-			"场域论2",
-			"目的论2"],
+			"场域论2：时间（历时性）与空间（共时性）的二分",
+			"本体论2：否定性存在与肯定性存在的对立"],
 		"feature_list":[
-			"",
-			"",
-			"",
-			""],
+			"①否定性存在并不是不存在，而是主体使用了否定性的能力，建构出一个虚构的存在（Fiction），并通过这个虚构的纬度产生效果（比如通过虚构的寓言故事可以阐明真切的道理），现实正是通过虚构的方式结构起来",
+			"②时间就是这样一种否定性存在，只有时间被花费了，主体才能感受到时间的存在，所以时间总是被体验为来不及、催人跑，除了这种被体验时间的时间外，不存在一个公允的刻度化的时间"],
 		"related_list":[
-			"",
 			"原视频链接：https://www.bilibili.com/video/BV1wU4y1Y7kJ"]},
 	"2-2-1":{
 		"ch_name":"无限主义",
-		"en_name":"",
+		"en_name":"Infinitism",
 		"axis_list":[
-			"场域论2",
-			"目的论2",
-			"认识论1"],
+			"场域论2：时间与空间的对立",
+			"本体论2：业力（时间性的连结力量）（Karma）与无（去主体化、去时间化的存在状态）（Void）的对立",
+			"认识论1：各种法（dharma）"],
 		"feature_list":[
-			"",
-			"",
-			"",
-			""],
+			"①时间是优先于空间的，庸人以空间性把握世界，圣人以时间性把握世界，以第一人称将世界把握为过程性、事件性、时态性的",
+			"②人不能在瞬间就白嫖在场性，空间的广延需要耗费时间才能被感受到，把空间性体验化约为时间性体验，消解了在场性",
+			"③万物的每一刹那（Kṣaṇa）都是静态的切片，其本身是无法被体验为存在的，需要依靠业力（Karma）网络才能相互连结起来，被主体化地体验",
+			"④业力是一种拟质，业力通过不同的法（dharma）使得刹那（Kṣaṇa）相互连结，但是对各种法的分类学是天真、粗糙的，其中包含了一个前反思的伦理学大他者的维度"],
 		"related_list":[
-			"",
+			"思想史代表人物：摩诃毗罗（大雄）、乔达摩悉达多（释迦牟尼）、阿周陀那（龙树）",
+			"形而上学对应宗教：原始佛教、耆那教",
 			"原视频链接：https://www.bilibili.com/video/BV1TK4y1m7BH"]},
 	"2-2-1-1":{
 		"ch_name":"分子业力学",
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论1",
 			"目的论1"],
 		"feature_list":[
@@ -1772,7 +1792,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论1",
 			"目的论2"],
 		"feature_list":[
@@ -1788,7 +1808,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论1",
 			"目的论3"],
 		"feature_list":[
@@ -1804,7 +1824,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论1",
 			"目的论4"],
 		"feature_list":[
@@ -1820,7 +1840,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论2"],
 		"feature_list":[
 			"",
@@ -1835,7 +1855,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论2",
 			"目的论1"],
 		"feature_list":[
@@ -1851,7 +1871,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论2",
 			"目的论2"],
 		"feature_list":[
@@ -1867,7 +1887,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论2",
 			"目的论3"],
 		"feature_list":[
@@ -1883,7 +1903,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论2",
 			"目的论4"],
 		"feature_list":[
@@ -1899,7 +1919,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论3"],
 		"feature_list":[
 			"",
@@ -1914,7 +1934,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论3",
 			"目的论1"],
 		"feature_list":[
@@ -1930,7 +1950,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论3",
 			"目的论2"],
 		"feature_list":[
@@ -1946,7 +1966,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论3",
 			"目的论3"],
 		"feature_list":[
@@ -1962,7 +1982,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论3",
 			"目的论4"],
 		"feature_list":[
@@ -1978,7 +1998,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论4"],
 		"feature_list":[
 			"",
@@ -1993,7 +2013,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论4",
 			"目的论1"],
 		"feature_list":[
@@ -2009,7 +2029,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论4",
 			"目的论2"],
 		"feature_list":[
@@ -2025,7 +2045,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论4",
 			"目的论3"],
 		"feature_list":[
@@ -2041,7 +2061,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论2",
+			"本体论2",
 			"认识论4",
 			"目的论4"],
 		"feature_list":[
@@ -2057,7 +2077,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3"],
+			"本体论3"],
 		"feature_list":[
 			"",
 			"",
@@ -2071,7 +2091,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论1"],
 		"feature_list":[
 			"",
@@ -2086,7 +2106,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论1",
 			"目的论1"],
 		"feature_list":[
@@ -2102,7 +2122,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论1",
 			"目的论2"],
 		"feature_list":[
@@ -2118,7 +2138,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论1",
 			"目的论3"],
 		"feature_list":[
@@ -2134,7 +2154,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论1",
 			"目的论4"],
 		"feature_list":[
@@ -2150,7 +2170,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论2"],
 		"feature_list":[
 			"",
@@ -2165,7 +2185,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论2",
 			"目的论1"],
 		"feature_list":[
@@ -2181,7 +2201,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论2",
 			"目的论2"],
 		"feature_list":[
@@ -2197,7 +2217,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论2",
 			"目的论3"],
 		"feature_list":[
@@ -2213,7 +2233,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论2",
 			"目的论4"],
 		"feature_list":[
@@ -2229,7 +2249,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论3"],
 		"feature_list":[
 			"",
@@ -2244,7 +2264,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论3",
 			"目的论1"],
 		"feature_list":[
@@ -2260,7 +2280,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论3",
 			"目的论2"],
 		"feature_list":[
@@ -2276,7 +2296,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论3",
 			"目的论3"],
 		"feature_list":[
@@ -2292,7 +2312,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论3",
 			"目的论4"],
 		"feature_list":[
@@ -2308,7 +2328,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论4"],
 		"feature_list":[
 			"",
@@ -2323,7 +2343,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论4",
 			"目的论1"],
 		"feature_list":[
@@ -2339,7 +2359,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论4",
 			"目的论2"],
 		"feature_list":[
@@ -2355,7 +2375,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论4",
 			"目的论3"],
 		"feature_list":[
@@ -2371,7 +2391,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论3",
+			"本体论3",
 			"认识论4",
 			"目的论4"],
 		"feature_list":[
@@ -2387,7 +2407,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4"],
+			"本体论4"],
 		"feature_list":[
 			"",
 			"",
@@ -2401,7 +2421,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论1"],
 		"feature_list":[
 			"",
@@ -2416,7 +2436,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论1",
 			"目的论1"],
 		"feature_list":[
@@ -2432,7 +2452,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论1",
 			"目的论2"],
 		"feature_list":[
@@ -2448,7 +2468,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论1",
 			"目的论3"],
 		"feature_list":[
@@ -2464,7 +2484,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论1",
 			"目的论4"],
 		"feature_list":[
@@ -2480,7 +2500,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论2"],
 		"feature_list":[
 			"",
@@ -2495,7 +2515,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论2",
 			"目的论1"],
 		"feature_list":[
@@ -2511,7 +2531,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论2",
 			"目的论2"],
 		"feature_list":[
@@ -2527,7 +2547,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论2",
 			"目的论3"],
 		"feature_list":[
@@ -2543,7 +2563,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论2",
 			"目的论4"],
 		"feature_list":[
@@ -2559,7 +2579,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论3"],
 		"feature_list":[
 			"",
@@ -2574,7 +2594,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论3",
 			"目的论1"],
 		"feature_list":[
@@ -2590,7 +2610,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论3",
 			"目的论2"],
 		"feature_list":[
@@ -2606,7 +2626,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论3",
 			"目的论3"],
 		"feature_list":[
@@ -2622,7 +2642,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论3",
 			"目的论4"],
 		"feature_list":[
@@ -2638,7 +2658,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论4"],
 		"feature_list":[
 			"",
@@ -2653,7 +2673,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论4",
 			"目的论1"],
 		"feature_list":[
@@ -2669,7 +2689,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论4",
 			"目的论2"],
 		"feature_list":[
@@ -2685,7 +2705,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论4",
 			"目的论3"],
 		"feature_list":[
@@ -2701,7 +2721,7 @@
 		"en_name":"",
 		"axis_list":[
 			"场域论2",
-			"目的论4",
+			"本体论4",
 			"认识论4",
 			"目的论4"],
 		"feature_list":[
@@ -2712,27 +2732,24 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1wq4y177u6"]},
-	"3-1":{
-		"ch_name":"现象学",
+	"3":{
+		"ch_name":"观念论",
 		"en_name":"",
 		"axis_list":[
-			"场域论3",
-			"目的论1"],
+			"场域论3"],
 		"feature_list":[
 			"",
 			"",
 			"",
 			""],
 		"related_list":[
-			"",
 			"原视频链接：https://www.bilibili.com/video/BV1g5411T7Bc"]},
-	"3-1-1":{
-		"ch_name":"先验现象学",
+	"3-1":{
+		"ch_name":"现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论1"],
+			"本体论1"],
 		"feature_list":[
 			"",
 			"",
@@ -2741,14 +2758,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1KK4y1g7TA"]},
-	"3-1-1-1":{
-		"ch_name":"先验直觉主义",
+	"3-1-1":{
+		"ch_name":"先验现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论1",
-			"目的论1"],
+			"本体论1",
+			"认识论1"],
 		"feature_list":[
 			"",
 			"",
@@ -2757,14 +2773,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1uv411H7no"]},
-	"3-1-1-2":{
-		"ch_name":"先验本质主义",
+	"3-1-1-1":{
+		"ch_name":"先验直觉主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论1",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -2773,14 +2789,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV115411T7GZ"]},
-	"3-1-1-3":{
-		"ch_name":"反思性的主体主义",
+	"3-1-1-2":{
+		"ch_name":"先验本质主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论1",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -2789,14 +2805,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV17V411x7mG"]},
-	"3-1-1-4":{
-		"ch_name":"准先验辩证主义",
+	"3-1-1-3":{
+		"ch_name":"反思性的主体主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论1",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -2805,13 +2821,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1uK4y1g7HL"]},
-	"3-1-2":{
-		"ch_name":"实事观现象学",
+	"3-1-1-4":{
+		"ch_name":"准先验辩证主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论2"],
+			"本体论1",
+			"认识论1",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -2820,14 +2837,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1S5411T76u"]},
-	"3-1-2-1":{
-		"ch_name":"媒介性的客观主义",
+	"3-1-2":{
+		"ch_name":"实事观现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论2",
-			"目的论1"],
+			"本体论1",
+			"认识论2"],
 		"feature_list":[
 			"",
 			"",
@@ -2836,14 +2852,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1n5411T7Dm"]},
-	"3-1-2-2":{
-		"ch_name":"本质心理主义",
+	"3-1-2-1":{
+		"ch_name":"媒介性的客观主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论2",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -2852,14 +2868,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1X64y197yk"]},
-	"3-1-2-3":{
-		"ch_name":"现象学的唯美主义",
+	"3-1-2-2":{
+		"ch_name":"本质心理主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论2",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -2868,14 +2884,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1e64y1b7Nc"]},
-	"3-1-2-4":{
-		"ch_name":"游戏的世界象征主义",
+	"3-1-2-3":{
+		"ch_name":"现象学的唯美主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论2",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -2884,13 +2900,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1gw411Z7TE"]},
-	"3-1-3":{
-		"ch_name":"生活世界现象学",
+	"3-1-2-4":{
+		"ch_name":"游戏的世界象征主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论3"],
+			"本体论1",
+			"认识论2",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -2899,14 +2916,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1oy4y1M7ef"]},
-	"3-1-3-1":{
-		"ch_name":"主体间普遍主义",
+	"3-1-3":{
+		"ch_name":"生活世界现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论3",
-			"目的论1"],
+			"本体论1",
+			"认识论3"],
 		"feature_list":[
 			"",
 			"",
@@ -2915,14 +2931,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1kh411h7NN"]},
-	"3-1-3-2":{
-		"ch_name":"本土方法论",
+	"3-1-3-1":{
+		"ch_name":"主体间普遍主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论3",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -2931,14 +2947,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1W64y1Q7z8"]},
-	"3-1-3-3":{
-		"ch_name":"格式塔现象学",
+	"3-1-3-2":{
+		"ch_name":"本土方法论",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论3",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -2947,14 +2963,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Ho4y1X7cp"]},
-	"3-1-3-4":{
-		"ch_name":"自身性现象学",
+	"3-1-3-3":{
+		"ch_name":"格式塔现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论3",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -2963,13 +2979,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Sg411u7fs"]},
-	"3-1-4":{
-		"ch_name":"现世的现象学",
+	"3-1-3-4":{
+		"ch_name":"自身性现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论4"],
+			"本体论1",
+			"认识论3",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -2978,14 +2995,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1KB4y1N7SF"]},
-	"3-1-4-1":{
-		"ch_name":"追问的现象学",
+	"3-1-4":{
+		"ch_name":"现世的现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
-			"认识论4",
-			"目的论1"],
+			"本体论1",
+			"认识论4"],
 		"feature_list":[
 			"",
 			"",
@@ -2994,14 +3010,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV11f4y1L7Sv"]},
-	"3-1-4-2":{
-		"ch_name":"性化的现象学",
+	"3-1-4-1":{
+		"ch_name":"追问的现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论4",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -3010,14 +3026,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1944y1q7jY"]},
-	"3-1-4-3":{
-		"ch_name":"存在论的现象学",
+	"3-1-4-2":{
+		"ch_name":"性化的现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论4",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -3026,14 +3042,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1t64y147HL"]},
-	"3-1-4-4":{
-		"ch_name":"现象学伦理主义",
+	"3-1-4-3":{
+		"ch_name":"存在论的现象学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论1",
+			"本体论1",
 			"认识论4",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -3042,12 +3058,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Yv411J7xi"]},
-	"3-2":{
-		"ch_name":"德国观念论",
+	"3-1-4-4":{
+		"ch_name":"现象学伦理主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论2"],
+			"本体论1",
+			"认识论4",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -3056,13 +3074,12 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Cg411T75n"]},
-	"3-2-1":{
-		"ch_name":"批判哲学",
+	"3-2":{
+		"ch_name":"德国观念论",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论2",
-			"认识论1"],
+			"本体论2"],
 		"feature_list":[
 			"",
 			"",
@@ -3071,327 +3088,12 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1xL411H7sy"]},
-	"3-2-1-1":{
-		"ch_name":"无限的有限主义",
+	"3-2-1":{
+		"ch_name":"批判哲学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论2",
-			"认识论1",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1og411T7tD"]},
-	"3-2-1-2":{
-		"ch_name":"先验经验主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论1",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1gX4y1A7XY"]},
-	"3-2-1-3":{
-		"ch_name":"先验逻辑主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论1",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1154y1n7qC"]},
-	"3-2-1-4":{
-		"ch_name":"符号形式主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论1",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1BB4y1N7bj"]},
-	"3-2-2":{
-		"ch_name":"知识学",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1p64y1X7Tn"]},
-	"3-2-2-1":{
-		"ch_name":"理智直观主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论2",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qU4y1n7iL"]},
-	"3-2-2-2":{
-		"ch_name":"先验观念论",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论2",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1ZM4y1K7uM"]},
-	"3-2-2-3":{
-		"ch_name":"彻底的经验主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论2",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qv411n768"]},
-	"3-2-2-4":{
-		"ch_name":"唯我的实在论/现实主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论2",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1cX4y1c71w"]},
-	"3-2-3":{
-		"ch_name":"体系自由主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1hq4y1H74z"]},
-	"3-2-3-1":{
-		"ch_name":"时间-本体论",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论3",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1aM4y1T7Mj"]},
-	"3-2-3-2":{
-		"ch_name":"加倍的德国观念论",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论3",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Gv411J7uV"]},
-	"3-2-3-3":{
-		"ch_name":"生存的存在主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论3",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1CP4y1s7BM"]},
-	"3-2-3-4":{
-		"ch_name":"自身-辩证法",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论3",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1pg41177WJ"]},
-	"3-2-4":{
-		"ch_name":"辩证法",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1tM4y1T7FM"]},
-	"3-2-4-1":{
-		"ch_name":"逻辑学",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论4",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1xU4y1J7iL"]},
-	"3-2-4-2":{
-		"ch_name":"否定辩证法",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论4",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qq4y1p7Hi"]},
-	"3-2-4-3":{
-		"ch_name":"爱欲辩证法",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论4",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Pf4y1V7X7"]},
-	"3-2-4-4":{
-		"ch_name":"意识形态学",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论2",
-			"认识论4",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Sy4y157QZ"]},
-	"3-3":{
-		"ch_name":"生存论",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1UQ4y1f7So"]},
-	"3-3-1":{
-		"ch_name":"存在主义",
-		"en_name":"",
-		"axis_list":[
-			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论1"],
 		"feature_list":[
 			"",
@@ -3400,13 +3102,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1n54y177ts"]},
-	"3-3-1-1":{
-		"ch_name":"分环节的生存论的存在论",
+			"原视频链接：https://www.bilibili.com/video/BV1og411T7tD"]},
+	"3-2-1-1":{
+		"ch_name":"无限的有限主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论1",
 			"目的论1"],
 		"feature_list":[
@@ -3416,13 +3118,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Mg411j745"]},
-	"3-3-1-2":{
-		"ch_name":"人道主义的存在主义",
+			"原视频链接：https://www.bilibili.com/video/BV1gX4y1A7XY"]},
+	"3-2-1-2":{
+		"ch_name":"先验经验主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论1",
 			"目的论2"],
 		"feature_list":[
@@ -3432,13 +3134,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1cb4y167Hi"]},
-	"3-3-1-3":{
-		"ch_name":"政治的理性主义",
+			"原视频链接：https://www.bilibili.com/video/BV1154y1n7qC"]},
+	"3-2-1-3":{
+		"ch_name":"先验逻辑主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论1",
 			"目的论3"],
 		"feature_list":[
@@ -3448,13 +3150,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Jf4y1V7QB"]},
-	"3-3-1-4":{
-		"ch_name":"前本体论",
+			"原视频链接：https://www.bilibili.com/video/BV1BB4y1N7bj"]},
+	"3-2-1-4":{
+		"ch_name":"符号形式主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论1",
 			"目的论4"],
 		"feature_list":[
@@ -3464,13 +3166,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1hy4y1L7BS"]},
-	"3-3-2":{
-		"ch_name":"真正的生存主义",
+			"原视频链接：https://www.bilibili.com/video/BV1p64y1X7Tn"]},
+	"3-2-2":{
+		"ch_name":"知识学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论2"],
 		"feature_list":[
 			"",
@@ -3479,13 +3181,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1k44y1C7oy"]},
-	"3-3-2-1":{
-		"ch_name":"安防了的实存主义",
+			"原视频链接：https://www.bilibili.com/video/BV1qU4y1n7iL"]},
+	"3-2-2-1":{
+		"ch_name":"理智直观主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论2",
 			"目的论1"],
 		"feature_list":[
@@ -3495,13 +3197,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1mM4y157rF"]},
-	"3-3-2-2":{
-		"ch_name":"诗性存在论",
+			"原视频链接：https://www.bilibili.com/video/BV1ZM4y1K7uM"]},
+	"3-2-2-2":{
+		"ch_name":"先验观念论",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论2",
 			"目的论2"],
 		"feature_list":[
@@ -3511,13 +3213,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Gg411j7df"]},
-	"3-3-2-3":{
-		"ch_name":"神-人伦理学",
+			"原视频链接：https://www.bilibili.com/video/BV1qv411n768"]},
+	"3-2-2-3":{
+		"ch_name":"彻底的经验主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论2",
 			"目的论3"],
 		"feature_list":[
@@ -3527,13 +3229,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV12M4y157rK"]},
-	"3-3-2-4":{
-		"ch_name":"超验-生存论",
+			"原视频链接：https://www.bilibili.com/video/BV1cX4y1c71w"]},
+	"3-2-2-4":{
+		"ch_name":"唯我的实在论/现实主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论2",
 			"目的论4"],
 		"feature_list":[
@@ -3543,13 +3245,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1jf4y137gM"]},
-	"3-3-3":{
-		"ch_name":"同一生存论",
+			"原视频链接：https://www.bilibili.com/video/BV1hq4y1H74z"]},
+	"3-2-3":{
+		"ch_name":"体系自由主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论3"],
 		"feature_list":[
 			"",
@@ -3558,13 +3260,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1FL4y1e7Cq"]},
-	"3-3-3-1":{
-		"ch_name":"斗争的生存论",
+			"原视频链接：https://www.bilibili.com/video/BV1aM4y1T7Mj"]},
+	"3-2-3-1":{
+		"ch_name":"时间-本体论",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论3",
 			"目的论1"],
 		"feature_list":[
@@ -3574,13 +3276,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1vq4y1M7z4"]},
-	"3-3-3-2":{
-		"ch_name":"直接生存论",
+			"原视频链接：https://www.bilibili.com/video/BV1Gv411J7uV"]},
+	"3-2-3-2":{
+		"ch_name":"加倍的德国观念论",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论3",
 			"目的论2"],
 		"feature_list":[
@@ -3590,13 +3292,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1sM4y1L73D"]},
-	"3-3-3-3":{
-		"ch_name":"共同体的生存论",
+			"原视频链接：https://www.bilibili.com/video/BV1CP4y1s7BM"]},
+	"3-2-3-3":{
+		"ch_name":"生存的存在主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论3",
 			"目的论3"],
 		"feature_list":[
@@ -3606,13 +3308,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV17g41157y9"]},
-	"3-3-3-4":{
-		"ch_name":"金融资本主义",
+			"原视频链接：https://www.bilibili.com/video/BV1pg41177WJ"]},
+	"3-2-3-4":{
+		"ch_name":"自身-辩证法",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论3",
 			"目的论4"],
 		"feature_list":[
@@ -3622,13 +3324,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Eg41157BA"]},
-	"3-3-4":{
-		"ch_name":"虚构的生存论",
+			"原视频链接：https://www.bilibili.com/video/BV1tM4y1T7FM"]},
+	"3-2-4":{
+		"ch_name":"辩证法",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论4"],
 		"feature_list":[
 			"",
@@ -3637,13 +3339,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV16L4y1a76p"]},
-	"3-3-4-1":{
-		"ch_name":"幸存的兄弟主义",
+			"原视频链接：https://www.bilibili.com/video/BV1xU4y1J7iL"]},
+	"3-2-4-1":{
+		"ch_name":"逻辑学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论4",
 			"目的论1"],
 		"feature_list":[
@@ -3653,13 +3355,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1h64y1a7kW"]},
-	"3-3-4-2":{
-		"ch_name":"去中心化的料层主义",
+			"原视频链接：https://www.bilibili.com/video/BV1qq4y1p7Hi"]},
+	"3-2-4-2":{
+		"ch_name":"否定辩证法",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论4",
 			"目的论2"],
 		"feature_list":[
@@ -3669,13 +3371,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1my4y137hf"]},
-	"3-3-4-3":{
-		"ch_name":"幸福的幸存主义",
+			"原视频链接：https://www.bilibili.com/video/BV1Pf4y1V7X7"]},
+	"3-2-4-3":{
+		"ch_name":"爱欲辩证法",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论4",
 			"目的论3"],
 		"feature_list":[
@@ -3685,13 +3387,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1y64y1e7eY"]},
-	"3-3-4-4":{
-		"ch_name":"诗性永恒主义",
+			"原视频链接：https://www.bilibili.com/video/BV1Sy4y157QZ"]},
+	"3-2-4-4":{
+		"ch_name":"意识形态学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论3",
+			"本体论2",
 			"认识论4",
 			"目的论4"],
 		"feature_list":[
@@ -3701,12 +3403,328 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1xM4y1V7WH"]},
-	"3-4":{
-		"ch_name":"符号学",
+			"原视频链接：https://www.bilibili.com/video/BV1UQ4y1f7So"]},
+	"3-3":{
+		"ch_name":"生存论",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
+			"本体论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1n54y177ts"]},
+	"3-3-1":{
+		"ch_name":"存在主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Mg411j745"]},
+	"3-3-1-1":{
+		"ch_name":"分环节的生存论的存在论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论1",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1cb4y167Hi"]},
+	"3-3-1-2":{
+		"ch_name":"人道主义的存在主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论1",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Jf4y1V7QB"]},
+	"3-3-1-3":{
+		"ch_name":"政治的理性主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论1",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1hy4y1L7BS"]},
+	"3-3-1-4":{
+		"ch_name":"前本体论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论1",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1k44y1C7oy"]},
+	"3-3-2":{
+		"ch_name":"真正的生存主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1mM4y157rF"]},
+	"3-3-2-1":{
+		"ch_name":"安防了的实存主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论2",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Gg411j7df"]},
+	"3-3-2-2":{
+		"ch_name":"诗性存在论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论2",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV12M4y157rK"]},
+	"3-3-2-3":{
+		"ch_name":"神-人伦理学",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论2",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1jf4y137gM"]},
+	"3-3-2-4":{
+		"ch_name":"超验-生存论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论2",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1FL4y1e7Cq"]},
+	"3-3-3":{
+		"ch_name":"同一生存论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1vq4y1M7z4"]},
+	"3-3-3-1":{
+		"ch_name":"斗争的生存论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论3",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1sM4y1L73D"]},
+	"3-3-3-2":{
+		"ch_name":"直接生存论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论3",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV17g41157y9"]},
+	"3-3-3-3":{
+		"ch_name":"共同体的生存论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论3",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Eg41157BA"]},
+	"3-3-3-4":{
+		"ch_name":"金融资本主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论3",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV16L4y1a76p"]},
+	"3-3-4":{
+		"ch_name":"虚构的生存论",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1h64y1a7kW"]},
+	"3-3-4-1":{
+		"ch_name":"幸存的兄弟主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论4",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1my4y137hf"]},
+	"3-3-4-2":{
+		"ch_name":"去中心化的料层主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论4",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1y64y1e7eY"]},
+	"3-3-4-3":{
+		"ch_name":"幸福的幸存主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论4",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1xM4y1V7WH"]},
+	"3-3-4-4":{
+		"ch_name":"诗性永恒主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论3",
+			"本体论3",
+			"认识论4",
 			"目的论4"],
 		"feature_list":[
 			"",
@@ -3716,13 +3734,12 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1wQ4y117Zt"]},
-	"3-4-1":{
-		"ch_name":"结构主义",
+	"3-4":{
+		"ch_name":"符号学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论1"],
+			"本体论4"],
 		"feature_list":[
 			"",
 			"",
@@ -3731,14 +3748,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1cf4y1H7Ci"]},
-	"3-4-1-1":{
-		"ch_name":"结构人本主义",
+	"3-4-1":{
+		"ch_name":"结构主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论1",
-			"目的论1"],
+			"本体论4",
+			"认识论1"],
 		"feature_list":[
 			"",
 			"",
@@ -3747,14 +3763,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Hy4y1G7ep"]},
-	"3-4-1-2":{
-		"ch_name":"隐藏的象征主义",
+	"3-4-1-1":{
+		"ch_name":"结构人本主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论1",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -3763,14 +3779,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV11M4y137yS"]},
-	"3-4-1-3":{
-		"ch_name":"分类性的叙事主义",
+	"3-4-1-2":{
+		"ch_name":"隐藏的象征主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论1",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -3779,14 +3795,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1gM4y157PT"]},
-	"3-4-1-4":{
-		"ch_name":"陈述性的话语主义",
+	"3-4-1-3":{
+		"ch_name":"分类性的叙事主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论1",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -3795,13 +3811,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV18L41147nT"]},
-	"3-4-2":{
-		"ch_name":"后结构主义",
+	"3-4-1-4":{
+		"ch_name":"陈述性的话语主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论2"],
+			"本体论4",
+			"认识论1",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -3810,14 +3827,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1m3411i78S"]},
-	"3-4-2-1":{
-		"ch_name":"无意识的主体主义",
+	"3-4-2":{
+		"ch_name":"后结构主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论2",
-			"目的论1"],
+			"本体论4",
+			"认识论2"],
 		"feature_list":[
 			"",
 			"",
@@ -3826,14 +3842,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1f34y1D7nP"]},
-	"3-4-2-2":{
-		"ch_name":"静止的事件主义",
+	"3-4-2-1":{
+		"ch_name":"无意识的主体主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论2",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -3842,14 +3858,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1DL411475o"]},
-	"3-4-2-3":{
-		"ch_name":"哲学的意识形态主义/墨守成规",
+	"3-4-2-2":{
+		"ch_name":"静止的事件主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论2",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -3858,14 +3874,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1kf4y1A7br"]},
-	"3-4-2-4":{
-		"ch_name":"螺旋的贱斥主义",
+	"3-4-2-3":{
+		"ch_name":"哲学的意识形态主义/墨守成规",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论2",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -3874,13 +3890,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1vL4y1h72E"]},
-	"3-4-3":{
-		"ch_name":"差异的辩证法",
+	"3-4-2-4":{
+		"ch_name":"螺旋的贱斥主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论3"],
+			"本体论4",
+			"认识论2",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -3889,14 +3906,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1YQ4y1a79j"]},
-	"3-4-3-1":{
-		"ch_name":"游牧的辩证主义",
+	"3-4-3":{
+		"ch_name":"差异的辩证法",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论3",
-			"目的论1"],
+			"本体论4",
+			"认识论3"],
 		"feature_list":[
 			"",
 			"",
@@ -3905,14 +3921,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Gg411c78c"]},
-	"3-4-3-2":{
-		"ch_name":"圆满的经济学",
+	"3-4-3-1":{
+		"ch_name":"游牧的辩证主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论3",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -3921,14 +3937,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1PL4y1a7UM"]},
-	"3-4-3-3":{
-		"ch_name":"倒错的好客主义",
+	"3-4-3-2":{
+		"ch_name":"圆满的经济学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论3",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -3937,14 +3953,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1L3411q7rs"]},
-	"3-4-3-4":{
-		"ch_name":"局部的总体主义",
+	"3-4-3-3":{
+		"ch_name":"倒错的好客主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论3",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -3953,13 +3969,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1JQ4y1y7Gf"]},
-	"3-4-4":{
-		"ch_name":"解释学",
+	"3-4-3-4":{
+		"ch_name":"局部的总体主义",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论4"],
+			"本体论4",
+			"认识论3",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -3968,14 +3985,13 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1bq4y1N76d"]},
-	"3-4-4-1":{
-		"ch_name":"现象学的解释学",
+	"3-4-4":{
+		"ch_name":"解释学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
-			"认识论4",
-			"目的论1"],
+			"本体论4",
+			"认识论4"],
 		"feature_list":[
 			"",
 			"",
@@ -3984,14 +4000,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Mg41157ps"]},
-	"3-4-4-2":{
-		"ch_name":"经典的精神分析",
+	"3-4-4-1":{
+		"ch_name":"现象学的解释学",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论4",
-			"目的论2"],
+			"目的论1"],
 		"feature_list":[
 			"",
 			"",
@@ -4000,14 +4016,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1gL411x7gm"]},
-	"3-4-4-3":{
-		"ch_name":"语言游戏",
+	"3-4-4-2":{
+		"ch_name":"经典的精神分析",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论4",
-			"目的论3"],
+			"目的论2"],
 		"feature_list":[
 			"",
 			"",
@@ -4016,14 +4032,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV18Q4y1k7hi"]},
-	"3-4-4-4":{
-		"ch_name":"针对资本主义的精神分析",
+	"3-4-4-3":{
+		"ch_name":"语言游戏",
 		"en_name":"",
 		"axis_list":[
 			"场域论3",
-			"目的论4",
+			"本体论4",
 			"认识论4",
-			"目的论4"],
+			"目的论3"],
 		"feature_list":[
 			"",
 			"",
@@ -4032,12 +4048,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Ab4y1m7pv"]},
-	"4-1":{
-		"ch_name":"政治经济意识形态批判",
+	"3-4-4-4":{
+		"ch_name":"针对资本主义的精神分析",
 		"en_name":"",
 		"axis_list":[
-			"场域论4",
-			"目的论1"],
+			"场域论3",
+			"本体论4",
+			"认识论4",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -4046,29 +4064,24 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1QA411F7ut"]},
-	"4-1-1":{
-		"ch_name":"资本主义史研究",
+	"4":{
+		"ch_name":"实践",
 		"en_name":"",
 		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论1"],
+			"场域论4"],
 		"feature_list":[
 			"",
 			"",
 			"",
 			""],
 		"related_list":[
-			"",
 			"原视频链接：https://www.bilibili.com/video/BV1qh411J7kp"]},
-	"4-1-1-1":{
-		"ch_name":"经济学哲学批判",
+	"4-1":{
+		"ch_name":"政治经济意识形态批判",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论1",
-			"认识论1",
-			"目的论1"],
+			"本体论1"],
 		"feature_list":[
 			"",
 			"",
@@ -4077,311 +4090,12 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1Nb4y1h7mw"]},
-	"4-1-1-2":{
-		"ch_name":"内外评论",
+	"4-1-1":{
+		"ch_name":"资本主义史研究",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论1",
-			"认识论1",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1q3411C7dJ"]},
-	"4-1-1-3":{
-		"ch_name":"国际性的理论协调",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论1",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1544y1x7i5"]},
-	"4-1-1-4":{
-		"ch_name":"中派的独立生存",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论1",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1hq4y197tW"]},
-	"4-1-2":{
-		"ch_name":"灌输",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1jh411n7i8"]},
-	"4-1-2-1":{
-		"ch_name":"学习/研究",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论2",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV19F411Y7Ly"]},
-	"4-1-2-2":{
-		"ch_name":"写作与交谈",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论2",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1UL411G7Sd"]},
-	"4-1-2-3":{
-		"ch_name":"正派青年的交友和团结",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论2",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Dh411b7eN"]},
-	"4-1-2-4":{
-		"ch_name":"现实的本体论化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论2",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV15Q4y1Q7S8"]},
-	"4-1-3":{
-		"ch_name":"历史的哲学化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1rQ4y1D7WJ"]},
-	"4-1-3-1":{
-		"ch_name":"方法论的本体论化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论3",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Kb4y1a7GE"]},
-	"4-1-3-2":{
-		"ch_name":"教条的哲学化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论3",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1U3411r7uY"]},
-	"4-1-3-3":{
-		"ch_name":"体系化的理论探索",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论3",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV17q4y1R7Qz"]},
-	"4-1-3-4":{
-		"ch_name":"争夺文化霸权",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论3",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV13R4y1n7pu"]},
-	"4-1-4":{
-		"ch_name":"精神化了的重复",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV19T4y1R7xn"]},
-	"4-1-4-1":{
-		"ch_name":"对意识形态的历史化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论4",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1NQ4y1q7W7"]},
-	"4-1-4-2":{
-		"ch_name":"哲学的再现代化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论4",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qb4y1h7it"]},
-	"4-1-4-3":{
-		"ch_name":"持续的否定",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论4",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1RS4y1R7kh"]},
-	"4-1-4-4":{
-		"ch_name":"现实生活",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论1",
-			"认识论4",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1P3411C7gu"]},
-	"4-2":{
-		"ch_name":"现实的正统化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1e44y1i76G"]},
-	"4-2-1":{
-		"ch_name":"合律组织",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论1"],
 		"feature_list":[
 			"",
@@ -4390,13 +4104,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1TP4y1j7Ye"]},
-	"4-2-1-1":{
-		"ch_name":"获取典型性",
+			"原视频链接：https://www.bilibili.com/video/BV1q3411C7dJ"]},
+	"4-1-1-1":{
+		"ch_name":"经济学哲学批判",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论1",
 			"目的论1"],
 		"feature_list":[
@@ -4406,13 +4120,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1aq4y1R7Lk"]},
-	"4-2-1-2":{
-		"ch_name":"操作系统程序",
+			"原视频链接：https://www.bilibili.com/video/BV1544y1x7i5"]},
+	"4-1-1-2":{
+		"ch_name":"内外评论",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论1",
 			"目的论2"],
 		"feature_list":[
@@ -4422,13 +4136,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1MU4y1g7cm"]},
-	"4-2-1-3":{
-		"ch_name":"代表那个体系",
+			"原视频链接：https://www.bilibili.com/video/BV1hq4y197tW"]},
+	"4-1-1-3":{
+		"ch_name":"国际性的理论协调",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论1",
 			"目的论3"],
 		"feature_list":[
@@ -4438,13 +4152,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Y34y1Z7i4"]},
-	"4-2-1-4":{
-		"ch_name":"台面上的权宜之计",
+			"原视频链接：https://www.bilibili.com/video/BV1jh411n7i8"]},
+	"4-1-1-4":{
+		"ch_name":"中派的独立生存",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论1",
 			"目的论4"],
 		"feature_list":[
@@ -4454,13 +4168,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1th411t7P7"]},
-	"4-2-2":{
-		"ch_name":"列宁主义",
+			"原视频链接：https://www.bilibili.com/video/BV19F411Y7Ly"]},
+	"4-1-2":{
+		"ch_name":"灌输",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论2"],
 		"feature_list":[
 			"",
@@ -4469,13 +4183,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV19q4y1r7m3"]},
-	"4-2-2-1":{
-		"ch_name":"受信任的联合",
+			"原视频链接：https://www.bilibili.com/video/BV1UL411G7Sd"]},
+	"4-1-2-1":{
+		"ch_name":"学习/研究",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论2",
 			"目的论1"],
 		"feature_list":[
@@ -4485,13 +4199,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1LU4y1M7Cb"]},
-	"4-2-2-2":{
-		"ch_name":"清楚的区分",
+			"原视频链接：https://www.bilibili.com/video/BV1Dh411b7eN"]},
+	"4-1-2-2":{
+		"ch_name":"写作与交谈",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论2",
 			"目的论2"],
 		"feature_list":[
@@ -4501,13 +4215,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1bS4y1d7pM"]},
-	"4-2-2-3":{
-		"ch_name":"前沿注意",
+			"原视频链接：https://www.bilibili.com/video/BV15Q4y1Q7S8"]},
+	"4-1-2-3":{
+		"ch_name":"正派青年的交友和团结",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论2",
 			"目的论3"],
 		"feature_list":[
@@ -4517,13 +4231,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV12h411t7os"]},
-	"4-2-2-4":{
-		"ch_name":"驱散关键Debuff",
+			"原视频链接：https://www.bilibili.com/video/BV1rQ4y1D7WJ"]},
+	"4-1-2-4":{
+		"ch_name":"现实的本体论化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论2",
 			"目的论4"],
 		"feature_list":[
@@ -4533,13 +4247,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Vg411T7PB"]},
-	"4-2-3":{
-		"ch_name":"真正的国际主义",
+			"原视频链接：https://www.bilibili.com/video/BV1Kb4y1a7GE"]},
+	"4-1-3":{
+		"ch_name":"历史的哲学化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论3"],
 		"feature_list":[
 			"",
@@ -4548,13 +4262,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1HR4y1t79w"]},
-	"4-2-3-1":{
-		"ch_name":"接管国家机器",
+			"原视频链接：https://www.bilibili.com/video/BV1U3411r7uY"]},
+	"4-1-3-1":{
+		"ch_name":"方法论的本体论化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论3",
 			"目的论1"],
 		"feature_list":[
@@ -4564,13 +4278,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1kY411x7we"]},
-	"4-2-3-2":{
-		"ch_name":"第三国际早期的历史任务",
+			"原视频链接：https://www.bilibili.com/video/BV17q4y1R7Qz"]},
+	"4-1-3-2":{
+		"ch_name":"教条的哲学化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论3",
 			"目的论2"],
 		"feature_list":[
@@ -4580,13 +4294,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1744y1v7Qd"]},
-	"4-2-3-3":{
-		"ch_name":"对自决进程施加领导",
+			"原视频链接：https://www.bilibili.com/video/BV13R4y1n7pu"]},
+	"4-1-3-3":{
+		"ch_name":"体系化的理论探索",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论3",
 			"目的论3"],
 		"feature_list":[
@@ -4596,13 +4310,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1CL411u7Cy"]},
-	"4-2-3-4":{
-		"ch_name":"历史的妥协",
+			"原视频链接：https://www.bilibili.com/video/BV19T4y1R7xn"]},
+	"4-1-3-4":{
+		"ch_name":"争夺文化霸权",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论3",
 			"目的论4"],
 		"feature_list":[
@@ -4612,13 +4326,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1eg411N7yp"]},
-	"4-2-4":{
-		"ch_name":"再来一次",
+			"原视频链接：https://www.bilibili.com/video/BV1NQ4y1q7W7"]},
+	"4-1-4":{
+		"ch_name":"精神化了的重复",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论4"],
 		"feature_list":[
 			"",
@@ -4627,13 +4341,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1CQ4y1U73C"]},
-	"4-2-4-1":{
-		"ch_name":"共进退",
+			"原视频链接：https://www.bilibili.com/video/BV1qb4y1h7it"]},
+	"4-1-4-1":{
+		"ch_name":"对意识形态的历史化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论4",
 			"目的论1"],
 		"feature_list":[
@@ -4643,13 +4357,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV17r4y1k7B6"]},
-	"4-2-4-2":{
-		"ch_name":"不断围绕中心旋转",
+			"原视频链接：https://www.bilibili.com/video/BV1RS4y1R7kh"]},
+	"4-1-4-2":{
+		"ch_name":"哲学的再现代化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论4",
 			"目的论2"],
 		"feature_list":[
@@ -4659,13 +4373,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Jr4y1k7zx"]},
-	"4-2-4-3":{
-		"ch_name":"集体创新",
+			"原视频链接：https://www.bilibili.com/video/BV1P3411C7gu"]},
+	"4-1-4-3":{
+		"ch_name":"持续的否定",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论4",
 			"目的论3"],
 		"feature_list":[
@@ -4675,13 +4389,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1WU4y1u7Ei"]},
-	"4-2-4-4":{
-		"ch_name":"分类标准上的冲突",
+			"原视频链接：https://www.bilibili.com/video/BV1e44y1i76G"]},
+	"4-1-4-4":{
+		"ch_name":"现实生活",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论2",
+			"本体论1",
 			"认识论4",
 			"目的论4"],
 		"feature_list":[
@@ -4691,12 +4405,312 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1cL411M7KT"]},
-	"4-3":{
-		"ch_name":"建设理想社会",
+			"原视频链接：https://www.bilibili.com/video/BV1TP4y1j7Ye"]},
+	"4-2":{
+		"ch_name":"现实的正统化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
+			"本体论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1aq4y1R7Lk"]},
+	"4-2-1":{
+		"ch_name":"合律组织",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1MU4y1g7cm"]},
+	"4-2-1-1":{
+		"ch_name":"获取典型性",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论1",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Y34y1Z7i4"]},
+	"4-2-1-2":{
+		"ch_name":"操作系统程序",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论1",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1th411t7P7"]},
+	"4-2-1-3":{
+		"ch_name":"代表那个体系",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论1",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV19q4y1r7m3"]},
+	"4-2-1-4":{
+		"ch_name":"台面上的权宜之计",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论1",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1LU4y1M7Cb"]},
+	"4-2-2":{
+		"ch_name":"列宁主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1bS4y1d7pM"]},
+	"4-2-2-1":{
+		"ch_name":"受信任的联合",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论2",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV12h411t7os"]},
+	"4-2-2-2":{
+		"ch_name":"清楚的区分",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论2",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Vg411T7PB"]},
+	"4-2-2-3":{
+		"ch_name":"前沿注意",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论2",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1HR4y1t79w"]},
+	"4-2-2-4":{
+		"ch_name":"驱散关键Debuff",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论2",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1kY411x7we"]},
+	"4-2-3":{
+		"ch_name":"真正的国际主义",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1744y1v7Qd"]},
+	"4-2-3-1":{
+		"ch_name":"接管国家机器",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论3",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1CL411u7Cy"]},
+	"4-2-3-2":{
+		"ch_name":"第三国际早期的历史任务",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论3",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1eg411N7yp"]},
+	"4-2-3-3":{
+		"ch_name":"对自决进程施加领导",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论3",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1CQ4y1U73C"]},
+	"4-2-3-4":{
+		"ch_name":"历史的妥协",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论3",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV17r4y1k7B6"]},
+	"4-2-4":{
+		"ch_name":"再来一次",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Jr4y1k7zx"]},
+	"4-2-4-1":{
+		"ch_name":"共进退",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论4",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1WU4y1u7Ei"]},
+	"4-2-4-2":{
+		"ch_name":"不断围绕中心旋转",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论4",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1cL411M7KT"]},
+	"4-2-4-3":{
+		"ch_name":"集体创新",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论2",
+			"认识论4",
 			"目的论3"],
 		"feature_list":[
 			"",
@@ -4706,13 +4720,14 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1ai4y1o72t"]},
-	"4-3-1":{
-		"ch_name":"生活必需品",
+	"4-2-4-4":{
+		"ch_name":"分类标准上的冲突",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论3",
-			"认识论1"],
+			"本体论2",
+			"认识论4",
+			"目的论4"],
 		"feature_list":[
 			"",
 			"",
@@ -4721,14 +4736,12 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1ih41147hV"]},
-	"4-3-1-1":{
-		"ch_name":"组织经济生活",
+	"4-3":{
+		"ch_name":"建设理想社会",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论3",
-			"认识论1",
-			"目的论1"],
+			"本体论3"],
 		"feature_list":[
 			"",
 			"",
@@ -4737,311 +4750,12 @@
 		"related_list":[
 			"",
 			"原视频链接：https://www.bilibili.com/video/BV1QQ4y1v7c7"]},
-	"4-3-1-2":{
-		"ch_name":"生产的再政治化",
+	"4-3-1":{
+		"ch_name":"生活必需品",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论3",
-			"认识论1",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1rh411s7zu"]},
-	"4-3-1-3":{
-		"ch_name":"阵列的统一",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论1",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1WY411s7KC"]},
-	"4-3-1-4":{
-		"ch_name":"埋下生命线",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论1",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1bq4y1z7CQ"]},
-	"4-3-2":{
-		"ch_name":"对于生产活动的解放",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1jL4y1W7KM"]},
-	"4-3-2-1":{
-		"ch_name":"人道化人口",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论2",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1zg411A753"]},
-	"4-3-2-2":{
-		"ch_name":"激发自发性",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论2",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1xP4y1V7gA"]},
-	"4-3-2-3":{
-		"ch_name":"经济-妇女-儿童的三重解放",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论2",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1jL41177A7"]},
-	"4-3-2-4":{
-		"ch_name":"解放思想",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论2",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1vR4y1s7Gw"]},
-	"4-3-3":{
-		"ch_name":"战略战役战斗的统合",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1mL41177ud"]},
-	"4-3-3-1":{
-		"ch_name":"攻略性的组织工作",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论3",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1v34y1X74U"]},
-	"4-3-3-2":{
-		"ch_name":"纪律教育",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论3",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1DQ4y1e7H4"]},
-	"4-3-3-3":{
-		"ch_name":"将资本社会化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论3",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1wS4y197d5"]},
-	"4-3-3-4":{
-		"ch_name":"将全球主义替换掉",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论3",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qR4y1s7iG"]},
-	"4-3-4":{
-		"ch_name":"社会主义的资本实现",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1y44y1E73G"]},
-	"4-3-4-1":{
-		"ch_name":"农业的去本地化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论4",
-			"目的论1"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV19q4y1q72w"]},
-	"4-3-4-2":{
-		"ch_name":"去代理人化",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论4",
-			"目的论2"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1JL411E76j"]},
-	"4-3-4-3":{
-		"ch_name":"合法性的再生产",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论4",
-			"目的论3"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1oq4y1q7rg"]},
-	"4-3-4-4":{
-		"ch_name":"社会主义的人类学实现",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论3",
-			"认识论4",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1eM4y1A7AT"]},
-	"4-4":{
-		"ch_name":"不可能的乌托邦",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论4"],
-		"feature_list":[
-			"",
-			"",
-			"",
-			""],
-		"related_list":[
-			"",
-			"原视频链接：https://www.bilibili.com/video/BV1xS4y1Q7T8"]},
-	"4-4-1":{
-		"ch_name":"计划良好的人性生活方式",
-		"en_name":"",
-		"axis_list":[
-			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论1"],
 		"feature_list":[
 			"",
@@ -5050,13 +4764,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1zL4y1J7HM"]},
-	"4-4-1-1":{
-		"ch_name":"业力体系",
+			"原视频链接：https://www.bilibili.com/video/BV1rh411s7zu"]},
+	"4-3-1-1":{
+		"ch_name":"组织经济生活",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论1",
 			"目的论1"],
 		"feature_list":[
@@ -5066,13 +4780,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV16L4y1J7BT"]},
-	"4-4-1-2":{
-		"ch_name":"再性征化",
+			"原视频链接：https://www.bilibili.com/video/BV1WY411s7KC"]},
+	"4-3-1-2":{
+		"ch_name":"生产的再政治化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论1",
 			"目的论2"],
 		"feature_list":[
@@ -5082,13 +4796,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1yY411W7Ev"]},
-	"4-4-1-3":{
-		"ch_name":"寄生性的享乐",
+			"原视频链接：https://www.bilibili.com/video/BV1bq4y1z7CQ"]},
+	"4-3-1-3":{
+		"ch_name":"阵列的统一",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论1",
 			"目的论3"],
 		"feature_list":[
@@ -5098,13 +4812,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1GL411j7JB"]},
-	"4-4-1-4":{
-		"ch_name":"醒来",
+			"原视频链接：https://www.bilibili.com/video/BV1jL4y1W7KM"]},
+	"4-3-1-4":{
+		"ch_name":"埋下生命线",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论1",
 			"目的论4"],
 		"feature_list":[
@@ -5114,13 +4828,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1DT4y1f7PZ"]},
-	"4-4-2":{
-		"ch_name":"去人类中心化",
+			"原视频链接：https://www.bilibili.com/video/BV1zg411A753"]},
+	"4-3-2":{
+		"ch_name":"对于生产活动的解放",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论2"],
 		"feature_list":[
 			"",
@@ -5129,13 +4843,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1yb4y1v7Wc"]},
-	"4-4-2-1":{
-		"ch_name":"永生",
+			"原视频链接：https://www.bilibili.com/video/BV1xP4y1V7gA"]},
+	"4-3-2-1":{
+		"ch_name":"人道化人口",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论2",
 			"目的论1"],
 		"feature_list":[
@@ -5145,13 +4859,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV15L4y1n7mp"]},
-	"4-4-2-2":{
-		"ch_name":"符号性死亡",
+			"原视频链接：https://www.bilibili.com/video/BV1jL41177A7"]},
+	"4-3-2-2":{
+		"ch_name":"激发自发性",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论2",
 			"目的论2"],
 		"feature_list":[
@@ -5161,13 +4875,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1bR4y1W7fe"]},
-	"4-4-2-3":{
-		"ch_name":"成熟/衰老",
+			"原视频链接：https://www.bilibili.com/video/BV1vR4y1s7Gw"]},
+	"4-3-2-3":{
+		"ch_name":"经济-妇女-儿童的三重解放",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论2",
 			"目的论3"],
 		"feature_list":[
@@ -5177,13 +4891,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1NR4y1s7bf"]},
-	"4-4-2-4":{
-		"ch_name":"身体化",
+			"原视频链接：https://www.bilibili.com/video/BV1mL41177ud"]},
+	"4-3-2-4":{
+		"ch_name":"解放思想",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论2",
 			"目的论4"],
 		"feature_list":[
@@ -5193,13 +4907,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1tP4y1J76t"]},
-	"4-4-3":{
-		"ch_name":"对合/内卷",
+			"原视频链接：https://www.bilibili.com/video/BV1v34y1X74U"]},
+	"4-3-3":{
+		"ch_name":"战略战役战斗的统合",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论3"],
 		"feature_list":[
 			"",
@@ -5208,13 +4922,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1US4y1M7Qm"]},
-	"4-4-3-1":{
-		"ch_name":"爱欲同化",
+			"原视频链接：https://www.bilibili.com/video/BV1DQ4y1e7H4"]},
+	"4-3-3-1":{
+		"ch_name":"攻略性的组织工作",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论3",
 			"目的论1"],
 		"feature_list":[
@@ -5224,13 +4938,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1ga411r7JZ"]},
-	"4-4-3-2":{
-		"ch_name":"秘密间性",
+			"原视频链接：https://www.bilibili.com/video/BV1wS4y197d5"]},
+	"4-3-3-2":{
+		"ch_name":"纪律教育",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论3",
 			"目的论2"],
 		"feature_list":[
@@ -5240,13 +4954,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1A34y1z7Mk"]},
-	"4-4-3-3":{
-		"ch_name":"被拯救",
+			"原视频链接：https://www.bilibili.com/video/BV1qR4y1s7iG"]},
+	"4-3-3-3":{
+		"ch_name":"将资本社会化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论3",
 			"目的论3"],
 		"feature_list":[
@@ -5256,13 +4970,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qr4y1S7tX"]},
-	"4-4-3-4":{
-		"ch_name":"语言",
+			"原视频链接：https://www.bilibili.com/video/BV1y44y1E73G"]},
+	"4-3-3-4":{
+		"ch_name":"将全球主义替换掉",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论3",
 			"目的论4"],
 		"feature_list":[
@@ -5272,13 +4986,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1qM4y1F7rg"]},
-	"4-4-4":{
-		"ch_name":"有序的深渊",
+			"原视频链接：https://www.bilibili.com/video/BV19q4y1q72w"]},
+	"4-3-4":{
+		"ch_name":"社会主义的资本实现",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论4"],
 		"feature_list":[
 			"",
@@ -5287,13 +5001,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1544y1E7V1"]},
-	"4-4-4-1":{
-		"ch_name":"教育",
+			"原视频链接：https://www.bilibili.com/video/BV1JL411E76j"]},
+	"4-3-4-1":{
+		"ch_name":"农业的去本地化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论4",
 			"目的论1"],
 		"feature_list":[
@@ -5303,13 +5017,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1gi4y197JV"]},
-	"4-4-4-2":{
-		"ch_name":"成为间隙",
+			"原视频链接：https://www.bilibili.com/video/BV1oq4y1q7rg"]},
+	"4-3-4-2":{
+		"ch_name":"去代理人化",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论4",
 			"目的论2"],
 		"feature_list":[
@@ -5319,13 +5033,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1Cb4y1n7Jd"]},
-	"4-4-4-3":{
-		"ch_name":"可朽性",
+			"原视频链接：https://www.bilibili.com/video/BV1eM4y1A7AT"]},
+	"4-3-4-3":{
+		"ch_name":"合法性的再生产",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论4",
 			"目的论3"],
 		"feature_list":[
@@ -5335,13 +5049,13 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1oZ4y1U7jz"]},
-	"4-4-4-4":{
-		"ch_name":"再生",
+			"原视频链接：https://www.bilibili.com/video/BV1xS4y1Q7T8"]},
+	"4-3-4-4":{
+		"ch_name":"社会主义的人类学实现",
 		"en_name":"",
 		"axis_list":[
 			"场域论4",
-			"目的论4",
+			"本体论3",
 			"认识论4",
 			"目的论4"],
 		"feature_list":[
@@ -5351,5 +5065,335 @@
 			""],
 		"related_list":[
 			"",
-			"原视频链接：https://www.bilibili.com/video/BV1mb4y1e7rD"]}
+			"原视频链接：https://www.bilibili.com/video/BV1zL4y1J7HM"]},
+	"4-4":{
+		"ch_name":"不可能的乌托邦",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV16L4y1J7BT"]},
+	"4-4-1":{
+		"ch_name":"计划良好的人性生活方式",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1yY411W7Ev"]},
+	"4-4-1-1":{
+		"ch_name":"业力体系",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论1",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1GL411j7JB"]},
+	"4-4-1-2":{
+		"ch_name":"再性征化",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论1",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1DT4y1f7PZ"]},
+	"4-4-1-3":{
+		"ch_name":"寄生性的享乐",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论1",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1yb4y1v7Wc"]},
+	"4-4-1-4":{
+		"ch_name":"醒来",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论1",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV15L4y1n7mp"]},
+	"4-4-2":{
+		"ch_name":"去人类中心化",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1bR4y1W7fe"]},
+	"4-4-2-1":{
+		"ch_name":"永生",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论2",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1NR4y1s7bf"]},
+	"4-4-2-2":{
+		"ch_name":"符号性死亡",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论2",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1tP4y1J76t"]},
+	"4-4-2-3":{
+		"ch_name":"成熟/衰老",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论2",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1US4y1M7Qm"]},
+	"4-4-2-4":{
+		"ch_name":"身体化",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论2",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1ga411r7JZ"]},
+	"4-4-3":{
+		"ch_name":"对合/内卷",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1A34y1z7Mk"]},
+	"4-4-3-1":{
+		"ch_name":"爱欲同化",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论3",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1qr4y1S7tX"]},
+	"4-4-3-2":{
+		"ch_name":"秘密间性",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论3",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1qM4y1F7rg"]},
+	"4-4-3-3":{
+		"ch_name":"被拯救",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论3",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1544y1E7V1"]},
+	"4-4-3-4":{
+		"ch_name":"语言",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论3",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1gi4y197JV"]},
+	"4-4-4":{
+		"ch_name":"有序的深渊",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1Cb4y1n7Jd"]},
+	"4-4-4-1":{
+		"ch_name":"教育",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论4",
+			"目的论1"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1oZ4y1U7jz"]},
+	"4-4-4-2":{
+		"ch_name":"成为间隙",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论4",
+			"目的论2"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1mb4y1e7rD"]},
+	"4-4-4-3":{
+		"ch_name":"可朽性",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论4",
+			"目的论3"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV1si4y19799"]},
+	"4-4-4-4":{
+		"ch_name":"再生",
+		"en_name":"",
+		"axis_list":[
+			"场域论4",
+			"本体论4",
+			"认识论4",
+			"目的论4"],
+		"feature_list":[
+			"",
+			"",
+			"",
+			""],
+		"related_list":[
+			"",
+			"原视频链接：https://www.bilibili.com/video/BV11Y41187nu"]}
 }
