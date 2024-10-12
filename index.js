@@ -249,7 +249,7 @@ function showIntroduction(){
     document.getElementById("ism_related").innerHTML = ""
     for(let i=0;i<introduction_length;i++)
         document.getElementById("ism_related").innerHTML += introduction.ismism_introduction[i]
-    document.getElementById("ism_related").innerHTML += '\n\n' + introduction.warning + '\n' + introduction.group + '\n' + introduction.link
+    document.getElementById("ism_related").innerHTML += '\n\n' + introduction.Github + '\n' + introduction.Github_pages + '\n' + introduction.group + '\n' + introduction.link + '\n\n' + introduction.warning + "\n\n<HR><p style='text-align:center'><a href='https://beian.miit.gov.cn/' target='_blank' style='font-style:normal;text-decoration:none'>京ICP备2024067574号-1</a><p><p style='text-align:center'><a href='https://beian.mps.gov.cn/#/query/webSearch?code=11010802044945' target='_blank' style='font-style:normal;text-decoration:none'>京公网安备11010802044945</a><p>"
 }
 
 function setIndicatorActive(){
