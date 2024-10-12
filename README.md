@@ -3,12 +3,12 @@ __visualized webpage of ISMISM summary!__
 
 可以通过**https://www.ismismtag.com** 网址访问网站
 
-相关视频链接：**https://www.bilibili.com/video/BV1jz42187r3**
+相关视频链接：**https://www.bilibili.com/video/BV1VXiGekEHK**
 
 Github托管：**https://spaceater.github.io/ismismtag-website/**
 
 use **https://www.ismismtag.com** to visit the webpage
 
-linked video:**https://www.bilibili.com/video/BV1jz42187r3**
+linked video:**https://www.bilibili.com/video/BV1VXiGekEHK**
 
 Github Pages**https://spaceater.github.io/ismismtag-website/**
