@@ -10,7 +10,7 @@ window.onscroll=()=>{
 }
 
 let xhr = new XMLHttpRequest()
-xhr.open("GET","/ism.json",true)
+xhr.open("GET","ism.json",true)
 xhr.send(null)
 xhr.onload = ()=>{
     if(xhr.status === 200){
