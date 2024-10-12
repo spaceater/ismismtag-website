@@ -11,4 +11,4 @@ use **https://www.ismismtag.com** to visit the webpage
 
 linked video:**https://www.bilibili.com/video/BV1jz42187r3**
 
-Github Pages：**https://spaceater.github.io/ismismtag-website/**
+Github Pages**https://spaceater.github.io/ismismtag-website/**
