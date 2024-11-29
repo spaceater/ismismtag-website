@@ -20,9 +20,9 @@ xhr.onload = ()=>{
             let ism_name = ism_data[ism_node.getAttribute("ism_tag")]["ch_name"].split('/')[0].replace('“','"').replace('”','"')
             ism_node.firstChild.textContent = ism_name
             if(ism_name.length<=4)
-    	        ism_node.style.fontSize = "1rem"
+    	        ism_node.firstChild.style.fontSize = "1rem"
             else
-    	        ism_node.style.fontSize = "0.75rem"
+    	        ism_node.firstChild.style.fontSize = "0.75rem"
             if(ism_data[ism_node.getAttribute("ism_tag")]["en_name"]=="")
                 ism_node.classList.add("no_data")
 	        ism_node.addEventListener("mouseenter",function(){selectISM(ism_node)})
@@ -249,7 +249,7 @@ function showIntroduction(){
     document.getElementById("ism_related").innerHTML = ""
     for(let i=0;i<introduction_length;i++)
         document.getElementById("ism_related").innerHTML += introduction.ismism_introduction[i]
-    document.getElementById("ism_related").innerHTML += '\n\n' + introduction.Github + '\n' + introduction.Github_pages + '\n' + introduction.group + '\n' + introduction.link + '\n\n' + introduction.warning + "\n\n<HR><p style='text-align:center'><a href='https://beian.miit.gov.cn/' target='_blank' style='font-style:normal;text-decoration:none'>京ICP备2024067574号-1</a><p><p style='text-align:center'><a href='https://beian.mps.gov.cn/#/query/webSearch?code=11010802044945' target='_blank' style='font-style:normal;text-decoration:none'>京公网安备11010802044945</a><p>"
+    document.getElementById("ism_related").innerHTML += '\n\n' + introduction.Github + introduction.Github_pages + introduction.group + introduction.link + '\n' + introduction.warning + "\n<HR><p style='text-align:center'><a href='https://beian.miit.gov.cn/' target='_blank' style='font-style:normal;text-decoration:none'>京ICP备2024067574号-1</a><p><p style='text-align:center'><a href='https://beian.mps.gov.cn/#/query/webSearch?code=11010802044945' target='_blank' style='font-style:normal;text-decoration:none'>京公网安备11010802044945</a><p>"
 }
 
 function setIndicatorActive(){

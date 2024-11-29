@@ -1,13 +1,25 @@
+@font-face {
+    font-family: "en_font";
+    src: local("Times New Roman");
+    unicode-range: U+0041-005A, U+0061-007A; /* 包含 A-Z 和 a-z 的 Unicode 范围 */
+}
+@font-face {
+    font-family: "other_font";
+    src: local("Microsoft YaHei");
+    font-style: normal;
+}
 *{
     margin: 0;
     padding: 0;
+    font-family: "en_font","other_font",sans-serif;
 }
 a{
     font-style: italic;
     color: black;
 }
 #left_part{
-    position:fixed;
+    z-index: 1;
+    position: fixed;
     width: 40rem;
     height: 100%;
     background-color: rgb(230, 230, 230);
@@ -362,7 +374,7 @@ a{
 #left_part #ism_info div{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     margin-right: 0.5rem;
     display: flex;
 }
@@ -406,29 +418,31 @@ a{
     background-color: gray;
 }
 #right_part{
+    z-index: 0;
     position: absolute;
-    left: 42rem;
+    left: 40rem;
     right: 0;
-    min-width: 50rem;
+    min-width: 53rem;
     height: 100%;
     overflow-x: scroll;
     overflow-y: scroll;
 }
 @keyframes right_close{
-    0%{left: 42rem}
-    100%{left: 2rem}
+    0%{left: 40rem}
+    100%{left: 0rem}
 }
 @keyframes right_open{
-    0%{left: 2rem}
-    100%{left: 42rem}
+    0%{left: 0rem}
+    100%{left: 40rem}
 }
 #right_part #ismism_cube_box{
     position: absolute;
-    left: 0;
+    left: 2rem;
     right: 0;
     max-width: 60rem;
     display: flex;
     transform-origin: left;
+    overflow: visible;
 }
 #right_part #ismism_cube_box .ismism_cube{
     position: absolute;
