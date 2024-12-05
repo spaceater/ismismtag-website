@@ -3,11 +3,7 @@ let info_box = document.getElementById("info_box")
 let ism_data = null
 let ism_pinned = null
 let axis_color = ["red","green","blue","darkorange"]
-
-document.getElementById("ism_name").textContent = "数据正在加载中\n\n若长时间未刷新\n请检测网络后重试\n或\n强制重新加载此页面(windows快捷键 Ctrl + F5)"
-window.onscroll=()=>{
-    info_box.style.left = -window.scrollX + "px"
-}
+let ism_info_font_size = 1.0;
 
 let xhr = new XMLHttpRequest()
 xhr.open("GET","ism.json",true)
@@ -30,8 +26,14 @@ xhr.onload = ()=>{
             ism_node.addEventListener("click",function(){pinISM(ism_node)})
         }
         showIntroduction()
+        document.getElementById("return_button").textContent = "更多内容"
+        document.getElementById("return_button").addEventListener("click",function(){window.open("https://www.maybered.com","_blank")})
+        document.getElementById("search_button").textContent = "检索"
         document.getElementById("search_button").addEventListener("click",function(){searchISM(document.getElementById("search_text").value)})
-        document.getElementById("reset_button").addEventListener("click",function(){document.getElementById("search_text").value="",searchISM("")})
+        document.getElementById("reset_button").textContent = "重置"
+        document.getElementById("reset_button").addEventListener("click",function(){document.getElementById("search_text").value="",resetISM()})
+        document.getElementById("increase_fontsize_button").addEventListener("click",function(){ism_info_font_size+=0.1,document.getElementById("ism_info").style["font-size"]=ism_info_font_size+"rem"})
+        document.getElementById("decrease_fontsize_button").addEventListener("click",function(){ism_info_font_size-=0.1,document.getElementById("ism_info").style["font-size"]=ism_info_font_size+"rem"})
         document.getElementById("size_indicator").addEventListener("mousedown",function(){setIndicatorActive()})
     }
     else{
@@ -225,12 +227,29 @@ function searchISM(target){
         }
         document.getElementById("ism_name").innerHTML = ""
         document.getElementById("ism_axis").innerHTML = "<b>检索词：</b><a href='https://www.baidu.com/s?wd=" + target + "' target='_blank'>" + target + "</a>"
-        document.getElementById("ism_features").innerHTML = "<span style='background-color:rgb(225,172,39)'>检索完成</span>"
+        document.getElementById("ism_features").innerHTML = "<b style='color:rgb(255,30,30)'>检索完成</b>"
         document.getElementById("ism_related").innerHTML = "总共检索到<b> " + result_count + " </b>个结果"
     }
     else{
-        showIntroduction()
+        document.getElementById("ism_name").innerHTML = ""
+        document.getElementById("ism_axis").innerHTML = "<b style='color:rgb(255,30,30)'>未键入检索词</b>"
+        document.getElementById("ism_features").innerHTML = "<b>若要进行检索，请先在左上角的检索栏中键入检索词</b>"
+        document.getElementById("ism_related").innerHTML = ""
     }
+}
+
+function resetISM(){
+    ism_pinned = null
+    for(let i=0;i<ism_detial_list.length;i++){
+        let ism_node = ism_detial_list[i]
+        ism_node.classList.remove("pinned")
+        ism_node.classList.remove("searched")
+        if(ism_node.getAttribute("ism_tag").length==3){
+            document.getElementById(ism_node.getAttribute("ism_tag")).classList.remove("pinned")
+            document.getElementById(ism_node.getAttribute("ism_tag")).classList.remove("searched")
+        }
+    }
+    showIntroduction()
 }
 
 function showIntroduction(){

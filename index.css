@@ -19,9 +19,10 @@ a{
 }
 #left_part{
     z-index: 1;
-    position: fixed;
+    position: absolute;
     width: 40rem;
     height: 100%;
+    min-height: 30rem;
     background-color: rgb(230, 230, 230);
     box-shadow: -1rem 0 1rem 1rem black;
 }
@@ -33,41 +34,59 @@ a{
     0%{left: -40rem}
     100%{left: 0}
 }
-#left_part #search_box{
+#left_part #return_button{
     position: absolute;
     left: 1rem;
     top: 1rem;
+    width: 7rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    background-color: rgb(200, 200, 200);
+    border:solid black 0.05rem;
+    text-align: center;
+}
+#left_part #return_button:hover{
+    background-color: gray;
+}
+#left_part #search_box{
+    position: absolute;
+    left: 1rem;
+    top: 3rem;
 }
 #left_part #search_box #search_text{
     position: absolute;
     width: 7rem;
     height: 1.5rem;
+    font-size: 0.8rem;
     border:solid black 0.05rem;
     text-align: center;
 }
 #left_part #search_box #search_button{
     position: absolute;
     top: 2rem;
-    width: 3rem;
+    width: 3.25rem;
     height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     background-color: rgb(200, 200, 200);
     border:solid black 0.05rem;
     text-align: center;
-    display: block;
 }
 #left_part #search_box #search_button:hover{
     background-color: gray;
 }
 #left_part #search_box #reset_button{
     position: absolute;
-    left: 4rem;
+    left: 3.75rem;
     top: 2rem;
-    width: 3rem;
+    width: 3.25rem;
     height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     background-color: rgb(200, 200, 200);
     border:solid black 0.05rem;
     text-align: center;
-    display: block;
 }
 #left_part #search_box #reset_button:hover{
     background-color: gray;
@@ -343,10 +362,11 @@ a{
 #left_part #axis_label p::before{
     content: "";
     position: absolute;
-    left: -1.3rem;
-    bottom: 0.2rem;
-    width: 1rem;
-    height:1rem;
+    left: -1rem;
+    bottom: 0.3rem;
+    width: 0.75rem;
+    height:0.75rem;
+    border:solid black 0.05rem;
 }
 #left_part #axis_label #axis_x::before{
     background-color: red;
@@ -372,10 +392,7 @@ a{
     overflow-y: scroll;
 }
 #left_part #ism_info div{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 1rem;
-    margin-right: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
     display: flex;
 }
 #left_part #ism_info div p{
@@ -385,6 +402,55 @@ a{
 #left_part #ism_info div p#ism_name{
     margin-top: -0.25rem;
     text-align: center;
+}
+#left_part #fontsize_change_box{
+    position: absolute;
+    left: 1.5rem;
+    top: 20rem;
+}
+#left_part #fontsize_change_box #increase_fontsize_button{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(200,200,200);
+    border:solid rgb(170, 170, 170) 0.2rem;
+}
+#left_part #fontsize_change_box #increase_fontsize_button::before{
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 0.4rem;
+    width: 0.8rem;
+    height: 0.2rem;
+    background-color: black;
+}
+#left_part #fontsize_change_box #increase_fontsize_button::after{
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.1rem;
+    width: 0.2rem;
+    height: 0.8rem;
+    background-color: black;
+}
+#left_part #fontsize_change_box #decrease_fontsize_button{
+    position: absolute;
+    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(200,200,200);
+    border:solid rgb(170, 170, 170) 0.2rem;
+}
+#left_part #fontsize_change_box #decrease_fontsize_button::before{
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 0.4rem;
+    width: 0.8rem;
+    height: 0.2rem;
+    background-color: black;
 }
 #left_part #size_adjuster{
     position: absolute;
@@ -424,6 +490,7 @@ a{
     right: 0;
     min-width: 53rem;
     height: 100%;
+    min-height: 30rem;
     overflow-x: scroll;
     overflow-y: scroll;
 }
