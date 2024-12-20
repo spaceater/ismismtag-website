@@ -1,7 +1,5 @@
 let ism_detial_list = document.getElementsByClassName("ism")
-let info_box = document.getElementById("info_box")
 let ism_data = null
-let ism_pinned = null
 let axis_color = ["red","green","blue","darkorange"]
 let ism_info_font_size = 1.0;
 
@@ -21,9 +19,9 @@ xhr.onload = ()=>{
     	        ism_node.firstChild.style.fontSize = "0.75rem"
             if(ism_data[ism_node.getAttribute("ism_tag")]["en_name"]=="")
                 ism_node.classList.add("no_data")
-	        ism_node.addEventListener("mouseenter",function(){selectISM(ism_node)})
-	        ism_node.addEventListener("mouseleave",function(){unselectISM(ism_node)})
-            ism_node.addEventListener("click",function(){pinISM(ism_node)})
+	        ism_node.addEventListener("mouseenter",function(){selectISM(ism_node.getAttribute("ism_tag"))})
+	        ism_node.addEventListener("mouseleave",function(){unselectISM(ism_node.getAttribute("ism_tag"))})
+            ism_node.addEventListener("click",function(){window.location.hash=(window.location.hash.slice(1)==ism_node.getAttribute("ism_tag")?"":ism_node.getAttribute("ism_tag"))})
         }
         showIntroduction()
         document.getElementById("return_button").textContent = "更多内容"
@@ -42,9 +40,8 @@ xhr.onload = ()=>{
     }
 }
 
-function selectISM(ism_node){    
-    setISMInfo(ism_node)
-    let ism_tag = ism_node.getAttribute("ism_tag")
+function selectISM(ism_tag){    
+    setISMInfo(ism_tag)
     let ism_length = ism_tag.length
     let ism_data_list_length = ism_detial_list.length
     for(let i=0;i<ism_data_list_length;i++){
@@ -57,15 +54,8 @@ function selectISM(ism_node){
     }
 }
 
-function unselectISM(ism_node){
-    if(ism_pinned != null){
-        setISMInfo(ism_pinned)
-    }
-    else{
-        showIntroduction()
-    }
-    let ism_tag = ism_node.getAttribute("ism_tag")
-    let ism_length=ism_tag.length
+function unselectISM(ism_tag){
+    let ism_length = ism_tag.length
     let ism_data_list_length = ism_detial_list.length
     for(let i=0;i<ism_data_list_length;i++){
         let ism_node = ism_detial_list[i]
@@ -75,10 +65,46 @@ function unselectISM(ism_node){
                 document.getElementById(ism_node.getAttribute("ism_tag")).classList.remove("selected")
         }
     }
+    window.onhashchange()
 }
 
-function setISMInfo(ism_node){
-    let ism_tag = ism_node.getAttribute("ism_tag")
+window.onhashchange = function(){
+    for(let i=0;i<ism_detial_list.length;i++){
+        let ism_node = ism_detial_list[i]
+        ism_node.classList.remove("pinned")
+        if(ism_node.getAttribute("ism_tag").length==3){
+            document.getElementById(ism_node.getAttribute("ism_tag")).classList.remove("pinned")
+        }
+    }
+    let ism_tag = window.location.hash.slice(1)
+    if(ism_tag!=""){
+        if(ism_tag in ism_data){
+            document.title = "主义主义魔方-" + ism_data[ism_tag].ch_name
+            setISMInfo(ism_tag)
+            let ism_length=ism_tag.length
+            let ism_data_list_length = ism_detial_list.length
+            for(let i=0;i<ism_data_list_length;i++){
+                let ism_node = ism_detial_list[i]
+                if(ism_node.getAttribute("ism_tag").slice(0,ism_length) == ism_tag){
+                    ism_node.classList.add("pinned")
+                    if(ism_node.getAttribute("ism_tag").length==3){
+                        document.getElementById(ism_node.getAttribute("ism_tag")).classList.add("pinned")
+                    }
+                }
+            }
+        }
+        else{
+            window.location.hash = ""
+        }
+        
+    }
+    else{
+        document.title = "主义主义魔方"
+        showIntroduction()
+    }    
+}
+
+function setISMInfo(ism_tag){
     let ism_tag_data = ism_data[ism_tag]
     //设置ism_name标签
     if(ism_tag.length>=1)
@@ -130,37 +156,7 @@ function renewInfo(target){
     document.getElementById("ism_related").innerHTML = document.getElementById("ism_related").innerHTML.replace(reg,"<span style='background-color:rgb(225, 172, 39);'>$&</span>")
 }
 
-function pinISM(ism_node){
-    for(let i=0;i<ism_detial_list.length;i++){
-        let ism_node = ism_detial_list[i]
-        ism_node.classList.remove("pinned")
-        if(ism_node.getAttribute("ism_tag").length==3){
-            document.getElementById(ism_node.getAttribute("ism_tag")).classList.remove("pinned")
-        }
-    }
-    if(ism_pinned == ism_node){
-        ism_pinned = null
-    }
-    else{
-        ism_pinned = ism_node
-        setISMInfo(ism_node)
-        let ism_tag = ism_node.getAttribute("ism_tag")
-        let ism_length=ism_tag.length
-        let ism_data_list_length = ism_detial_list.length
-        for(let i=0;i<ism_data_list_length;i++){
-            let ism_node = ism_detial_list[i]
-            if(ism_node.getAttribute("ism_tag").slice(0,ism_length) == ism_tag){
-                ism_node.classList.add("pinned")
-                if(ism_node.getAttribute("ism_tag").length==3){
-                    document.getElementById(ism_node.getAttribute("ism_tag")).classList.add("pinned")
-                }
-            }
-        }
-    }
-}
-
 function searchISM(target){
-    ism_pinned = null
     for(let i=0;i<ism_detial_list.length;i++){
         let ism_node = ism_detial_list[i]
         ism_node.classList.remove("pinned")
@@ -239,7 +235,7 @@ function searchISM(target){
 }
 
 function resetISM(){
-    ism_pinned = null
+    window.location.hash = ""
     for(let i=0;i<ism_detial_list.length;i++){
         let ism_node = ism_detial_list[i]
         ism_node.classList.remove("pinned")
@@ -249,7 +245,6 @@ function resetISM(){
             document.getElementById(ism_node.getAttribute("ism_tag")).classList.remove("searched")
         }
     }
-    showIntroduction()
 }
 
 function showIntroduction(){
