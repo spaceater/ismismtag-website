@@ -29,9 +29,9 @@ xhr.onload = ()=>{
         document.getElementById("search_button").textContent = "检索"
         document.getElementById("search_button").addEventListener("click",function(){searchISM(document.getElementById("search_text").value)})
         document.getElementById("reset_button").textContent = "重置"
-        document.getElementById("reset_button").addEventListener("click",function(){document.getElementById("search_text").value="",resetISM()})
-        document.getElementById("increase_fontsize_button").addEventListener("click",function(){ism_info_font_size+=0.1,document.getElementById("ism_info").style["font-size"]=ism_info_font_size+"rem"})
-        document.getElementById("decrease_fontsize_button").addEventListener("click",function(){ism_info_font_size-=0.1,document.getElementById("ism_info").style["font-size"]=ism_info_font_size+"rem"})
+        document.getElementById("reset_button").addEventListener("click",function(){resetISM(),document.getElementById("search_text").value="",window.onhashchange()})
+        document.getElementById("increase_fontsize_button").addEventListener("click",function(){ism_info_font_size+=0.1,document.getElementById("ism_info").style["font-size"]=ism_info_font_size+"rem";if(window.location.hash.slice(1)!=""){window.onhashchange()}})
+        document.getElementById("decrease_fontsize_button").addEventListener("click",function(){ism_info_font_size-=0.1,document.getElementById("ism_info").style["font-size"]=ism_info_font_size+"rem";if(window.location.hash.slice(1)!=""){window.onhashchange()}})
         document.getElementById("size_indicator").addEventListener("mousedown",function(){setIndicatorActive()})
     }
     else{
@@ -77,9 +77,13 @@ window.onhashchange = function(){
         }
     }
     let ism_tag = window.location.hash.slice(1)
-    if(ism_tag!=""){
+    if(ism_tag==""){
+        document.title = "主义主义魔方"
+        showIntroduction()
+    }
+    else{
         if(ism_tag in ism_data){
-            document.title = "主义主义魔方-" + ism_data[ism_tag].ch_name
+            document.title = "主义主义魔方-"+ism_data[ism_tag].ch_name
             setISMInfo(ism_tag)
             let ism_length=ism_tag.length
             let ism_data_list_length = ism_detial_list.length
@@ -96,11 +100,6 @@ window.onhashchange = function(){
         else{
             window.location.hash = ""
         }
-        
-    }
-    else{
-        document.title = "主义主义魔方"
-        showIntroduction()
     }    
 }
 
@@ -108,27 +107,27 @@ function setISMInfo(ism_tag){
     let ism_tag_data = ism_data[ism_tag]
     //设置ism_name标签
     if(ism_tag.length>=1)
-        document.getElementById("ism_name").innerHTML = "<b style='color:red;border:solid black 0.05rem'>"+ism_tag[0]+"</b>"
+        document.getElementById("ism_name").innerHTML = "<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:red;border:solid black 0.1rem;'><b>"+ism_tag[0]+"</b></p>"
     if(ism_tag.length>=3)
-        document.getElementById("ism_name").innerHTML += "-<b style='color:green;border:solid black 0.05rem'>"+ism_tag[2]+"</b>"
+        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:green;border:solid black 0.1rem'><b>"+ism_tag[2]+"</b></p>"
     if(ism_tag.length>=5)
-        document.getElementById("ism_name").innerHTML += "-<b style='color:blue;border:solid black 0.05rem'>"+ism_tag[4]+"</b>"
+        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:blue;border:solid black 0.1rem'><b>"+ism_tag[4]+"</b></p>"
     if(ism_tag.length>=7)
-        document.getElementById("ism_name").innerHTML += "-<b style='color:darkorange;border:solid black 0.05rem'>"+ism_tag[6]+"</b>"
-    document.getElementById("ism_name").innerHTML += '\n' + "<b>" + ism_tag_data.ch_name + '\n' + ism_tag_data.en_name + "</b>"
+        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:darkorange;border:solid black 0.1rem'><b>"+ism_tag[6]+"</b></p>"
+    document.getElementById("ism_name").innerHTML += '\n'+"<b>"+ism_tag_data.ch_name+'\n'+ism_tag_data.en_name+"</b>"
     //设置ism_axis标签
     let axis_list_data = ism_tag_data.axis_list
     let axis_list_length = axis_list_data.length
     document.getElementById("ism_axis").innerHTML = ""
     for(let i=0;i<axis_list_length;i++)
-        document.getElementById("ism_axis").innerHTML += "<b style='color:" + axis_color[i] + "'>" + axis_list_data[i].slice(0,3) + "</b><b style='border:solid black 0.05rem'>" + axis_list_data[i].slice(3,4) + "</b><b>" + axis_list_data[i].slice(4,5) + "</b>" + axis_list_data[i].slice(5) + '\n' 
+        document.getElementById("ism_axis").innerHTML += "<b style='color:"+axis_color[i]+"'>"+axis_list_data[i].slice(0,3)+"</b><p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;border:solid black 0.1rem;text-align:center'><b>"+axis_list_data[i].slice(3,4)+"</b></p>"+axis_list_data[i].slice(4)+'\n' 
     //设置ism_features标签
     let feature_list_data = ism_tag_data.feature_list
     let feature_list_length = feature_list_data.length
     document.getElementById("ism_features").innerHTML = ""
     for(let i=0;i<feature_list_length;i++){
         if(feature_list_data[i]!="")
-            document.getElementById("ism_features").innerHTML += "<b>" + feature_list_data[i].slice(0,1) + "</b>" + feature_list_data[i].slice(1) + '\n'
+            document.getElementById("ism_features").innerHTML += "<b>"+feature_list_data[i].slice(0,1)+"</b>"+feature_list_data[i].slice(1)+'\n'
     }
     //设置ism_related标签
     let related_list_data = ism_tag_data.related_list
@@ -138,9 +137,9 @@ function setISMInfo(ism_tag){
         if(related_list_data[i]!=""){
             let split_index = related_list_data[i].indexOf('：')
             if(related_list_data[i].search("http")==-1)
-                document.getElementById("ism_related").innerHTML += "<b>" + related_list_data[i].slice(0,split_index+1) + "</b>" + related_list_data[i].slice(split_index+1) + '\n'
+                document.getElementById("ism_related").innerHTML += "<b>"+related_list_data[i].slice(0,split_index+1)+"</b>"+related_list_data[i].slice(split_index+1)+'\n'
             else
-                document.getElementById("ism_related").innerHTML += "<b>" + related_list_data[i].slice(0,split_index+1) + "</b><a href='" + related_list_data[i].slice(split_index+1) + "' target='_blank'>" + related_list_data[i].slice(split_index+1) + '</a>\n'
+                document.getElementById("ism_related").innerHTML += "<b>"+related_list_data[i].slice(0,split_index+1)+"</b><a href='"+related_list_data[i].slice(split_index+1)+"' target='_blank'>"+related_list_data[i].slice(split_index+1)+'</a>\n'
         }    
     }
     //设置搜索关键字加背景色
@@ -157,6 +156,8 @@ function renewInfo(target){
 }
 
 function searchISM(target){
+    history.replaceState(null,null,"/#")
+    document.title = "主义主义魔方"
     for(let i=0;i<ism_detial_list.length;i++){
         let ism_node = ism_detial_list[i]
         ism_node.classList.remove("pinned")
@@ -222,9 +223,9 @@ function searchISM(target){
             }
         }
         document.getElementById("ism_name").innerHTML = ""
-        document.getElementById("ism_axis").innerHTML = "<b>检索词：</b><a href='https://www.baidu.com/s?wd=" + target + "' target='_blank'>" + target + "</a>"
+        document.getElementById("ism_axis").innerHTML = "<b>检索词：</b><a href='https://www.baidu.com/s?wd="+target+"' target='_blank'>"+target+"</a>"
         document.getElementById("ism_features").innerHTML = "<b style='color:rgb(255,30,30)'>检索完成</b>"
-        document.getElementById("ism_related").innerHTML = "总共检索到<b> " + result_count + " </b>个结果"
+        document.getElementById("ism_related").innerHTML = "总共检索到<b> "+result_count+" </b>个结果"
     }
     else{
         document.getElementById("ism_name").innerHTML = ""
@@ -263,7 +264,7 @@ function showIntroduction(){
     document.getElementById("ism_related").innerHTML = ""
     for(let i=0;i<introduction_length;i++)
         document.getElementById("ism_related").innerHTML += introduction.ismism_introduction[i]
-    document.getElementById("ism_related").innerHTML += '\n\n' + introduction.Github + introduction.Github_pages + introduction.group + introduction.link + '\n' + introduction.warning + "\n<HR><p style='text-align:center'><a href='https://beian.miit.gov.cn/' target='_blank' style='font-style:normal;text-decoration:none'>京ICP备2024067574号-1</a><p><p style='text-align:center'><a href='https://beian.mps.gov.cn/#/query/webSearch?code=11010802044945' target='_blank' style='font-style:normal;text-decoration:none'>京公网安备11010802044945</a><p>"
+    document.getElementById("ism_related").innerHTML += '\n\n'+introduction.Github+introduction.Github_pages+introduction.group+introduction.link+'\n'+introduction.warning+"\n<HR><p style='text-align:center'><a href='https://beian.miit.gov.cn/' target='_blank' style='font-style:normal;text-decoration:none'>京ICP备2024067574号-1</a><p><p style='text-align:center'><a href='https://beian.mps.gov.cn/#/query/webSearch?code=11010802044945' target='_blank' style='font-style:normal;text-decoration:none'>京公网安备11010802044945</a><p>"
 }
 
 function setIndicatorActive(){
@@ -302,7 +303,7 @@ function changeSize(event){
     let size_rate = 1 + value / max * 2
     if(size_rate >= 1.2){
         size_rate -= 0.2
-        document.getElementById("ismism_cube_box").style.cssText = "transform: scale(" + size_rate + ")"       
+        document.getElementById("ismism_cube_box").style.cssText = "transform: scale("+size_rate+")"       
     }
     else{
         document.getElementById("ismism_cube_box").style.cssText = "transform: scale(1)"       

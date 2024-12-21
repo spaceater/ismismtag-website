@@ -392,6 +392,7 @@ a{
     overflow-y: scroll;
 }
 #left_part #ism_info div{
+    position: relative;
     margin: 0.5rem 0.5rem 0.5rem 1rem;
     display: flex;
 }
@@ -403,20 +404,18 @@ a{
     margin-top: -0.25rem;
     text-align: center;
 }
-#left_part #fontsize_change_box{
+#left_part #ism_info #increase_fontsize_button{
+    z-index: 1;
     position: absolute;
-    left: 1.5rem;
-    top: 20rem;
-}
-#left_part #fontsize_change_box #increase_fontsize_button{
-    position: absolute;
+    left: 0;
+    top: 0;
     width: 1rem;
     height: 1rem;
     border-radius: 0.5rem;
     background-color: rgb(200,200,200);
     border:solid rgb(170, 170, 170) 0.2rem;
 }
-#left_part #fontsize_change_box #increase_fontsize_button::before{
+#left_part #ism_info #increase_fontsize_button::before{
     content: "";
     position: absolute;
     left: 0.1rem;
@@ -425,7 +424,7 @@ a{
     height: 0.2rem;
     background-color: black;
 }
-#left_part #fontsize_change_box #increase_fontsize_button::after{
+#left_part #ism_info #increase_fontsize_button::after{
     content: "";
     position: absolute;
     left: 0.4rem;
@@ -434,16 +433,18 @@ a{
     height: 0.8rem;
     background-color: black;
 }
-#left_part #fontsize_change_box #decrease_fontsize_button{
+#left_part #ism_info #decrease_fontsize_button{
+    z-index: 1;
     position: absolute;
     left: 2rem;
+    top: 0;
     width: 1rem;
     height: 1rem;
     border-radius: 0.5rem;
     background-color: rgb(200,200,200);
     border:solid rgb(170, 170, 170) 0.2rem;
 }
-#left_part #fontsize_change_box #decrease_fontsize_button::before{
+#left_part #ism_info #decrease_fontsize_button::before{
     content: "";
     position: absolute;
     left: 0.1rem;
