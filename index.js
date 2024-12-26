@@ -107,20 +107,20 @@ function setISMInfo(ism_tag){
     let ism_tag_data = ism_data[ism_tag]
     //设置ism_name标签
     if(ism_tag.length>=1)
-        document.getElementById("ism_name").innerHTML = "<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:red;border:solid black 0.1rem;'><b>"+ism_tag[0]+"</b></p>"
+        document.getElementById("ism_name").innerHTML = "<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:red;border:solid black "+0.1*ism_info_font_size+"rem;'><b>"+ism_tag[0]+"</b></p>"
     if(ism_tag.length>=3)
-        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:green;border:solid black 0.1rem'><b>"+ism_tag[2]+"</b></p>"
+        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:green;border:solid black "+0.1*ism_info_font_size+"rem'><b>"+ism_tag[2]+"</b></p>"
     if(ism_tag.length>=5)
-        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:blue;border:solid black 0.1rem'><b>"+ism_tag[4]+"</b></p>"
+        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:blue;border:solid black "+0.1*ism_info_font_size+"rem'><b>"+ism_tag[4]+"</b></p>"
     if(ism_tag.length>=7)
-        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:darkorange;border:solid black 0.1rem'><b>"+ism_tag[6]+"</b></p>"
+        document.getElementById("ism_name").innerHTML += "-<p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;color:darkorange;border:solid black "+0.1*ism_info_font_size+"rem'><b>"+ism_tag[6]+"</b></p>"
     document.getElementById("ism_name").innerHTML += '\n'+"<b>"+ism_tag_data.ch_name+'\n'+ism_tag_data.en_name+"</b>"
     //设置ism_axis标签
     let axis_list_data = ism_tag_data.axis_list
     let axis_list_length = axis_list_data.length
     document.getElementById("ism_axis").innerHTML = ""
     for(let i=0;i<axis_list_length;i++)
-        document.getElementById("ism_axis").innerHTML += "<b style='color:"+axis_color[i]+"'>"+axis_list_data[i].slice(0,3)+"</b><p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;border:solid black 0.1rem;text-align:center'><b>"+axis_list_data[i].slice(3,4)+"</b></p>"+axis_list_data[i].slice(4)+'\n' 
+        document.getElementById("ism_axis").innerHTML += "<b style='color:"+axis_color[i]+"'>"+axis_list_data[i].slice(0,3)+"</b><p style='display:inline-block;width:"+1.1*ism_info_font_size+"rem;height:"+1.1*ism_info_font_size+"rem;line-height:"+1.1*ism_info_font_size+"rem;border:solid black "+0.1*ism_info_font_size+"rem;text-align:center'><b>"+axis_list_data[i].slice(3,4)+"</b></p>"+axis_list_data[i].slice(4)+'\n' 
     //设置ism_features标签
     let feature_list_data = ism_tag_data.feature_list
     let feature_list_length = feature_list_data.length
