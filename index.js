@@ -23,7 +23,7 @@ xhr.onload = ()=>{
 	        ism_node.addEventListener("mouseleave",function(){unselectISM(ism_node.getAttribute("ism_tag"))})
             ism_node.addEventListener("click",function(){window.location.hash=(window.location.hash.slice(1)==ism_node.getAttribute("ism_tag")?"":ism_node.getAttribute("ism_tag"))})
         }
-        showIntroduction()
+        window.onhashchange()
         document.getElementById("return_button").textContent = "更多内容"
         document.getElementById("return_button").addEventListener("click",function(){window.open("https://www.maybered.com","_blank")})
         document.getElementById("search_button").textContent = "检索"
