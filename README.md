@@ -9,6 +9,6 @@ Github托管：**https://spaceater.github.io/ismismtag-website/**
 *****
 use **https://www.ismismtag.com** to visit the webpage
 
-linked video:**https://www.bilibili.com/video/BV1VXiGekEHK**
+linked video: **https://www.bilibili.com/video/BV1VXiGekEHK**
 
-Github Pages**https://spaceater.github.io/ismismtag-website/**
+Github Pages: **https://spaceater.github.io/ismismtag-website/**
