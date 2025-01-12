@@ -7,7 +7,7 @@ __visualized webpage summary of *ISMISM*!__
 
 Github托管：**https://spaceater.github.io/ismismtag-website/**
 *****
-use **https://www.ismismtag.com** to visit the webpage
+type **https://www.ismismtag.com** to visit the webpage
 
 linked video: **https://www.bilibili.com/video/BV1VXiGekEHK**
 
