@@ -415,6 +415,9 @@ a{
     background-color: rgb(200,200,200);
     border:solid rgb(170, 170, 170) 0.2rem;
 }
+#left_part #ism_info #increase_fontsize_button:hover{
+    background-color: rgb(170, 170, 170);
+}
 #left_part #ism_info #increase_fontsize_button::before{
     content: "";
     position: absolute;
@@ -443,6 +446,9 @@ a{
     border-radius: 0.5rem;
     background-color: rgb(200,200,200);
     border:solid rgb(170, 170, 170) 0.2rem;
+}
+#left_part #ism_info #decrease_fontsize_button:hover{
+    background-color: rgb(170, 170, 170);
 }
 #left_part #ism_info #decrease_fontsize_button::before{
     content: "";
