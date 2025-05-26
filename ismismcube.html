@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主义主义魔方</title>
+    <script>
+        document.documentElement.style.fontSize = Math.max(screen.width,screen.height) / 96 + "px";
+    </script>
+    <link rel="stylesheet" href="ismismcube.css">
+    <script src="ismismcube.js"></script>
+</head>
+
+<body>
+    <div id="left_part">
+        <div id="page_view">
+            <img src="page_view_icon.png" alt="page_view">
+            <p></p>
+        </div>
+        <div id="return_button"></div>
+        <div id="search_box">
+            <input id="search_text" type="text" placeholder="键入检索词">
+            <div id="search_button"></div>
+            <div id="reset_button"></div>
+        </div>
+        <div id="ismism_main_cube">
+            <div id="show_cube">
+                <div id="1-1" style="--x:0;--y:3;--a:0.5;--b:0.5"></div>
+                <div id="1-2" style="--x:1;--y:3;--a:0.5;--b:0.5"></div>
+                <div id="1-3" style="--x:2;--y:3;--a:0.5;--b:0.5"></div>
+                <div id="1-4" style="--x:3;--y:3;--a:0.5;--b:1"></div>
+                <div id="2-1" style="--x:0;--y:2;--a:0.5;--b:0.5"></div>
+                <div id="2-2" style="--x:1;--y:2;--a:0.5;--b:0.5"></div>
+                <div id="2-3" style="--x:2;--y:2;--a:0.5;--b:0.5"></div>
+                <div id="2-4" style="--x:3;--y:2;--a:0.5;--b:1"></div>
+                <div id="3-1" style="--x:0;--y:1;--a:0.5;--b:0.5"></div>
+                <div id="3-2" style="--x:1;--y:1;--a:0.5;--b:0.5"></div>
+                <div id="3-3" style="--x:2;--y:1;--a:0.5;--b:0.5"></div>
+                <div id="3-4" style="--x:3;--y:1;--a:0.5;--b:1"></div>
+                <div id="4-1" style="--x:0;--y:0;--a:1;--b:0.5"></div>
+                <div id="4-2" style="--x:1;--y:0;--a:1;--b:0.5"></div>
+                <div id="4-3" style="--x:2;--y:0;--a:1;--b:0.5"></div>
+                <div id="4-4" style="--x:3;--y:0;--a:1;--b:1"></div>
+            </div>
+            <div id="hover_cube">
+                <div class="ism" style="--x:0;--y:3" ism_tag="1-1"><p></p></div>
+                <div class="ism" style="--x:1;--y:3" ism_tag="1-2"><p></p></div>
+                <div class="ism" style="--x:2;--y:3" ism_tag="1-3"><p></p></div>
+                <div class="ism" style="--x:3;--y:3" ism_tag="1-4"><p></p></div>
+                <div class="ism" style="--x:0;--y:2" ism_tag="2-1"><p></p></div>
+                <div class="ism" style="--x:1;--y:2" ism_tag="2-2"><p></p></div>
+                <div class="ism" style="--x:2;--y:2" ism_tag="2-3"><p></p></div>
+                <div class="ism" style="--x:3;--y:2" ism_tag="2-4"><p></p></div>
+                <div class="ism" style="--x:0;--y:1" ism_tag="3-1"><p></p></div>
+                <div class="ism" style="--x:1;--y:1" ism_tag="3-2"><p></p></div>
+                <div class="ism" style="--x:2;--y:1" ism_tag="3-3"><p></p></div>
+                <div class="ism" style="--x:3;--y:1" ism_tag="3-4"><p></p></div>
+                <div class="ism" style="--x:0;--y:0" ism_tag="4-1"><p></p></div>
+                <div class="ism" style="--x:1;--y:0" ism_tag="4-2"><p></p></div>
+                <div class="ism" style="--x:2;--y:0" ism_tag="4-3"><p></p></div>
+                <div class="ism" style="--x:3;--y:0" ism_tag="4-4"><p></p></div>
+            </div>
+            <div class="x" style="--x:1"><p>1</p></div>
+            <div class="x" style="--x:2"><p>2</p></div>
+            <div class="x" style="--x:3"><p>3</p></div>
+            <div class="x" style="--x:4"><p>4</p></div>
+            <div class="y" style="--y:1"><p>1</p></div>
+            <div class="y" style="--y:2"><p>2</p></div>
+            <div class="y" style="--y:3"><p>3</p></div>
+            <div class="y" style="--y:4"><p>4</p></div>
+            <ul id="ontological_structure">
+                <li class="ism" ism_tag="4"><p></p></li>
+                <li class="ism" ism_tag="3"><p></p></li>
+                <li class="ism" ism_tag="2"><p></p></li>
+                <li class="ism" ism_tag="1"><p></p></li>
+            </ul>
+            <div id="x"></div>
+            <div id="y"></div>
+            <div id="z"></div>
+        </div>
+        <div id="axis_label">
+            <p id="axis_x">场域论</p>
+            <p id="axis_y">本体论</p>
+            <p id="axis_z">认识论</p>
+            <p id="axis_i">目的论</p>
+        </div>
+        <div id="ism_info">
+            <div id="increase_fontsize_button"></div>
+            <div id="decrease_fontsize_button"></div>
+            <div><p id="ism_name">数据正在加载中<br><br>若长时间未刷新<br>请检测网络后重试<br>或<br>强制重新加载此页面(windows快捷键 Ctrl + F5)</p></div>
+            <div><p id="ism_axis"></p></div>
+            <div><p id="ism_features"></p></div>
+            <div><p id="ism_related"></p></div>
+        </div>
+        <div id="size_adjuster">
+            <div id="background_line"></div>
+            <div id="size_indicator"><p>△ ≡ ▽</p></div>
+        </div>
+    </div>
+    <div id="right_part">
+        <div id="ismism_cube_box">
+            <div class="ismism_cube" style="--y:0">
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="4-1-1-4"><p></p></li>
+                        <li class="ism" ism_tag="4-1-1-3"><p></p></li>
+                        <li class="ism" ism_tag="4-1-1-2"><p></p></li>
+                        <li class="ism" ism_tag="4-1-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="4-1-2-4"><p></p></li>
+                        <li class="ism" ism_tag="4-1-2-3"><p></p></li>
+                        <li class="ism" ism_tag="4-1-2-2"><p></p></li>
+                        <li class="ism" ism_tag="4-1-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="4-1-3-4"><p></p></li>
+                        <li class="ism" ism_tag="4-1-3-3"><p></p></li>
+                        <li class="ism" ism_tag="4-1-3-2"><p></p></li>
+                        <li class="ism" ism_tag="4-1-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="4-1-4-4"><p></p></li>
+                        <li class="ism" ism_tag="4-1-4-3"><p></p></li>
+                        <li class="ism" ism_tag="4-1-4-2"><p></p></li>
+                        <li class="ism" ism_tag="4-1-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="4-1-4"><p></p></div>
+                        <div class="ism" ism_tag="4-1-3"><p></p></div>
+                        <div class="ism" ism_tag="4-1-2"><p></p></div>
+                        <div class="ism" ism_tag="4-1-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="4-2-1-4"><p></p></li>
+                        <li class="ism" ism_tag="4-2-1-3"><p></p></li>
+                        <li class="ism" ism_tag="4-2-1-2"><p></p></li>
+                        <li class="ism" ism_tag="4-2-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="4-2-2-4"><p></p></li>
+                        <li class="ism" ism_tag="4-2-2-3"><p></p></li>
+                        <li class="ism" ism_tag="4-2-2-2"><p></p></li>
+                        <li class="ism" ism_tag="4-2-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="4-2-3-4"><p></p></li>
+                        <li class="ism" ism_tag="4-2-3-3"><p></p></li>
+                        <li class="ism" ism_tag="4-2-3-2"><p></p></li>
+                        <li class="ism" ism_tag="4-2-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="4-2-4-4"><p></p></li>
+                        <li class="ism" ism_tag="4-2-4-3"><p></p></li>
+                        <li class="ism" ism_tag="4-2-4-2"><p></p></li>
+                        <li class="ism" ism_tag="4-2-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="4-2-4"><p></p></div>
+                        <div class="ism" ism_tag="4-2-3"><p></p></div>
+                        <div class="ism" ism_tag="4-2-2"><p></p></div>
+                        <div class="ism" ism_tag="4-2-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="4-3-1-4"><p></p></li>
+                        <li class="ism" ism_tag="4-3-1-3"><p></p></li>
+                        <li class="ism" ism_tag="4-3-1-2"><p></p></li>
+                        <li class="ism" ism_tag="4-3-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="4-3-2-4"><p></p></li>
+                        <li class="ism" ism_tag="4-3-2-3"><p></p></li>
+                        <li class="ism" ism_tag="4-3-2-2"><p></p></li>
+                        <li class="ism" ism_tag="4-3-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="4-3-3-4"><p></p></li>
+                        <li class="ism" ism_tag="4-3-3-3"><p></p></li>
+                        <li class="ism" ism_tag="4-3-3-2"><p></p></li>
+                        <li class="ism" ism_tag="4-3-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="4-3-4-4"><p></p></li>
+                        <li class="ism" ism_tag="4-3-4-3"><p></p></li>
+                        <li class="ism" ism_tag="4-3-4-2"><p></p></li>
+                        <li class="ism" ism_tag="4-3-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="4-3-4"><p></p></div>
+                        <div class="ism" ism_tag="4-3-3"><p></p></div>
+                        <div class="ism" ism_tag="4-3-2"><p></p></div>
+                        <div class="ism" ism_tag="4-3-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="4-4-1-4"><p></p></li>
+                        <li class="ism" ism_tag="4-4-1-3"><p></p></li>
+                        <li class="ism" ism_tag="4-4-1-2"><p></p></li>
+                        <li class="ism" ism_tag="4-4-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="4-4-2-4"><p></p></li>
+                        <li class="ism" ism_tag="4-4-2-3"><p></p></li>
+                        <li class="ism" ism_tag="4-4-2-2"><p></p></li>
+                        <li class="ism" ism_tag="4-4-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="4-4-3-4"><p></p></li>
+                        <li class="ism" ism_tag="4-4-3-3"><p></p></li>
+                        <li class="ism" ism_tag="4-4-3-2"><p></p></li>
+                        <li class="ism" ism_tag="4-4-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="4-4-4-4"><p></p></li>
+                        <li class="ism" ism_tag="4-4-4-3"><p></p></li>
+                        <li class="ism" ism_tag="4-4-4-2"><p></p></li>
+                        <li class="ism" ism_tag="4-4-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="4-4-4"><p></p></div>
+                        <div class="ism" ism_tag="4-4-3"><p></p></div>
+                        <div class="ism" ism_tag="4-4-2"><p></p></div>
+                        <div class="ism" ism_tag="4-4-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+            </div>
+            <div class="ismism_cube" style="--y:1">
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="3-1-1-4"><p></p></li>
+                        <li class="ism" ism_tag="3-1-1-3"><p></p></li>
+                        <li class="ism" ism_tag="3-1-1-2"><p></p></li>
+                        <li class="ism" ism_tag="3-1-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="3-1-2-4"><p></p></li>
+                        <li class="ism" ism_tag="3-1-2-3"><p></p></li>
+                        <li class="ism" ism_tag="3-1-2-2"><p></p></li>
+                        <li class="ism" ism_tag="3-1-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="3-1-3-4"><p></p></li>
+                        <li class="ism" ism_tag="3-1-3-3"><p></p></li>
+                        <li class="ism" ism_tag="3-1-3-2"><p></p></li>
+                        <li class="ism" ism_tag="3-1-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="3-1-4-4"><p></p></li>
+                        <li class="ism" ism_tag="3-1-4-3"><p></p></li>
+                        <li class="ism" ism_tag="3-1-4-2"><p></p></li>
+                        <li class="ism" ism_tag="3-1-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="3-1-4"><p></p></div>
+                        <div class="ism" ism_tag="3-1-3"><p></p></div>
+                        <div class="ism" ism_tag="3-1-2"><p></p></div>
+                        <div class="ism" ism_tag="3-1-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="3-2-1-4"><p></p></li>
+                        <li class="ism" ism_tag="3-2-1-3"><p></p></li>
+                        <li class="ism" ism_tag="3-2-1-2"><p></p></li>
+                        <li class="ism" ism_tag="3-2-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="3-2-2-4"><p></p></li>
+                        <li class="ism" ism_tag="3-2-2-3"><p></p></li>
+                        <li class="ism" ism_tag="3-2-2-2"><p></p></li>
+                        <li class="ism" ism_tag="3-2-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="3-2-3-4"><p></p></li>
+                        <li class="ism" ism_tag="3-2-3-3"><p></p></li>
+                        <li class="ism" ism_tag="3-2-3-2"><p></p></li>
+                        <li class="ism" ism_tag="3-2-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="3-2-4-4"><p></p></li>
+                        <li class="ism" ism_tag="3-2-4-3"><p></p></li>
+                        <li class="ism" ism_tag="3-2-4-2"><p></p></li>
+                        <li class="ism" ism_tag="3-2-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="3-2-4"><p></p></div>
+                        <div class="ism" ism_tag="3-2-3"><p></p></div>
+                        <div class="ism" ism_tag="3-2-2"><p></p></div>
+                        <div class="ism" ism_tag="3-2-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="3-3-1-4"><p></p></li>
+                        <li class="ism" ism_tag="3-3-1-3"><p></p></li>
+                        <li class="ism" ism_tag="3-3-1-2"><p></p></li>
+                        <li class="ism" ism_tag="3-3-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="3-3-2-4"><p></p></li>
+                        <li class="ism" ism_tag="3-3-2-3"><p></p></li>
+                        <li class="ism" ism_tag="3-3-2-2"><p></p></li>
+                        <li class="ism" ism_tag="3-3-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="3-3-3-4"><p></p></li>
+                        <li class="ism" ism_tag="3-3-3-3"><p></p></li>
+                        <li class="ism" ism_tag="3-3-3-2"><p></p></li>
+                        <li class="ism" ism_tag="3-3-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="3-3-4-4"><p></p></li>
+                        <li class="ism" ism_tag="3-3-4-3"><p></p></li>
+                        <li class="ism" ism_tag="3-3-4-2"><p></p></li>
+                        <li class="ism" ism_tag="3-3-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="3-3-4"><p></p></div>
+                        <div class="ism" ism_tag="3-3-3"><p></p></div>
+                        <div class="ism" ism_tag="3-3-2"><p></p></div>
+                        <div class="ism" ism_tag="3-3-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="3-4-1-4"><p></p></li>
+                        <li class="ism" ism_tag="3-4-1-3"><p></p></li>
+                        <li class="ism" ism_tag="3-4-1-2"><p></p></li>
+                        <li class="ism" ism_tag="3-4-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="3-4-2-4"><p></p></li>
+                        <li class="ism" ism_tag="3-4-2-3"><p></p></li>
+                        <li class="ism" ism_tag="3-4-2-2"><p></p></li>
+                        <li class="ism" ism_tag="3-4-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="3-4-3-4"><p></p></li>
+                        <li class="ism" ism_tag="3-4-3-3"><p></p></li>
+                        <li class="ism" ism_tag="3-4-3-2"><p></p></li>
+                        <li class="ism" ism_tag="3-4-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="3-4-4-4"><p></p></li>
+                        <li class="ism" ism_tag="3-4-4-3"><p></p></li>
+                        <li class="ism" ism_tag="3-4-4-2"><p></p></li>
+                        <li class="ism" ism_tag="3-4-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="3-4-4"><p></p></div>
+                        <div class="ism" ism_tag="3-4-3"><p></p></div>
+                        <div class="ism" ism_tag="3-4-2"><p></p></div>
+                        <div class="ism" ism_tag="3-4-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+            </div>
+            <div class="ismism_cube" style="--y:2">
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="2-1-1-4"><p></p></li>
+                        <li class="ism" ism_tag="2-1-1-3"><p></p></li>
+                        <li class="ism" ism_tag="2-1-1-2"><p></p></li>
+                        <li class="ism" ism_tag="2-1-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="2-1-2-4"><p></p></li>
+                        <li class="ism" ism_tag="2-1-2-3"><p></p></li>
+                        <li class="ism" ism_tag="2-1-2-2"><p></p></li>
+                        <li class="ism" ism_tag="2-1-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="2-1-3-4"><p></p></li>
+                        <li class="ism" ism_tag="2-1-3-3"><p></p></li>
+                        <li class="ism" ism_tag="2-1-3-2"><p></p></li>
+                        <li class="ism" ism_tag="2-1-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="2-1-4-4"><p></p></li>
+                        <li class="ism" ism_tag="2-1-4-3"><p></p></li>
+                        <li class="ism" ism_tag="2-1-4-2"><p></p></li>
+                        <li class="ism" ism_tag="2-1-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="2-1-4"><p></p></div>
+                        <div class="ism" ism_tag="2-1-3"><p></p></div>
+                        <div class="ism" ism_tag="2-1-2"><p></p></div>
+                        <div class="ism" ism_tag="2-1-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="2-2-1-4"><p></p></li>
+                        <li class="ism" ism_tag="2-2-1-3"><p></p></li>
+                        <li class="ism" ism_tag="2-2-1-2"><p></p></li>
+                        <li class="ism" ism_tag="2-2-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="2-2-2-4"><p></p></li>
+                        <li class="ism" ism_tag="2-2-2-3"><p></p></li>
+                        <li class="ism" ism_tag="2-2-2-2"><p></p></li>
+                        <li class="ism" ism_tag="2-2-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="2-2-3-4"><p></p></li>
+                        <li class="ism" ism_tag="2-2-3-3"><p></p></li>
+                        <li class="ism" ism_tag="2-2-3-2"><p></p></li>
+                        <li class="ism" ism_tag="2-2-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="2-2-4-4"><p></p></li>
+                        <li class="ism" ism_tag="2-2-4-3"><p></p></li>
+                        <li class="ism" ism_tag="2-2-4-2"><p></p></li>
+                        <li class="ism" ism_tag="2-2-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="2-2-4"><p></p></div>
+                        <div class="ism" ism_tag="2-2-3"><p></p></div>
+                        <div class="ism" ism_tag="2-2-2"><p></p></div>
+                        <div class="ism" ism_tag="2-2-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="2-3-1-4"><p></p></li>
+                        <li class="ism" ism_tag="2-3-1-3"><p></p></li>
+                        <li class="ism" ism_tag="2-3-1-2"><p></p></li>
+                        <li class="ism" ism_tag="2-3-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="2-3-2-4"><p></p></li>
+                        <li class="ism" ism_tag="2-3-2-3"><p></p></li>
+                        <li class="ism" ism_tag="2-3-2-2"><p></p></li>
+                        <li class="ism" ism_tag="2-3-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="2-3-3-4"><p></p></li>
+                        <li class="ism" ism_tag="2-3-3-3"><p></p></li>
+                        <li class="ism" ism_tag="2-3-3-2"><p></p></li>
+                        <li class="ism" ism_tag="2-3-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="2-3-4-4"><p></p></li>
+                        <li class="ism" ism_tag="2-3-4-3"><p></p></li>
+                        <li class="ism" ism_tag="2-3-4-2"><p></p></li>
+                        <li class="ism" ism_tag="2-3-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="2-3-4"><p></p></div>
+                        <div class="ism" ism_tag="2-3-3"><p></p></div>
+                        <div class="ism" ism_tag="2-3-2"><p></p></div>
+                        <div class="ism" ism_tag="2-3-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="2-4-1-4"><p></p></li>
+                        <li class="ism" ism_tag="2-4-1-3"><p></p></li>
+                        <li class="ism" ism_tag="2-4-1-2"><p></p></li>
+                        <li class="ism" ism_tag="2-4-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="2-4-2-4"><p></p></li>
+                        <li class="ism" ism_tag="2-4-2-3"><p></p></li>
+                        <li class="ism" ism_tag="2-4-2-2"><p></p></li>
+                        <li class="ism" ism_tag="2-4-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="2-4-3-4"><p></p></li>
+                        <li class="ism" ism_tag="2-4-3-3"><p></p></li>
+                        <li class="ism" ism_tag="2-4-3-2"><p></p></li>
+                        <li class="ism" ism_tag="2-4-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="2-4-4-4"><p></p></li>
+                        <li class="ism" ism_tag="2-4-4-3"><p></p></li>
+                        <li class="ism" ism_tag="2-4-4-2"><p></p></li>
+                        <li class="ism" ism_tag="2-4-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="2-4-4"><p></p></div>
+                        <div class="ism" ism_tag="2-4-3"><p></p></div>
+                        <div class="ism" ism_tag="2-4-2"><p></p></div>
+                        <div class="ism" ism_tag="2-4-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+            </div>
+            <div class="ismism_cube" style="--y:3">
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="1-1-1-4"><p></p></li>
+                        <li class="ism" ism_tag="1-1-1-3"><p></p></li>
+                        <li class="ism" ism_tag="1-1-1-2"><p></p></li>
+                        <li class="ism" ism_tag="1-1-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="1-1-2-4"><p></p></li>
+                        <li class="ism" ism_tag="1-1-2-3"><p></p></li>
+                        <li class="ism" ism_tag="1-1-2-2"><p></p></li>
+                        <li class="ism" ism_tag="1-1-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="1-1-3-4"><p></p></li>
+                        <li class="ism" ism_tag="1-1-3-3"><p></p></li>
+                        <li class="ism" ism_tag="1-1-3-2"><p></p></li>
+                        <li class="ism" ism_tag="1-1-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="1-1-4-4"><p></p></li>
+                        <li class="ism" ism_tag="1-1-4-3"><p></p></li>
+                        <li class="ism" ism_tag="1-1-4-2"><p></p></li>
+                        <li class="ism" ism_tag="1-1-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="1-1-4"><p></p></div>
+                        <div class="ism" ism_tag="1-1-3"><p></p></div>
+                        <div class="ism" ism_tag="1-1-2"><p></p></div>
+                        <div class="ism" ism_tag="1-1-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="1-2-1-4"><p></p></li>
+                        <li class="ism" ism_tag="1-2-1-3"><p></p></li>
+                        <li class="ism" ism_tag="1-2-1-2"><p></p></li>
+                        <li class="ism" ism_tag="1-2-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="1-2-2-4"><p></p></li>
+                        <li class="ism" ism_tag="1-2-2-3"><p></p></li>
+                        <li class="ism" ism_tag="1-2-2-2"><p></p></li>
+                        <li class="ism" ism_tag="1-2-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="1-2-3-4"><p></p></li>
+                        <li class="ism" ism_tag="1-2-3-3"><p></p></li>
+                        <li class="ism" ism_tag="1-2-3-2"><p></p></li>
+                        <li class="ism" ism_tag="1-2-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="1-2-4-4"><p></p></li>
+                        <li class="ism" ism_tag="1-2-4-3"><p></p></li>
+                        <li class="ism" ism_tag="1-2-4-2"><p></p></li>
+                        <li class="ism" ism_tag="1-2-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="1-2-4"><p></p></div>
+                        <div class="ism" ism_tag="1-2-3"><p></p></div>
+                        <div class="ism" ism_tag="1-2-2"><p></p></div>
+                        <div class="ism" ism_tag="1-2-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="1-3-1-4"><p></p></li>
+                        <li class="ism" ism_tag="1-3-1-3"><p></p></li>
+                        <li class="ism" ism_tag="1-3-1-2"><p></p></li>
+                        <li class="ism" ism_tag="1-3-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="1-3-2-4"><p></p></li>
+                        <li class="ism" ism_tag="1-3-2-3"><p></p></li>
+                        <li class="ism" ism_tag="1-3-2-2"><p></p></li>
+                        <li class="ism" ism_tag="1-3-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="1-3-3-4"><p></p></li>
+                        <li class="ism" ism_tag="1-3-3-3"><p></p></li>
+                        <li class="ism" ism_tag="1-3-3-2"><p></p></li>
+                        <li class="ism" ism_tag="1-3-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="1-3-4-4"><p></p></li>
+                        <li class="ism" ism_tag="1-3-4-3"><p></p></li>
+                        <li class="ism" ism_tag="1-3-4-2"><p></p></li>
+                        <li class="ism" ism_tag="1-3-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="1-3-4"><p></p></div>
+                        <div class="ism" ism_tag="1-3-3"><p></p></div>
+                        <div class="ism" ism_tag="1-3-2"><p></p></div>
+                        <div class="ism" ism_tag="1-3-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+                <div class="detail">
+                    <ul style="--x:3">
+                        <li class="ism" ism_tag="1-4-1-4"><p></p></li>
+                        <li class="ism" ism_tag="1-4-1-3"><p></p></li>
+                        <li class="ism" ism_tag="1-4-1-2"><p></p></li>
+                        <li class="ism" ism_tag="1-4-1-1"><p></p></li>
+                        <div>1</div>
+                    </ul>
+                    <ul style="--x:2">
+                        <li class="ism" ism_tag="1-4-2-4"><p></p></li>
+                        <li class="ism" ism_tag="1-4-2-3"><p></p></li>
+                        <li class="ism" ism_tag="1-4-2-2"><p></p></li>
+                        <li class="ism" ism_tag="1-4-2-1"><p></p></li>
+                        <div>2</div>
+                    </ul>
+                    <ul style="--x:1">
+                        <li class="ism" ism_tag="1-4-3-4"><p></p></li>
+                        <li class="ism" ism_tag="1-4-3-3"><p></p></li>
+                        <li class="ism" ism_tag="1-4-3-2"><p></p></li>
+                        <li class="ism" ism_tag="1-4-3-1"><p></p></li>
+                        <div>3</div>
+                    </ul>
+                    <ul style="--x:0">
+                        <li class="ism" ism_tag="1-4-4-4"><p></p></li>
+                        <li class="ism" ism_tag="1-4-4-3"><p></p></li>
+                        <li class="ism" ism_tag="1-4-4-2"><p></p></li>
+                        <li class="ism" ism_tag="1-4-4-1"><p></p></li>
+                        <div>4</div>
+                    </ul>
+                    <div class="block">
+                        <div class="ism" ism_tag="1-4-4"><p></p></div>
+                        <div class="ism" ism_tag="1-4-3"><p></p></div>
+                        <div class="ism" ism_tag="1-4-2"><p></p></div>
+                        <div class="ism" ism_tag="1-4-1"><p></p></div>
+                    </div>
+                    <div class="i" style="--y:3">1</div>
+                    <div class="i" style="--y:2">2</div>
+                    <div class="i" style="--y:1">3</div>
+                    <div class="i" style="--y:0">4</div>
+                    <div id="i"></div>
+                    <div id="z"></div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>
