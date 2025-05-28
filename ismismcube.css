@@ -37,30 +37,43 @@ a{
 #left_part #page_view{
     position: absolute;
     left: 1rem;
-    top: 1rem;
-    min-width: 3.25rem;
+    top: 0;
+    width: 4rem;
     height: 1.5rem;
     font-size: 0.8rem;
-    line-height: 1.5rem;
-    background-color: rgb(200, 200, 200);
-    border:solid black 0.05rem;
+
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 #left_part #page_view img{
     position: relative;
     width: 1rem;
     height: 1rem;
 }
-#left_part #page_view p{
+#left_part #online_count{
+    position: absolute;
+    left: 4.5rem;
+    top: 0;
+    width: 3.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#left_part #online_count img{
     position: relative;
+    width: 1rem;
+    height: 1rem;
+}
+#left_part #online_count b{
+    color: green;
 }
 #left_part #return_button{
     position: absolute;
-    left: 4.75rem;
-    top: 1rem;
-    width: 3.25rem;
+    left: 1rem;
+    top: 1.5rem;
+    width: 7rem;
     height: 1.5rem;
     font-size: 0.8rem;
     line-height: 1.5rem;
@@ -74,7 +87,7 @@ a{
 #left_part #search_box{
     position: absolute;
     left: 1rem;
-    top: 3rem;
+    top: 3.5rem;
 }
 #left_part #search_box #search_text{
     position: absolute;

@@ -3,10 +3,15 @@ let axis_color = ["red","green","blue","darkorange"]
 let ism_info_font_size = 1.0;
 
 initial();
+const socket = new WebSocket("ws://127.0.0.1:1999");// 此参数在部署时需要修改为"wss://www.maybered.com"，并确认此地址已经在Nginx中反向代理
+socket.addEventListener("message", (event) => {
+    const data = JSON.parse(event.data);
+    document.querySelector("#left_part #online_count b").textContent = data["online_count"];
+});
 
 function initial(){
     const get_ism_json = new XMLHttpRequest();
-    get_ism_json.open("GET","ism.json",true);
+    get_ism_json.open("GET","/assets/ism.json",true);
     get_ism_json.send();
     get_ism_json.onload = ()=>{
         if(get_ism_json.status === 200){
@@ -22,7 +27,7 @@ function initial(){
                 ism_node.addEventListener("click",function(){window.location.hash=(window.location.hash.slice(1)==ism_node.getAttribute("ism_tag")?"":ism_node.getAttribute("ism_tag"));})
             }
             window.onhashchange();
-            document.getElementById("return_button").textContent = "更多";
+            document.getElementById("return_button").textContent = "更多内容";
             document.getElementById("return_button").addEventListener("click",function(){window.open("https://www.maybered.com","_blank");})
             document.getElementById("search_button").textContent = "检索";
             document.getElementById("search_button").addEventListener("click",function(){searchISM(document.getElementById("search_text").value);})
@@ -50,11 +55,11 @@ function initial(){
         }
     }
     const get_page_view = new XMLHttpRequest();
-    get_page_view.open("GET","https://www.maybered.com/api/ismismcube/page_view",true);
+    get_page_view.open("GET","/api/page_view",true);
     get_page_view.send();
     get_page_view.onload = ()=>{
         if(get_page_view.status === 200){
-            document.querySelector("#left_part #page_view p").textContent = JSON.parse(get_page_view.responseText)["page_view"];
+            document.querySelector("#left_part #page_view b").textContent = JSON.parse(get_page_view.responseText)["page_view"];
         }
     }
 }
