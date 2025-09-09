@@ -1,0 +1,15 @@
+<svg width="20" height="80" viewBox="0 0 20 80" xmlns="http://www.w3.org/2000/svg">
+  <line x1="10" y1="10" x2="5" y2="15" stroke="currentColor" stroke-width="" />
+  <line x1="10" y1="10" x2="15" y2="15" stroke="currentColor" stroke-width="1" />
+  <line x1="10" y1="14" x2="5" y2="19" stroke="currentColor" stroke-width="1" />
+  <line x1="10" y1="14" x2="15" y2="19" stroke="currentColor" stroke-width="1" />
+  
+  <line x1="5" y1="30" x2="15" y2="30" stroke="currentColor" stroke-width="2" />
+  <line x1="5" y1="40" x2="15" y2="40" stroke="currentColor" stroke-width="2" />
+  <line x1="5" y1="50" x2="15" y2="50" stroke="currentColor" stroke-width="2" />
+  
+  <line x1="10" y1="66" x2="5" y2="61" stroke="currentColor" stroke-width="1" />
+  <line x1="10" y1="66" x2="15" y2="61" stroke="currentColor" stroke-width="1" />
+  <line x1="10" y1="70" x2="5" y2="65" stroke="currentColor" stroke-width="1" />
+  <line x1="10" y1="70" x2="15" y2="65" stroke="currentColor" stroke-width="1" />
+</svg>

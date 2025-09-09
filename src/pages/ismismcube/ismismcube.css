@@ -1,0 +1,801 @@
+@font-face {
+    font-family: "en_font";
+    src: local("Times New Roman");
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+    font-family: "other_font";
+    src: local("Microsoft YaHei");
+    font-style: normal;
+}
+
+* {
+    font-family: "en_font", "other_font", sans-serif;
+}
+
+.ismismcube-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.ism {
+    cursor: pointer;
+}
+
+/* 基础色 */
+.show_x,
+.show_xy,
+.ism_xyz::before {
+    background-color: rgb(170, 170, 170);
+}
+
+.show_xy::before,
+.ism_xyz {
+    background-color: gray;
+}
+
+.show_xy::after,
+.ism_xyz::after,
+.ism_xyzi {
+    background-color: rgb(200, 200, 200);
+}
+
+/* searched状态颜色优先级最低 */
+.show_x.searched,
+.show_xy.searched,
+.ism_xyz.searched::before {
+    background-color: rgb(201, 149, 15);
+}
+
+.show_xy.searched::before,
+.ism_xyz.searched {
+    background-color: darkgoldenrod;
+}
+
+.show_xy.searched::after,
+.ism_xyz.searched::after,
+.ism_xyzi.searched {
+    background-color: rgb(225, 172, 39);
+}
+
+.show_x.pinned,
+.show_xy.pinned,
+.ism_xyz.pinned::before {
+    background-color: rgb(11, 167, 167);
+}
+
+.show_xy.pinned::before,
+.ism_xyz.pinned {
+    background-color: darkcyan;
+}
+
+.show_xy.pinned::after,
+.ism_xyz.pinned::after,
+.ism_xyzi.pinned {
+    background-color: rgb(17, 188, 188);
+}
+
+.show_x.selected,
+.show_xy.selected,
+.ism_xyz.selected::before {
+    background-color: rgb(182, 53, 53);
+}
+
+.show_xy.selected::before,
+.ism_xyz.selected {
+    background-color: brown;
+}
+
+.show_xy.selected::after,
+.ism_xyz.selected::after,
+.ism_xyzi.selected {
+    background-color: rgb(218, 73, 73);
+}
+
+/* 名称 */
+.ism_name {
+    width: 2.5rem;
+    max-height: 3rem;
+    font-size: 0.75em;
+    line-height: 1.3;
+    text-align: center;
+    word-break: normal;
+    overflow: hidden;
+    text-wrap: balance;
+    color: black;
+}
+
+.show_x .ism_name.no_data,
+.show_xy_name .ism_name.no_data {
+    color: rgb(100, 100, 100);
+}
+
+.ism_xyz .ism_name.no_data {
+    color: rgb(68,68,68);
+}
+
+.ism_xyzi .ism_name.no_data {
+    color: rgb(130, 130, 130);
+}
+
+#left_part {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40rem;
+    height: 100%;
+    min-height: 30rem;
+    background-color: rgb(230, 230, 230);
+    box-shadow: -1rem 0 1rem 1rem black;
+}
+
+@keyframes left_close {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(-40rem) }
+}
+
+.left_part_close {
+    animation: left_close 1s ease-in-out forwards;
+}
+
+@keyframes left_open {
+    0% { transform: translateX(-40rem) }
+    100% { transform: translateX(0) }
+}
+
+.left_part_open {
+    animation: left_open 1s ease-in-out forwards;
+}
+
+#page_view {
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    width: 4rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+#page_view img {
+    width: 1rem;
+    height: 1rem;
+}
+
+#online_count {
+    position: absolute;
+    right: 31.5rem;
+    top: 0;
+    width: 3.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#online_count b {
+    color: green;
+}
+
+#return_button {
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    width: 3.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background-color: rgb(200, 200, 200);
+    border: solid black 1px;
+    cursor: pointer;
+}
+
+#return_button:hover {
+    background-color: gray;
+}
+
+#download_button {
+    position: absolute;
+    left: 5rem;
+    top: 1.5rem;
+    width: 3.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background-color: rgb(200, 200, 200);
+    border: solid black 1px;
+    cursor: pointer;
+}
+
+#download_button:hover {
+    background-color: gray;
+}
+
+#search_input {
+    position: absolute;
+    left: 1rem;
+    top: 3.5rem;
+    width: 7.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border: solid black 1px;
+}
+
+#ismism_main_cube {
+    position: absolute;
+    left: 10rem;
+    top: 3.8rem;
+    transform: skewY(-15deg);
+}
+
+#show_cube {
+    z-index: -1;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 2.5rem);
+    grid-template-rows: repeat(4, 3rem);
+    gap: 0;
+    width: 20rem;
+    height: 17.8rem;
+    contain: strict;
+    overflow: hidden;
+    transform: skewY(30deg);
+    clip-path: polygon(0% 100%, calc(50% - 1px) 100%, 100% 68%, 100% 0%, calc(50% - 1px) 0%, 0% 32%);
+}
+
+.show_xy {
+    z-index: var(--x);
+    position: relative;
+    top: 5.8rem;
+    width: 2.5rem;
+    height: 3rem;
+    transform-origin: right;
+    box-sizing: border-box;
+    border: solid black 1px;
+    display: flex;
+}
+
+.show_xy.selected,
+.show_xy.pinned,
+.show_xy.searched {
+    z-index: calc(100 + var(--x));
+}
+
+.show_xy::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: calc(2.5rem - 1px);
+    top: -1px;
+    width: 10rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border: solid black 1px;
+    display: flex;
+    transform-origin: left;
+    transform: skewY(-30deg);
+    opacity: var(--b);
+    pointer-events: none;
+}
+
+.show_xy[style*="--y: 4"]::before {
+    pointer-events: auto;
+}
+
+.show_xy::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: calc(-5.9rem + 1px);
+    width: 2.5rem;
+    height: calc(5.9rem - 1px);
+    box-sizing: border-box;
+    border: solid black 1px;
+    transform-origin: bottom;
+    transform: skewX(-60deg);
+    opacity: var(--a);
+    pointer-events: none;
+}
+
+.show_xy[style*="--x: 4"]::after {
+    pointer-events: auto;
+}
+
+#show_cube_name {
+    z-index: 1;
+    position: absolute;
+    top: 2.9rem;
+    display: grid;
+    grid-template-columns: repeat(4, 2.5rem);
+    grid-template-rows: repeat(4, 3rem);
+    gap: 0;
+    transform: skewY(30deg);
+    pointer-events: none;
+}
+
+.show_xy_name {
+    position: relative;
+    width: 2.5rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.line_x {    
+    position: absolute;
+    left: 10rem;
+    top: calc(12rem - calc(var(--x)*3rem));
+    width: 10rem;
+    height: 0;
+    border-bottom: 1px dashed black;
+    transform-origin: left;
+    transform: skewY(30deg);
+    pointer-events: none;
+}
+
+.line_x[style*="--x: 4"] {
+    border-bottom: none;
+}
+
+.line_x p {    
+    position: relative;
+    left:12.5rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    color: red;
+}
+
+.line_y {
+    position: absolute;
+    left: calc(10rem + calc(var(--y)*2.5rem) - 1px);
+    top: calc(calc(var(--y)*calc(1.5rem - 1px)) + 1px);
+    width: 0;
+    height: calc(12rem - 1px);
+    border-right: 1px dashed black;
+    transform: skewY(30deg);
+    pointer-events: none;
+}
+
+.line_y[style*="--y: 4"] {
+    border-bottom: none;
+}
+
+.line_y p {
+    position: relative;
+    left:-2.5rem;
+    top: -1.3rem;
+    width: 2.5rem;
+    height: 1.5rem;
+    color: green;
+    text-align: center;
+}
+
+#show_cube_x {
+    position: absolute;   
+    left: calc(20rem - 1px);
+    top: 6.5rem;
+    transform: skewY(30deg);
+}
+
+.show_x {
+    position: relative;
+    list-style: none;
+    width: 2.5rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border:solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show_x p {
+    position: absolute;
+    width: 2.5rem;
+    max-height: 3rem;
+    text-align: center;
+    word-break: normal;
+    overflow: hidden;
+    text-wrap: balance;
+    pointer-events: none;
+}
+
+#axis_x {
+    z-index: 10;
+    position: absolute;
+    left: calc(10rem - 1px);
+    top: calc(1rem - 1px);
+    height: 11rem;
+    border-right: 3px dashed red;
+    transform-origin: left;
+    transform: skewY(30deg);
+    pointer-events: none;
+}
+
+#axis_x::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -2rem;
+    border-style: solid;
+    border-width: 1rem 4px 1rem 4px;
+    border-color: transparent transparent red transparent;
+}
+
+#axis_y {
+    z-index: 9;
+    position: absolute;
+    left:10rem;
+    top: calc(12rem - 1px);
+    width: 9rem;
+    border-bottom: 3px dashed green;
+    transform-origin: left;
+    transform: skewY(30deg);
+    pointer-events: none;
+}
+
+#axis_y::before {
+    content: "";
+    position: absolute;
+    left: 9rem;
+    top: -3px;
+    border-style: solid;
+    border-width: 4px 1rem 4px 1rem;
+    border-color: transparent transparent transparent green;
+}
+
+#axis_z {
+    z-index: 8;
+    position: absolute;
+    left: 1rem;
+    top: calc(12rem - 1px);
+    width: 9rem;
+    border-bottom: 3px dashed blue;
+    transform-origin: top;
+    pointer-events: none;
+}
+
+#axis_z::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: -3px;
+    border-style: solid;
+    border-width: 4px 1rem 4px 1rem;
+    border-color: transparent blue transparent transparent;
+}
+
+#axis_label {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 4.5rem;
+    height: 8rem;
+}
+
+#axis_label p {
+    position: relative;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+#axis_label p::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    bottom: 0.3rem;
+    width: 0.75rem;
+    height:0.75rem;
+    border:solid black 0.05rem;
+}
+
+#axis_label_x::before {
+    background-color: red;
+}
+
+#axis_label_y::before {
+    background-color: green;
+}
+
+#axis_label_z::before {
+    background-color: blue;
+}
+
+#axis_label_i::before {
+    background-color: darkorange;
+}
+
+#ism_info {
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    top: 19.5rem;
+    height: calc(100% - 20rem);
+    background-color: rgb(200, 200, 200);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 3px 3px gray;
+    overflow: auto;
+}
+
+#increase_fontsize_button {
+    z-index: 1;
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(200,200,200);
+    border:solid rgb(170, 170, 170) 0.2rem;
+}
+
+#increase_fontsize_button:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+#increase_fontsize_button::before {
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 0.4rem;
+    width: 0.8rem;
+    height: 0.2rem;
+    background-color: black;
+}
+
+#increase_fontsize_button::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.1rem;
+    width: 0.2rem;
+    height: 0.8rem;
+    background-color: black;
+}
+
+#decrease_fontsize_button {
+    z-index: 1;
+    position: absolute;
+    left: 3rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(200,200,200);
+    border:solid rgb(170, 170, 170) 0.2rem;
+}
+
+#decrease_fontsize_button:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+#decrease_fontsize_button::before {
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 0.4rem;
+    width: 0.8rem;
+    height: 0.2rem;
+    background-color: black;
+}
+
+#ism_info_content {
+    position: relative;
+    padding: 0.5rem 1rem;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#size_adjuster {
+    position: absolute;
+    left: 40rem;
+    height: calc(100% - 4rem);
+}
+
+#size_indicator {
+    position: absolute;
+    width: 1rem;
+    height: 4rem;
+    background: rgb(200,200,200) url('@/assets/size_indicator.svg') center/contain no-repeat;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#size_indicator:hover {
+    background-color: gray;
+}
+
+#right_part {
+    z-index: 0;
+    position: absolute;
+    left: 40rem;
+    width: calc(100% - 40rem);
+    height: 100%;
+    overflow: auto;
+}
+
+@keyframes right_close {
+    0% { transform: translateX(0);width: calc(100% - 40rem); }
+    100% { transform: translateX(-40rem);width: 100%; }
+    
+}
+
+.right_part_close {
+    animation: right_close 1s ease-in-out forwards;
+}
+
+@keyframes right_open {
+    0% { transform: translateX(-40rem);width: 100%; }
+    100% { transform: translateX(0);width: calc(100% - 40rem); }
+}
+
+.right_part_open {
+    animation: right_open 1s ease-in-out forwards;
+}
+
+#ismism_cube_box {
+    position: absolute;
+    left: 2rem;
+    right: 0;
+    max-width: 60rem;
+    display: flex;
+    transform-origin: left;
+    overflow: visible;
+}
+
+.ism_x {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    top: calc(0.5rem + var(--x) * 18rem);
+}
+
+.ism_xy {
+    position: relative;
+    width: 12.5rem;
+    height: 18rem;
+    contain: strict;
+    overflow: hidden;
+    transform: skewY(-15deg);
+}
+
+.ism_xy p {
+    width: 2.5rem;
+    max-height: 3rem;
+    font-size: 0.75em;
+    line-height: 1.3;
+    text-align: center;
+    pointer-events: none;
+}
+
+.ism_xy #i {
+    z-index: 1;
+    position: absolute;
+    left: calc(10rem + 1px);
+    top: 2.5rem;
+    height: 11rem;
+    border-right: 3px dashed darkorange;
+    pointer-events: none;
+}
+
+.ism_xy #i::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: -2rem;
+    border-style: solid;
+    border-width: 1rem 4px 1rem 4px;
+    border-color: transparent transparent darkorange transparent;
+}
+
+.ism_xy #z {
+    z-index: 1;
+    position: absolute;
+    left: 1rem;
+    top: calc(13.5rem + 1px);
+    width: 9rem;
+    border-bottom: 3px dashed blue;
+    pointer-events: none;
+}
+
+.ism_xy #z::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    top: -3px;
+    border-style: solid;
+    border-width: 4px 1rem 4px 1rem;
+    border-color: transparent blue transparent transparent;
+}
+
+.ism_xyz {
+    position: absolute;
+    left: calc(var(--z) * 2.5rem);
+    top: 15rem;
+    width: 2.5rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+}
+
+.ism_xyz::before {
+    z-index: -2;
+    content: "";
+    position: absolute;
+    left: -2.5rem;
+    top: -1px;
+    width: 2.5rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border: solid black 1px;
+    transform-origin: right;
+    transform: skewY(31deg);
+}
+
+.ism_xyz::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1.5rem;
+    width: 2.5rem;
+    height: 1.5rem;
+    box-sizing: border-box;
+    border: solid black 1px;
+    transform-origin: bottom;
+    transform: skewX(59deg);
+}
+
+#ism_xyz_label_column {
+    position: absolute;
+    left: -2.5rem;
+    top: -14.7rem;
+    width: 2.5rem;
+    height: 1.5rem;
+    color: blue;
+    text-align: center;
+    pointer-events: none;
+}
+
+#ism_xyz_label_row {
+    position: absolute;
+    left: 2.7rem;
+    height: 3rem;
+    color: darkorange;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.ism_xyzi {
+    position: absolute;
+    left: -2.5rem;
+    top: calc(-16.5rem + var(--i) * 3rem);
+    width: 2.5rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+}
