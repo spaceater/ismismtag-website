@@ -192,7 +192,8 @@ const router = useRouter()
 // WebSocket连接管理
 const connectWebSocket = () => {
   try {
-    socket = new WebSocket("wss://" + window.location.host + "/ws/ismismcube_online")
+    // 根据当前页面协议自动选择 WebSocket 协议
+    socket = new WebSocket((window.location.protocol === 'https:' ? 'wss:' : 'ws:') + "//" + window.location.host + "/ws/ismismcube_online")
     socket.addEventListener("open", () => {
       console.log("WebSocket连接成功")
       if (reconnectTimer) {
