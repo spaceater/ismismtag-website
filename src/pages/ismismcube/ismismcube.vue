@@ -9,10 +9,10 @@
       </div>
       <div id="online_count" title="当前在线数">
         <p>在线:</p>
-        <b>{{ onlineCount }}</b>
+        <b>{{ onlineCount == -1 ? '-' : onlineCount }}</b>
       </div>
       <div id="return_button" @click="openMoreContent">更多内容</div>
-      <div id="download_button" @click="downloadIsmJson">下载数据</div>
+      <div id="download_button" @click="downloadIsmJson">下载文件</div>
       <input 
         id="search_input" 
         type="text" 
@@ -176,7 +176,7 @@ const ismData = ref<any>(null)
 const axisColor = ["red", "green", "blue", "darkorange"]
 const ismInfoFontSize = ref(1.0)
 const pageView = ref(0)
-const onlineCount = ref(1)
+const onlineCount = ref(-1)
 const searchText = ref('')
 const sizeIndicatorRatio = ref(0)
 const content = ref('')
@@ -447,24 +447,25 @@ const openMoreContent = () => {
   window.open("https://www.maybered.com", "_blank")
 }
 
-const downloadIsmJson = async () => {
+const downloadIsmJson = () => {
   try {
-    const response = await fetch('/ism.json')
-    if (response.ok) {
-      const blob = await response.blob()
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'ism.json'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
-    } else {
-      console.error('Failed to fetch ism.json')
+    if (!ismData.value) {
+      alert("数据加载失败，请检查网络后重试")
+      return
     }
+    const jsonString = JSON.stringify(ismData.value, null, 2)
+    const blob = new Blob([jsonString], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'ism.json'
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+    URL.revokeObjectURL(url)
   } catch (error) {
     console.error('Error downloading ism.json:', error)
+    alert("下载失败，请重试")
   }
 }
 

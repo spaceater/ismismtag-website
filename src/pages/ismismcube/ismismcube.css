@@ -192,8 +192,10 @@
     font-size: 0.8rem;
     line-height: 1.5rem;
     text-align: center;
+    white-space: nowrap;
     background-color: rgb(200, 200, 200);
     border: solid black 1px;
+    overflow: hidden;
     cursor: pointer;
 }
 
@@ -210,8 +212,10 @@
     font-size: 0.8rem;
     line-height: 1.5rem;
     text-align: center;
+    white-space: nowrap;
     background-color: rgb(200, 200, 200);
     border: solid black 1px;
+    overflow: hidden;
     cursor: pointer;
 }
 

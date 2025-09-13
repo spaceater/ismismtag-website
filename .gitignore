@@ -11,6 +11,7 @@ node_modules
 dist
 frontend
 *.local
+*.vbs
 
 # Editor directories and files
 .vscode/*
