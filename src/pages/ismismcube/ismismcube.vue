@@ -333,34 +333,35 @@ const pinISM = (ismTag: string) => {
 const setISMInfo = (ismTag: string) => {
   if (!ismData.value || !ismData.value[ismTag]) return
   const ismTagData = ismData.value[ismTag]
-  let contentHtml = `<div style='text-align: center;'>`
+  const ismTagfontSize = 1.2*ismInfoFontSize.value;
+  let contentHtml = `<div style='text-align: center; font-size:${ismTagfontSize}rem;'>`
   if (ismTag.length >= 1) {
-    contentHtml += `<p style='display: inline-block;width:${1.1*ismInfoFontSize.value}rem;height:${1.1*ismInfoFontSize.value}rem;line-height:${1.1*ismInfoFontSize.value}rem;color:red;border:solid black ${0.1*ismInfoFontSize.value}rem;'><b>${ismTag[0]}</b></p>`
+    contentHtml += `<p style='display: inline-block;width:${ismTagfontSize}rem;height:${ismTagfontSize}rem;line-height:${ismTagfontSize}rem;color:red;border:solid black ${ismTagfontSize/10}rem;'><b>${ismTag[0]}</b></p>`
   }
   if (ismTag.length >= 3) {
-    contentHtml += `-<p style='display: inline-block;width:${1.1*ismInfoFontSize.value}rem;height:${1.1*ismInfoFontSize.value}rem;line-height:${1.1*ismInfoFontSize.value}rem;color:green;border:solid black ${0.1*ismInfoFontSize.value}rem;'><b>${ismTag[2]}</b></p>`
+    contentHtml += `-<p style='display: inline-block;width:${ismTagfontSize}rem;height:${ismTagfontSize}rem;line-height:${ismTagfontSize}rem;color:green;border:solid black ${ismTagfontSize/10}rem;'><b>${ismTag[2]}</b></p>`
   }
   if (ismTag.length >= 5) {
-    contentHtml += `-<p style='display: inline-block;width:${1.1*ismInfoFontSize.value}rem;height:${1.1*ismInfoFontSize.value}rem;line-height:${1.1*ismInfoFontSize.value}rem;color:blue;border:solid black ${0.1*ismInfoFontSize.value}rem;'><b>${ismTag[4]}</b></p>`
+    contentHtml += `-<p style='display: inline-block;width:${ismTagfontSize}rem;height:${ismTagfontSize}rem;line-height:${ismTagfontSize}rem;color:blue;border:solid black ${ismTagfontSize/10}rem;'><b>${ismTag[4]}</b></p>`
   }
   if (ismTag.length >= 7) {
-    contentHtml += `-<p style='display: inline-block;width:${1.1*ismInfoFontSize.value}rem;height:${1.1*ismInfoFontSize.value}rem;line-height:${1.1*ismInfoFontSize.value}rem;color:darkorange;border:solid black ${0.1*ismInfoFontSize.value}rem;'><b>${ismTag[6]}</b></p>`
+    contentHtml += `-<p style='display: inline-block;width:${ismTagfontSize}rem;height:${ismTagfontSize}rem;line-height:${ismTagfontSize}rem;color:darkorange;border:solid black ${ismTagfontSize/10}rem;'><b>${ismTag[6]}</b></p>`
   }
   contentHtml += `\n<b>${ismTagData.ch_name}\n${ismTagData.en_name}</b></div>`
   const axisListData = ismTagData.axis_list
-  contentHtml += `<div>`
+  contentHtml += `<div style='line-height: 1.4;'>`
   let colorCount = 0
   for (const i of axisListData) {
     contentHtml += `<b style='color:${axisColor[colorCount++]}'>${i.slice(0,3)}</b><p style='display:inline-block;text-align: center;width:${1.1*ismInfoFontSize.value}rem;height:${1.1*ismInfoFontSize.value}rem;line-height:${1.1*ismInfoFontSize.value}rem;border:solid black ${0.1*ismInfoFontSize.value}rem;'><b>${i.slice(3,4)}</b></p>${i.slice(4)}\n`
   }
-  contentHtml += `</div><div>`
+  contentHtml += `</div><div style='line-height: 1.4;'>`
   const featureListData = ismTagData.feature_list
   for (const i of featureListData) {
     if (i !== '') {
       contentHtml += `<b>${i.slice(0,1)}</b>${i.slice(1)}\n`
     }
   }
-  contentHtml += `</div><div style='text-align: center;'>`
+  contentHtml += `</div><div style='text-align: center; line-height: 1.4;'>`
   const relatedListData = ismTagData.related_list
   for (const i of relatedListData) {
     if (i !== '') {
@@ -416,7 +417,7 @@ const isSearchResult = (ismTag: string) => {
 const showIntroduction = () => {
   if (!ismData.value || !ismData.value.introduction) return
   const introduction = ismData.value.introduction
-  let contentHtml = `<div>`
+  let contentHtml = `<div style='line-height: 1.4;'>`
   for (const i of introduction) {
     contentHtml += i
   }
